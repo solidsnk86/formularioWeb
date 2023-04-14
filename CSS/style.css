@@ -216,10 +216,16 @@ footer {
     body {
         display: block;
     }
+    th, td {
+        display: block;
+    }
 }
 
 @media screen and (max-width:740px) {
     body {
+        display: block;
+    }
+    th, td {
         display: block;
     }
 }
