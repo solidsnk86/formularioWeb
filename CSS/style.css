@@ -211,3 +211,15 @@ footer {
 	margin-top: 20px;
 	text-align: center;
 }
+
+@media screen and (max-width:980px) {
+    body {
+        display: block;
+    }
+}
+
+@media screen and (max-width:740px) {
+    body {
+        display: block;
+    }
+}
