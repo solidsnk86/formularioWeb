@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300&display=swap');
+* {
+    font-family: 'Roboto';
+}
+input {
+    border: none;
+    font-family: monospace;
+}
+#textArea {
+    resize: horizontal;
+}
+header {
+    background-color: rgb(188, 204, 218);
+    color: #000;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+}
+header h1 input {
+    font-family: 'Righteous';
+    padding: 9px 12px;
+    text-shadow: 0 0 6px rgb(141, 141, 141);
+    font-size: x-large;
+    background-color: rgb(188, 204, 218);
+}
+header h3, input {
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+header h2 {
+    font-size: 1.3em;
+    padding-left: 9px;
+    text-shadow: 0 0 4px rgb(83, 83, 83);
+}
+header h2 input {
+    font-weight: bold;
+    font-size: 0.9em;
+    background-color: rgb(188, 204, 218);
+}
+header p {
+    font-size: 1.0em;
+    text-align: right;
+    text-shadow: 0 0 6px rgb(141, 141, 141);
+}
+header p input {
+    cursor: text;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+th {
+	background-color: rgb(188, 204, 218);
+}
+
+tfoot td {
+	font-weight: bold;
+}
+
+.observaciones {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    padding: 20px;
+}
+.observaciones li {
+    margin: 5px;
+}
+option, select {
+    font-size: 0.95em;
+    cursor: pointer;
+}
+.enviar button {
+    border: 1px solid #000;
+    padding: 10px 14px;
+    border-radius: 100px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+.enviar button:hover {
+    background-color: rgb(188, 204, 218);
+    transition: 0.1s;
+}
+.contacto {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    text-align: right;
+    padding: 20px;
+    background-color: rgb(188, 204, 218);
+}
+.contacto a {
+    text-decoration: none;
+    color: royalblue;
+}
+.contacto a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+.contacto iframe {
+    margin-top: 15px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Carta */
+.card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-card {
+    background-color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0;
+    padding: 2px;
+    border-radius: 5px;
+}
+.compartirMenu {
+    background-color: rgb(188, 204, 218);
+    width: 500px;
+    height: auto;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: box-shadow 0.2s;
+    color: rgb(0, 0, 0);
+}
+#donar {
+    border: 1px solid #000;
+    border-radius: 100px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#donar:hover {
+    background-color: rgb(88, 231, 45);
+    transition: 0.1s ease-in-out;
+}
+.compartirMenu a {
+    color: tomato;
+    text-decoration: none;
+}
+.redesMenu button {
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.redesMenu i:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px aliceblue;
+}
+.redesMenu #face:hover {
+    color: royalblue;
+}
+.redesMenu #twitt:hover {
+    color: rgb(0, 140, 255);
+}
+.redesMenu #what:hover {
+    color: rgb(10, 161, 10);
+}
+.redesMenu #linked:hover {
+    color: rgba(0, 68, 255, 0.795);
+}
+.redesMenu i {
+    padding: 5px;
+    font-size: 1.75em;
+}
+video {
+    margin: 10px;
+    border-radius: 5px;
+}
+.redesMenu hr {
+    border-radius: 50%;
+}
+#cerrarCarta {
+    background-color: tomato;
+    border: 1px solid #000;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+}
+#cerrarCarta i {
+    font-size: 1.0em;
+    text-align: center;
+}
+#cerrarCarta:hover {
+    background-color: lightsalmon;
+}
+footer {
+	margin-top: 20px;
+	text-align: center;
+}

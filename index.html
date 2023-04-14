@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolidSnk86 - Formularios©</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+		<h1><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa"></h1>
+        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold"></h3>
+		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="textArea"></h2>
+        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="textArea"></h2>
+		<h2>CUIT/CUIL: <input type="text" placeholder="XX-XXXXXXXX-X"></h2>
+		<p><input type="text" style="font-weight: bold;" placeholder="N° Fact/Remito"></p>
+		<p>Fecha: <input type="date" style="font-weight: bold;"></p>
+	</header>
+	<table>
+		<tr>
+			<th>Descripción</th>
+			<th>Cantidad</th>
+			<th>Precio Unitario</th>
+			<th>Total</th>
+		</tr>
+		<tr>
+			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="textArea"></td>
+			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
+			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+		</tr>
+		<tr>
+			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="textArea"></td>
+			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
+			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+		</tr>
+		<tr>
+			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
+			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
+			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+		</tr>
+		<tr>
+			<td colspan="3">Subtotal:</td>
+			<td><input type="text" style="width: 85px;" placeholder="Sub-total" title="Ingrese el subtotal"></td>
+		</tr>
+		<tr>
+			<td colspan="3">Impuestos:</td>
+			<td><input type="text" style="width: 70px;" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
+		</tr>
+		<tr>
+			<td colspan="3">Total:</td>
+			<td><input type="text" style="width: 85px;" placeholder="TOTAL"></td>
+		</tr>
+	</table>
+<div class="observaciones">
+    <h3>Observaciones:</h3>
+    <li>Validez de la oferta: <input type="time" name="" id=""></li>
+    <li>Forma de pago: <select name="Forma de pago">
+        <option value="opcion1">Transferencia</option>
+        <option value="opcion2">Mercado Pago</option>
+        <option value="opcion3">Efectivo</option>
+      </select>
+      </li>
+    <li>Facturación: <select name="Facturacion">
+        <option value="opcion1">"A"</option>
+        <option value="opcion2">"B"</option>
+        <option value="opcion3">"C"</option>
+      </select></li>
+</div>
+<div class="contacto">
+    <h4>Contáctese por estos medios:</h4>
+    <a href="tel:+5492665290020"><i class="fa-solid fa-phone"></i> 2665290020</a>
+    <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> calcagni.gabriel86@gmail.com</a>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="enviar">
+    <button onclick="compartirFormulario()">Compartir Formulario</button>
+    <button onclick="imprimirFormulario()">Imprimir</button>
+	<button>Descargar</button>
+</div>
+	<footer>
+		<p>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;">SolidSnk86</span></p>
+	</footer>
+      <script src="/JS/script.js"></script>
+</body>
+</html>
