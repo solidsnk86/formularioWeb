@@ -31,7 +31,7 @@ function cerrarCarta() {
 }
 // función imprimir
 function imprimirFormulario() {
-  var formularioHTML = window.open('/index.html');
+  var formularioHTML = window.open('index.html');
   formularioHTML.onload = function() {
     formularioHTML.print();
   } 
