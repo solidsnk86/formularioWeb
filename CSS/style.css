@@ -216,6 +216,8 @@ footer {
     body {
         display: block;
     }
+    input {
+       width: auto;
 }
 
 @media screen and (max-width:740px) {
