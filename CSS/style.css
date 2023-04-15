@@ -100,10 +100,22 @@ option, select {
 .contacto a {
     text-decoration: none;
     color: royalblue;
+    padding: 5px;
 }
 .contacto a:hover {
     text-decoration: underline;
     color: blue;
+}
+.contacto i {
+    font-size: large;
+}
+#wap {
+    color: rgb(4, 156, 4);
+    font-size: 1.3em;
+}
+.contacto i:hover {
+    transform:translateY(-15%);
+    transition: 0.1s ease-in-out;
 }
 .contacto iframe {
     margin-top: 15px;
@@ -213,6 +225,7 @@ footer {
 }
 
 /* Responsive */
+
 @media screen and (max-width:980px) {
     body {
         display: block;
