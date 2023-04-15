@@ -16,6 +16,7 @@ header {
     margin-bottom: 5px;
 }
 header h1 input {
+    padding-left: 3px;
     font-family: 'Righteous';
     padding: 9px 12px;
     text-shadow: 0 0 6px rgb(141, 141, 141);
@@ -119,7 +120,7 @@ option, select {
 }
 .contacto iframe {
     margin-top: 15px;
-    width: 400px;
+    width: fit-content;
     height: auto;
     border-radius: 10px;
 }
@@ -198,10 +199,6 @@ option, select {
     padding: 5px;
     font-size: 1.75em;
 }
-video {
-    margin: 10px;
-    border-radius: 5px;
-}
 .redesMenu hr {
     border-radius: 50%;
 }
@@ -235,7 +232,9 @@ footer {
     }
     .container-card, .compartirMenu {
         display: block;
-        width: fit-content;
+    }
+    header h1 input {
+        padding-left: 3px;
     }
 }
 
@@ -249,5 +248,14 @@ footer {
     .container-card, .compartirMenu {
         display: block;
         width: fit-content;
+    }
+    header h1 input {
+        padding-left: 3px;
+    }
+}
+
+@media screen and (max-width:844px) {
+    body {
+        display: block;
     }
 }
