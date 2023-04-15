@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+	<form onsubmit="printFormulario()">
     <header>
 		<h1><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="textArea"></h1>
-        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold"></h3>
-		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="textArea"></h2>
-        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="textArea"></h2>
-		<h2>CUIT/CUIL: <input type="text" placeholder="XX-XXXXXXXX-X"></h2>
+        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto" title="Factura/Recibo/Presupuesto"></h3>
+		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
+        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
+		<h2>CUIT/CUIL: <input type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
 		<p><input type="text" style="font-weight: bold;" placeholder="N° Fact/Remito"></p>
-		<p>Fecha: <input type="date" style="font-weight: bold;"></p>
+		<p>Fecha: <input type="date" style="font-weight: bold; width:auto"></p>
 	</header>
 	<table>
 		<tr>
@@ -45,7 +46,7 @@
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
-			<td><input type="text" style="width: 85px;" placeholder="Sub-total" title="Ingrese el subtotal"></td>
+			<td><input type="text" style="width: 70px;" placeholder="Sub-total" title="Ingrese el subtotal"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Impuestos:</td>
@@ -53,7 +54,7 @@
 		</tr>
 		<tr>
 			<td colspan="3">Total:</td>
-			<td><input type="text" style="width: 85px;" placeholder="TOTAL"></td>
+			<td><input type="text" style="width: 70px;" placeholder="TOTAL"></td>
 		</tr>
 	</table>
 <div class="observaciones">
@@ -71,8 +72,11 @@
         <option value="opcion3">"C"</option>
       </select></li>
 </div>
+</form>
 <div class="contacto">
     <h4>Contáctese por estos medios:</h4>
+	<a href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en
+        %20tu%20servivio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i></a>
     <a href="tel:+5492665290020"><i class="fa-solid fa-phone"></i> 2665290020</a>
     <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> calcagni.gabriel86@gmail.com</a>
     <br>
