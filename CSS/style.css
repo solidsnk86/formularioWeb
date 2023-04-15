@@ -216,12 +216,15 @@ footer {
     body {
         display: block;
     }
-    table {
-       display: block;
+    input {
+       width: 85px;
 }
 
 @media screen and (max-width:740px) {
     body {
         display: block;
+    }
+    input {
+        width: 85px
     }
 }
