@@ -212,19 +212,28 @@ footer {
 	text-align: center;
 }
 
+/* Responsive */
 @media screen and (max-width:980px) {
     body {
         display: block;
     }
     input {
-       width: 85px;
+        width: 85px;
+    }
+    .container-card, .compartirMenu {
+        display: block;
+    }
 }
 
-@media screen and (max-width:740px) {
+@media screen and (max-width:980px) {
     body {
         display: block;
     }
     input {
-        width: 85px
+        width: 85px;
+    }
+    .container-card, .compartirMenu {
+        display: block;
+        width: fit-content;
     }
 }
