@@ -231,7 +231,7 @@ footer {
         display: block;
     }
     input {
-        width: 85px;
+        width: 55px;
     }
     .container-card, .compartirMenu {
         display: block;
@@ -239,12 +239,12 @@ footer {
     }
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:740px) {
     body {
         display: block;
     }
     input {
-        width: 85px;
+        width: 55px;
     }
     .container-card, .compartirMenu {
         display: block;
