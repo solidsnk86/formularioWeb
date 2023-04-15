@@ -235,6 +235,7 @@ footer {
     }
     .container-card, .compartirMenu {
         display: block;
+        width: fit-content;
     }
 }
 
