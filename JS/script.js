@@ -10,7 +10,7 @@ function compartirFormulario() {
     <button id="cerrarCarta" onclick="cerrarCarta()"><i class="fa-solid fa-xmark"></i></button>
       <div class="redesMenu">
       <br>
-      <p>Muchas gracias por compartir!<br></center> ¡Si te gustó el formulario puedes colaborar!</p>
+      <p>Muchas gracias por compartir!<br></center> ¡Si te gustó el formulario puedes colaborar <br>con el desarrollador aquí!<br>👇</p>
       <br>
       <button id="donar"><a href=""></a>Donar</button>
       <hr>
@@ -31,9 +31,9 @@ function cerrarCarta() {
 }
 // función imprimir
 function imprimirFormulario() {
-  var formularioHTML = window.open('index.html');
+  var formularioHTML = window.open('/index.html');
   formularioHTML.onload = function() {
-    formularioHTML.print();
+    formularioHTML.window.print();
   } 
 };
 // función para descargar
@@ -50,50 +50,56 @@ function autoResize() {
   this.style.width = this.scrollWidth + "px";
 };
 
-// función suma - porcentajes - descuentos
-const quantityInput = document.getElementById('cantidad');
-const priceInput = document.getElementById('precio');
-const discountInput = document.getElementById('descuento');
-const taxInput = document.getElementById('impuesto');
-const totalInput = document.getElementById('total');
+//
+// Seleccionamos el formulario
+const form = document.querySelectorAll('input');
 
-function updateTotal() {
-  const quantity = quantityInput.value;
-  const price = priceInput.value;
-  const discount = discountInput.value;
-  const tax = taxInput.value;
+// Agregamos un evento 'submit' al formulario
+form.addEventListener('submit', (event) => {
+  // Prevenimos que el formulario se envíe
+  event.preventDefault();
 
-  const subtotal = quantity * price;
-  const discountAmount = subtotal * (discount / 100);
-  const taxAmount = (subtotal - discountAmount) * (tax / 100);
-  const total = subtotal - discountAmount + taxAmount;
+  // Guardamos los valores del formulario en localStorage
+  localStorage.setItem('formValues', JSON.stringify(Object.fromEntries(new FormData(form))));
+});
 
-  totalInput.value = total.toFixed(2);
+// Verificamos si hay valores guardados en localStorage
+const formValues = localStorage.getItem('formValues');
+
+if (formValues) {
+  // Si hay valores, los cargamos en el formulario
+  const parsedFormValues = JSON.parse(formValues);
+
+  Object.entries(parsedFormValues).forEach(([input, value]) => {
+    form.elements[input].value = value;
+  });
 }
 
-quantityInput.addEventListener('input', updateTotal);
-
 // Función compartir en redes sociales
-  function compartirFacebook() {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+function compartirFacebook() {
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
 };
-  
+
 function compartirWhatsapp() {
-    var mensaje = "Míra mi CV online!: " + window.location.href;
-    window.open('https://wa.me/?text=' + encodeURIComponent(mensaje));
+  var mensaje = "Míra mi CV online!: " + window.location.href;
+  window.open('https://wa.me/?text=' + encodeURIComponent(mensaje));
 };
-  
+
 function compartirTwitter() {
-    window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href));
+  window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href));
 };
 
 function compartirLinkedIn() {
-    var url = encodeURIComponent(window.location.href);
-    var title = encodeURIComponent(document.title);
-    var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`';
-    window.open(shareUrl, '_blank');
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`';
+  window.open(shareUrl, '_blank');
 };
 
+function printForm(event) {
+  event.preventDefault(); // prevenir envío y borrado de formulario
+  window.print(); // imprimir formulario en su estado actual
+}
 
 
 
