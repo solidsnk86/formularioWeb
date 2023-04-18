@@ -1,3 +1,41 @@
+// Función sumar productos
+const cantidadInputs = document.querySelectorAll('.cantidad');
+const precioInputs = document.querySelectorAll('.precio');
+const totalInputs = document.querySelectorAll('.total');
+const subtotalInput = document.querySelector('.subtotal');
+const impuestosInput = document.querySelector('.impuestos');
+const totalFinalInput = document.querySelector('.total_final');
+
+function calcularTotales() {
+  let subtotal = 0;
+  let impuestos = parseFloat(impuestosInput.value) || 0;
+
+  for (let i = 0; i < cantidadInputs.length; i++) {
+    let cantidad = parseInt(cantidadInputs[i].value) || 0;
+    let precio = parseFloat(precioInputs[i].value) || 0;
+    let total = cantidad * precio;
+
+    totalInputs[i].value = total.toFixed(2);
+
+    subtotal += total;
+  }
+
+  subtotalInput.value = subtotal.toFixed(2);
+
+  let impuestosCalculados = (subtotal * impuestos) / 100;
+  impuestosInput.value = impuestosCalculados.toFixed(2);
+
+  let totalFinal = subtotal + impuestosCalculados;
+  totalFinalInput.value = totalFinal.toFixed(2);
+}
+
+for (let i = 0; i < cantidadInputs.length; i++) {
+  cantidadInputs[i].addEventListener('change', calcularTotales);
+  precioInputs[i].addEventListener('change', calcularTotales);
+}
+
+
+
 // función menú carta
 function compartirFormulario() {
   card = document.createElement('div');
@@ -31,12 +69,17 @@ function cerrarCarta() {
 }
 // función imprimir
 function imprimirFormulario() {
-  var formularioHTML = window.open('index.html');
+  var formularioHTML = window.open('/index.html');
   formularioHTML.onload = function() {
     formularioHTML.window.print();
   } 
 };
-// función para descargar
+
+const botonImprimir = document.getElementById('imprimir');
+botonImprimir.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.print();
+})
 
 
 // función para expandir área de texto
@@ -50,30 +93,37 @@ function autoResize() {
   this.style.width = this.scrollWidth + "px";
 };
 
-//
-// Seleccionamos el formulario
-const form = document.querySelectorAll('input');
+// guardar formulario
+const form = document.querySelector('#myForm');
+const inputField = document.querySelector('#inputField');
+const selectField = document.querySelector('#selectField');
 
-// Agregamos un evento 'submit' al formulario
-form.addEventListener('submit', (event) => {
-  // Prevenimos que el formulario se envíe
+// Restore form data from local storage when page loads
+window.onload = function() {
+  const savedInput = localStorage.getItem('myFormInput');
+  if (savedInput) {
+    inputField.value = savedInput;
+  }
+
+  const savedSelect = localStorage.getItem('myFormSelect');
+  if (savedSelect) {
+    selectField.value = savedSelect;
+  }
+}
+
+// Save form data to local storage before submitting
+form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Guardamos los valores del formulario en localStorage
-  localStorage.setItem('formValues', JSON.stringify(Object.fromEntries(new FormData(form))));
+  const input = inputField.value;
+  localStorage.setItem('myFormInput', input);
+
+  const select = selectField.value;
+  localStorage.setItem('myFormSelect', select);
+
+  // Submit the form data using fetch or XMLHttpRequest
+  // ...
 });
-
-// Verificamos si hay valores guardados en localStorage
-const formValues = localStorage.getItem('formValues');
-
-if (formValues) {
-  // Si hay valores, los cargamos en el formulario
-  const parsedFormValues = JSON.parse(formValues);
-
-  Object.entries(parsedFormValues).forEach(([input, value]) => {
-    form.elements[input].value = value;
-  });
-}
 
 // Función compartir en redes sociales
 function compartirFacebook() {
@@ -96,10 +146,6 @@ function compartirLinkedIn() {
   window.open(shareUrl, '_blank');
 };
 
-function printForm(event) {
-  event.preventDefault(); // prevenir envío y borrado de formulario
-  window.print(); // imprimir formulario en su estado actual
-}
 
 
 
