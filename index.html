@@ -11,12 +11,13 @@
 <body>
 	<form onsubmit="printFormulario()">
     <header>
+		<form id="myForm">
 		<h1><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="textArea"></h1>
-        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto" title="Factura/Recibo/Presupuesto"></h3>
+        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
 		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
         <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
 		<h2>CUIT/CUIL: <input type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input type="text" style="font-weight: bold;" placeholder="N° Fact/Remito"></p>
+		<p><input type="text" style="font-weight: bold;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
 		<p>Fecha: <input type="date" style="font-weight: bold; width:auto"></p>
 	</header>
 	<table>
@@ -28,38 +29,38 @@
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
-			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="number" class="cantidad" style="width: 70px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="number" class="cantidad" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" name="" id="" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td><input type="text" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="number" class="cantidad" style="width: 70px;" placeholder="..." title="Ingrese cantidad"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
-			<td><input type="text" style="width: 70px;" placeholder="Sub-total" title="Ingrese el subtotal"></td>
+			<td><input type="text" class="subtotal" style="width: 70px;" placeholder="Sub-total" title="Ingrese el subtotal"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Impuestos:</td>
-			<td><input type="text" style="width: 70px;" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
+			<td><input type="text" class="impuestos" style="width: 70px;" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Total:</td>
-			<td><input type="text" style="width: 70px;" placeholder="TOTAL"></td>
+			<td><input type="text" class="total_final" style="width: 70px;" placeholder="TOTAL"></td>
 		</tr>
 	</table>
 <div class="observaciones">
     <h3>Observaciones:</h3>
-    <li>Validez de la oferta: <input type="week" name="" id=""></li>
+    <li>Validez de la oferta: <input type="text" name="" id="" placeholder="Período"></li>
     <li>Forma de pago: <select name="Forma de pago">
         <option value="opcion1">Transferencia</option>
         <option value="opcion2">Mercado Pago</option>
@@ -76,7 +77,7 @@
 <div class="contacto">
     <h4>Contáctese por estos medios:</h4>
 	<a href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en
-        %20tu%20servivio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i></a>
+        %20tu%20servivio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i> Whatsapp</a>
     <a href="tel:+5492665290020"><i class="fa-solid fa-phone"></i> 2665290020</a>
     <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> calcagni.gabriel86@gmail.com</a>
     <br>
@@ -84,9 +85,9 @@
 </div>
 <div class="enviar">
     <button onclick="compartirFormulario()">Compartir Formulario</button>
-    <button onclick="imprimirFormulario()">Imprimir</button>
-	<button>Descargar</button>
+    <button onclick="imprimirFormulario()" id="imprimir">Imprimir | Descargar</button>
 </div>
+</form>
 	<footer>
 		<p>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;">SolidSnk86</span></p>
 	</footer>
