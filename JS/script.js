@@ -130,7 +130,7 @@ function compartirFacebook() {
 };
 
 function compartirWhatsapp() {
-  var mensaje = "Míra mi CV online!: " + window.location.href;
+  var mensaje = "Echa un vistazo a éste formulario web para que uses como factura, remito, etc.!: " + window.location.href;
   window.open('https://wa.me/?text=' + encodeURIComponent(mensaje));
 };
 
