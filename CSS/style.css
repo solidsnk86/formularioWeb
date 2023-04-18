@@ -219,6 +219,8 @@ option, select {
 footer {
 	margin-top: 20px;
 	text-align: center;
+        font-weight: bold;
+        text-shadow: 0 0 1px #000;
 }
 
 /* Responsive */
