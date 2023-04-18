@@ -238,6 +238,9 @@ footer {
     header h1 input {
         padding-left: 3px;
     }
+    #textArea {
+        max-width: 88px;
+    }
 }
 
 @media screen and (max-width:740px) {
@@ -254,10 +257,16 @@ footer {
     header h1 input {
         padding-left: 3px;
     }
+    #textArea {
+        max-width: 88px;
+    }
 }
 
 @media screen and (max-width:844px) {
     body {
         display: block;
+    }
+    #textArea {
+        max-width: 88px;
     }
 }
