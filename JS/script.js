@@ -50,7 +50,7 @@ function compartirFormulario() {
       <br>
       <p>Muchas gracias por compartir!<br></center> ¡Si te gustó el formulario puedes colaborar <br>con el desarrollador aquí!<br>👇</p>
       <br>
-      <button id="donar"><a href=""></a>Donar</button>
+      <button id="donar"><a href="link.mercadopago.com.ar/neotecs"></a>Donar</button>
       <hr>
       <p>Compartir en redes sociales:</p>
       <button onclick="compartirFacebook()"><i id="face" class="fa-brands fa-facebook-f"></i></span></button>
@@ -98,7 +98,7 @@ const form = document.querySelector('#myForm');
 const inputField = document.querySelector('#inputField');
 const selectField = document.querySelector('#selectField');
 
-// Restore form data from local storage when page loads
+
 window.onload = function() {
   const savedInput = localStorage.getItem('myFormInput');
   if (savedInput) {
@@ -111,7 +111,6 @@ window.onload = function() {
   }
 }
 
-// Save form data to local storage before submitting
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -121,8 +120,8 @@ form.addEventListener('submit', function(event) {
   const select = selectField.value;
   localStorage.setItem('myFormSelect', select);
 
-  // Submit the form data using fetch or XMLHttpRequest
-  // ...
+  
+
 });
 
 // Función compartir en redes sociales
