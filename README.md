@@ -8,4 +8,4 @@
 - CSS
 - JS
 
-# Este formulario ésta adaptado al los diseños responsive. (Smartphones-Tablets)
+## Este formulario ésta adaptado al los diseños responsive. (Smartphones-Tablets)
