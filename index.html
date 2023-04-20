@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="author" content="Calcagni Gabriel">
 	<meta property="og:title" content="SolidSnk86 - Formularios©">
 	<meta property="og:description" content="Formulario web para completar y usar como facturación, remitos, presupuestos, etc. Se suma el valor de los productos y se calcula el IVA en el total">
 	<meta property="og:image" content="/img/1.png">
@@ -34,19 +35,19 @@
 			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
 			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td>$<input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
 			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td>$<input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
 			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td>$<input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
@@ -88,7 +89,7 @@
 </div>
 <div class="enviar">
     <button onclick="compartirFormulario()">Compartir Formulario <i class="fa-solid fa-share"></i></button>
-    <button onclick="imprimirFormulario()" id="imprimir">Imprimir | Descargar <i class="fa-solid fa-print"></i></button>
+    <button onclick="imprimirFormulario()" id="imprimir"><i class="fa-solid fa-print"></i> Imprimir | Descargar</button>
 </div>
 </form>
 	<footer>
