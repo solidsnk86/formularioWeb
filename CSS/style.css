@@ -102,6 +102,7 @@ option, select {
     text-decoration: none;
     color: royalblue;
     padding: 5px;
+    font-size: 1.3em;
 }
 .contacto a:hover {
     text-decoration: underline;
