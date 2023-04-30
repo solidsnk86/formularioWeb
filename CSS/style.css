@@ -230,7 +230,15 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
+.enviar span {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+input[type="color"] {
+    background-color: transparent;
+    width: 25px;
+}
 /* Responsive */
 
 @media screen and (max-width:980px) {
