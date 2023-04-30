@@ -145,6 +145,17 @@ function compartirLinkedIn() {
   window.open(shareUrl, '_blank');
 };
 
+// función para cambiar de color
+
+const elegirColor = document.querySelector('#elegir-color');
+const elementos = document.querySelectorAll('#elemento');
+
+elegirColor.addEventListener('change', function() {
+  const color = elegirColor.value;
+  elementos.forEach(function (elementos) {
+    elementos.style.backgroundColor = color;
+  });
+});
 
 
 
