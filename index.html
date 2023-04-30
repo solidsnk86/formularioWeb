@@ -16,11 +16,11 @@
 	<form onsubmit="printFormulario()">
     <header>
 		<form id="myForm">
-		<h1><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="textArea"></h1>
+		<h1 id="elemento"><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="textArea"></h1>
         <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
-		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
-        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
-		<h2>CUIT/CUIL: <input type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
+		<h2>Cliente: <input id="elemento" type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
+        <h2>Dirección: <input id="elemento" type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
+		<h2>CUIT/CUIL: <input id="elemento" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
 		<p><input type="text" style="font-weight: bold;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
 		<p>Fecha: <input type="date" style="font-weight: bold; width:auto"></p>
 	</header>
@@ -78,7 +78,7 @@
       </select></li>
 </div>
 </form>
-<div class="contacto">
+<div class="contacto" id="elemento">
     <h4>Contáctese por estos medios:</h4>
 	<a href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i> Whatsapp</a>
         
@@ -91,6 +91,8 @@
 <div class="enviar">
     <button onclick="compartirFormulario()">Compartir Formulario <i class="fa-solid fa-share"></i></button>
     <button onclick="imprimirFormulario()" id="imprimir"><i class="fa-solid fa-print"></i> Imprimir | Descargar</button>
+	<br>
+	<span>Elije el color para el formulario: <input type="color" name="" id="elegir-color"></span>
 </div>
 </center>
 </form>
