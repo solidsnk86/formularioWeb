@@ -109,20 +109,8 @@ window.onload = function() {
   if (savedSelect) {
     selectField.value = savedSelect;
   }
-}
+};
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const input = inputField.value;
-  localStorage.setItem('myFormInput', input);
-
-  const select = selectField.value;
-  localStorage.setItem('myFormSelect', select);
-
-  
-
-});
 
 // Función compartir en redes sociales
 function compartirFacebook() {
