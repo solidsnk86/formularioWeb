@@ -140,9 +140,22 @@ const elementos = document.querySelectorAll('#elemento');
 
 elegirColor.addEventListener('change', function() {
   const color = elegirColor.value;
+  localStorage.setItem('selectedColor', color);
+  actualizarColor(color);
+});
+
+function actualizarColor(color) {
   elementos.forEach(function (elementos) {
     elementos.style.backgroundColor = color;
-  });
+  })
+};
+
+window.addEventListener('load', function () {
+  const selectedColor = localStorage.getItem('selectedColor');
+  if (selectedColor) {
+    actualizarColor(selectedColor);
+    elegirColor.value = selectedColor;
+  }
 });
 
 
