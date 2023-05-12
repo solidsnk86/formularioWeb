@@ -159,16 +159,21 @@ option, select {
     transition: box-shadow 0.2s;
     color: rgb(0, 0, 0);
 }
-#donar {
+#colab {
     border: 1px solid #000;
-    border-radius: 100px;
-    padding: 10px 12px;
-    cursor: pointer;
-    font-weight: bold;
+    padding: 8px;
+    border-radius: 3px;
+    font-weight: 500;
 }
-#donar:hover {
-    background-color: rgb(88, 231, 45);
-    transition: 0.1s ease-in-out;
+#colab:hover {
+    background: linear-gradient(
+        180deg, lightgreen, yellowgreen
+    );
+}
+.enviar span {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: fit-content;
 }
 .compartirMenu a {
     color: tomato;
@@ -229,11 +234,6 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
-}
-.enviar span {
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    font-weight: 500;
 }
 input[type="color"] {
     background-color: transparent;
