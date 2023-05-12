@@ -1,3 +1,41 @@
+function mostrarAnuncio() {
+  var anuncio = document.createElement('div');
+  anuncio.innerHTML = `
+  <div id="anuncio">
+  <h5>¡Por formularios perzonalizados! Contáctame por éste medio:
+  <a href="https://api.whatsapp.com/send?phone=5492604586538&text=Hola,%20necesito%20un%20formulario%20perzonalizado%20,%20mi%20nombre%20es...%20" target="_blank">
+   <img src="/img/whatsapp.png" alt="" width="14px"> 2665-290020</a>
+  </a>
+  </h5>
+  </div>
+  `;
+  anuncio.style.background = `rgb(193, 197, 215)`;
+  anuncio.style.color = '#333';
+  anuncio.style.padding = '3px';
+  anuncio.style.textAlign = 'center';
+
+  var contador = document.createElement('span');
+  contador.className = 'contador';
+  anuncio.appendChild(contador);
+
+  document.body.insertBefore(anuncio, document.body.firstChild);
+
+  var tiempoRestante = 60; 
+  contador.textContent = tiempoRestante + ' segundos restantes';
+
+  var intervalo = setInterval(function() {
+    tiempoRestante--;
+    contador.textContent = tiempoRestante + ' segundos restantes del anuncio';
+
+    if (tiempoRestante <= 0) {
+      clearInterval(intervalo);
+      anuncio.style.display = 'none';
+    }
+  }, 1000);
+}
+
+window.addEventListener('load', mostrarAnuncio);
+
 // Función sumar productos
 const cantidadInputs = document.querySelectorAll('.cantidad');
 const precioInputs = document.querySelectorAll('.precio');
