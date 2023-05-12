@@ -86,9 +86,18 @@ function compartirFormulario() {
     <button id="cerrarCarta" onclick="cerrarCarta()"><i class="fa-solid fa-xmark"></i></button>
       <div class="redesMenu">
       <br>
-      <p>Muchas gracias por compartir!<br></center> ¡Si te gustó el formulario puedes colaborar <br>con el desarrollador aquí!<br>👇</p>
-      <br>
-      <button id="donar"><a href="https://mpago.la/1KYtLYH">Donar</a></button>
+   <center>
+    <div class="container">
+        <div class="colaboracion">
+            <h1>¡Muchas Gracias por usar éste formulario!</h1>
+            <h3>No olvides dar una colaboración, el desarrollador te lo agradecerá<br>para poder seguir agregando nuevas funciones a éste formulario!</h3>
+            <img src="/img/metodo-de-pago.png" alt="" width="50px"><br>
+            <button id="colab">Colaborar</button>
+            <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
+            <img src="/img/icons8-mercado-pago-48.png" alt="">
+        </div>
+    </div>
+</center>
       <hr>
       <p>Compartir en redes sociales:</p>
       <button onclick="compartirFacebook()"><i id="face" class="fa-brands fa-facebook-f"></i></span></button>
