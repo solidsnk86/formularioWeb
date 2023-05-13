@@ -2,7 +2,7 @@ function mostrarAnuncio() {
   var anuncio = document.createElement('div');
   anuncio.innerHTML = `
   <div id="anuncio">
-  <h5>¡Por formularios perzonalizados! Contáctame por éste medio:
+  <h5>¡Por formularios perzonalizados! Contáctame por éste medio:<br>
   <a href="https://api.whatsapp.com/send?phone=5492604586538&text=Hola,%20necesito%20un%20formulario%20perzonalizado%20,%20mi%20nombre%20es...%20" target="_blank">
    <img src="img/whatsapp.png" alt="" width="14px"> 2665-290020</a>
   </a>
