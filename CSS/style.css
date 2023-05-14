@@ -22,6 +22,7 @@ header h1 input {
     text-shadow: 0 0 6px rgb(141, 141, 141);
     font-size: x-large;
     background-color: rgb(188, 204, 218);
+    margin-left: 3px;	
 }
 header h3, input {
     text-align: center;
