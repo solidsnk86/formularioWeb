@@ -88,8 +88,9 @@ option, select {
     background-color: white;
 }
 .enviar button:hover {
-    background-color: yellowgreen;
-    transition: 0.1s;
+    background-color: black;
+    transition: 0.3s;
+    color: white;		
 }
 .contacto {
     border-bottom: 1px solid #000;
