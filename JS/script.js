@@ -91,10 +91,10 @@ function compartirFormulario() {
         <div class="colaboracion">
             <h1>¡Muchas Gracias por usar éste formulario!</h1>
             <h3>No olvides dar una colaboración, el desarrollador te lo agradecerá<br>para poder seguir agregando nuevas funciones a éste formulario!</h3>
-            <img src="/img/metodo-de-pago.png" alt="" width="50px"><br>
+            <img src="img/metodo-de-pago.png" alt="" width="50px"><br>
             <button id="colab">Colaborar</button>
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
-            <img src="/img/icons8-mercado-pago-48.png" alt="">
+            <img src="img/icons8-mercado-pago-48.png" alt="">
         </div>
     </div>
 </center>
