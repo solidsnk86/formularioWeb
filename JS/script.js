@@ -224,16 +224,13 @@ function generarPDF() {
 
   const pdfUrl = URL.createObjectURL(pdfBlob);
 
-  const numeroWhatsApp = '';
-
-  const mensaje = encodeURIComponent('Adjunto el formulario como PDF.');
-  const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}&attachment=${pdfUrl}`;
+  const mensajePdf = encodeURIComponent('Adjunto el formulario como PDF.');
+  const enlaceWhatsApp = `https://wa.me/?text=&text=${mensajePdf}&attachment=${pdfUrl}`;
 
   window.open(enlaceWhatsApp);
 }
 
 document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
-
 
 
 
