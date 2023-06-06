@@ -205,6 +205,36 @@ window.addEventListener('load', function () {
   }
 });
 
+// Envio PDF
+function generarPDF() {
+  // Crear instancia de jsPDF
+  const doc = new jsPDF();
+
+  // Obtener el contenido del formulario
+  const formulario = document.getElementById('myForm');
+  const contenidoFormulario = formulario.innerHTML;
+
+  // Generar el PDF con el contenido del formulario
+  doc.text(contenidoFormulario, 10, 10);
+
+  const pdfData = doc.output();
+
+  // Crear un objeto Blob desde los datos del PDF
+  const pdfBlob = new Blob([pdfData], { type: 'application/pdf' });
+
+  const pdfUrl = URL.createObjectURL(pdfBlob);
+
+  const numeroWhatsApp = '';
+
+  const mensaje = encodeURIComponent('Adjunto el formulario como PDF.');
+  const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}&attachment=${pdfUrl}`;
+
+  window.open(enlaceWhatsApp);
+}
+
+document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
+
+
 
 
 
