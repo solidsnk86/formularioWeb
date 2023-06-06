@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="author" content="Calcagni Gabriel">
-	<meta property="og:title" content="SolidSnk86 - Formularios©">
-	<meta property="og:description" content="Formulario web para completar y usar como facturación, remitos, presupuestos, etc. Se suma el valor de los productos y se calcula el IVA en el total.">
-	<meta property="og:image" content="img/Screenshot_20230430-213156-731.png">
+    <meta property="author" content="Calcagni Gabriel">
+    <meta property="og:title" content="SolidSnk86 - Formularios©">
+    <meta property="og:description" content="Formulario web para completar y usar como facturación, remitos, presupuestos, etc. Se suma el valor de los productos y se calcula el IVA en el total.">
+    <meta property="og:image" content="img/Screenshot_20230430-213156-731.png">
     <title>SolidSnk86 - Formularios©</title>
-	<link rel="icon" type="image/x-icon" href="img/factura.png">
+    <link rel="icon" type="image/x-icon" href="img/factura.png">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script>
 </head>
 <body>
 	<form onsubmit="printFormulario()">
@@ -90,6 +92,7 @@
 </div>
 <center>
 <div class="enviar">
+    <button id="btnEnviarPDF" type="button">Enviar PDF a WhatsApp</button>		
     <button onclick="compartirFormulario()">Compartir Formulario <i class="fa-solid fa-share"></i></button>
     <button onclick="imprimirFormulario()" id="imprimir"><i class="fa-solid fa-print"></i> Imprimir | Descargar</button>
 	<br>
