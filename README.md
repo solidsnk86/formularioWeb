@@ -8,8 +8,8 @@ Este proyecto es un formulario web articulado para facturas o recibos con funcio
 | Lenguaje | Descripción            |
 |----------|------------------------|
 | ![Static Badge](https://img.shields.io/badge/HTML-red)     | Lenguaje de marcado    |
-| CSS      | Hojas de estilo        |
-| JS       | Programación           |
+| ![Static Badge](https://img.shields.io/badge/CSS-blue)      | Hojas de estilo        |
+| ![Static Badge](https://img.shields.io/badge/JavaScript-yellow)       | Programación           |
 
 
 ## Este formulario está adaptado a los diseños responsive (Smartphones-Tablets).
