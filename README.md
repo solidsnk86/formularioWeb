@@ -1,4 +1,4 @@
-`Formulario Web`
+https://img.shields.io/badge/just%20the%20message-8A2BE2
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
