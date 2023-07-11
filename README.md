@@ -2,15 +2,13 @@
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
-
 **🔧 Herramientas utilizadas:**
 
 | Lenguaje | Descripción            |
 |----------|------------------------|
-| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)
-| Lenguaje de marcado    |
-| ![Static Badge](https://img.shields.io/badge/CSS-blue)      | Hojas de estilo        |
-| ![Static Badge](https://img.shields.io/badge/JavaScript-yellow)       | Programación           |
+| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)     | Lenguaje de marcado    |
+| ![CSS](https://img.shields.io/badge/CSS-%231572B6.svg?logo=css3&logoColor=white)      | Hojas de estilo        |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black)       | Programación           |
 
 
 ## Este formulario está adaptado a los diseños responsive (Smartphones-Tablets).
