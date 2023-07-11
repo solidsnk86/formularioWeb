@@ -2,11 +2,16 @@
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
-## Herramientas utilizadas para este desarrollo:
 
-- `HTML`
-- `CSS`
-- `JS`
+5. **Tablas:** Puedes crear tablas para organizar y mostrar información de manera estructurada. Aquí tienes un ejemplo:
+
+```markdown
+| Lenguaje | Descripción            |
+|----------|------------------------|
+| HTML     | Lenguaje de marcado    |
+| CSS      | Hojas de estilo        |
+| JS       | Lenguaje de programación  |
+
 
 ## Este formulario está adaptado a los diseños responsive (Smartphones-Tablets).
 
