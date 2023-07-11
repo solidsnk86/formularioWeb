@@ -1,6 +1,4 @@
-![Logo de Markdown](https://example.com/logo.png)
-
-`#Formulario Web`
+`Formulario Web`
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
@@ -21,8 +19,6 @@ Este proyecto es un formulario web articulado para facturas o recibos con funcio
 
 ==[CONTRIBUCIONES](#)==
 
-
-
 Si encuentras errores o deseas mejorar este proyecto, ¡te invitamos a contribuir! Puedes hacerlo a través de un fork del repositorio y luego realizar tus modificaciones. Siéntete libre de agregar más contenido, ejemplos de código, instrucciones de instalación o cualquier otra mejora que consideres relevante.
 
 Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull para que podamos revisar tus contribuciones y considerar su incorporación al proyecto principal.
@@ -31,4 +27,7 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-calcagni-659907260) [![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/calcagni_gabriel26/?ishid=ZDdkNTZiNTM%3D)
 
+Tengo un sitio web de tutoriales para configurar antenas inalámbricas:
+
+![Static Badge](https://img.shields.io/badge/:badgeContent)
 
