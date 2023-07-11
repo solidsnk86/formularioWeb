@@ -29,5 +29,5 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 Tengo un sitio web de tutoriales para configurar antenas inalámbricas:
 
-![Static Badge](https://img.shields.io/badge/any_text-you_like-blue)
+![Static Badge](https://img.shields.io/badge/formulario-web-blue)
 
