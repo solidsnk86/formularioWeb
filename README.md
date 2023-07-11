@@ -5,7 +5,6 @@ Este proyecto es un formulario web articulado para facturas o recibos con funcio
 
 **🔧 Herramientas utilizadas:**
 
-```markdown
 | Lenguaje | Descripción            |
 |----------|------------------------|
 | HTML     | Lenguaje de marcado    |
