@@ -1,4 +1,4 @@
-https://img.shields.io/badge/just%20the%20message-8A2BE2
+![Static Badge](https://img.shields.io/badge/Formulario-Web-green)
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
@@ -29,5 +29,5 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 Tengo un sitio web de tutoriales para configurar antenas inalámbricas:
 
-![Static Badge](https://img.shields.io/badge/formulario-web-blue)
+
 
