@@ -1,4 +1,4 @@
-`#formularioWeb`
+`FormularioWeb`
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
@@ -24,4 +24,8 @@ Si encuentras errores o deseas mejorar este proyecto, ¡te invitamos a contribui
 Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull para que podamos revisar tus contribuciones y considerar su incorporación al proyecto principal.
 
 `¡Esperamos tus contribuciones!`
+
+- Mis redes:
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-calcagni-659907260)
+  
 
