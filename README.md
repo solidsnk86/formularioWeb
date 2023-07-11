@@ -10,7 +10,7 @@ Este proyecto es un formulario web articulado para facturas o recibos con funcio
 |----------|------------------------|
 | HTML     | Lenguaje de marcado    |
 | CSS      | Hojas de estilo        |
-| JS       | Lenguaje de programación  |
+| JS       | Programación           |
 
 
 ## Este formulario está adaptado a los diseños responsive (Smartphones-Tablets).
