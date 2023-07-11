@@ -1,6 +1,4 @@
 `FormularioWeb`
-<a href="https://www.instagram.com/tu_usuario" style="background-color: #E4405F; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">Instagram</a>
-
 
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
