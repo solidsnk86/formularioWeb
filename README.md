@@ -26,7 +26,7 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/formularioWeb.svg?style=social)
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-calcagni-659907260) [![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/calcagni_gabriel26/?ishid=ZDdkNTZiNTM%3D)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-calcagni-659907260) [![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/calcagni_gabriel26/?ishid=ZDdkNTZiNTM%3D) ![Static Badge](https://img.shields.io/badge/Neo-Tecs-green)
 
 
 
