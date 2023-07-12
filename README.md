@@ -31,6 +31,5 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
   
 # [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumslateblue)](https://neotecs.tech)
 
-[![icono](https://img.shields.io/badge/Icono-FontAwesome-%230769AD?logo=fontawesome)](enlace-a-tu-pagina)
-
+[![TP-Link](https://img.shields.io/badge/TP--Link-%23FF0000?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAy5JREFUOI2tVltvnGEU/mZmZnfPMxvmdmZ2bmZhZu5mZmZ3s9mR9Fyd6Rd9Fyt6xMgUqqUooC0IiQRIiCsCghF0lTQmm2u6WuokfRaL0L08cPfMqKjXV6mbvO+cfJzmXn5z5f+bMeQ9z0Ijk7OCNE5II5YGBgbTwgeM7F/YW9ffE9O34vt6yXQ51LeVu/eevl4P8f4YG7ut9uunhGd+5JXn5zr5bv3+P+MvY6LryLV6q1i6P1+w3z1aL9c4cPrmOG74zna8fR09qor9lMnuF1Pn+a+UN4rGd1q76G9Wz7Zx3WZX9ZfsLZxzP9hnP2d8j5nZ2bR1Xeu8hPcX9JjSb8j/OZiPGfmv51/TWVrC7bN7VUdb06omYsRm+WYq7FkVpXlXaxp3xGq/NN3U1mfy5+ScqO5Zy26Th8jxqbQ3epXZa25iX3W63ayP4O5if7PyvRZX6a9d1rq9dI0nk15Xcz1acG2I3yZa/8XdsVHXbc7dpjbt3+xnhn/7Pm76Rwv8B/vfgFZqu6jb+s/6cZu9e0iSbn7KAAAAAElFTkSuQmCC)](enlace-a-tu-pagina)
 
