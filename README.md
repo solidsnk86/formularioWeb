@@ -31,5 +31,6 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
   
 # [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumslateblue)](https://neotecs.tech)
 
+[![icono](https://img.shields.io/badge/Icono-FontAwesome-%230769AD?logo=fontawesome)](enlace-a-tu-pagina)
 
 
