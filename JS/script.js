@@ -113,13 +113,8 @@ function compartirFormulario() {
 
 function cerrarCarta() {
   document.body.removeChild(card);
-}
-
-var urlContribucion = document.getElementById('colab');
-
-urlContribucion.onclick = function() {
-  window.open('https://link.mercadopago.com.ar/neotecs');
 };
+
 
 // función imprimir
 function imprimirFormulario() {
