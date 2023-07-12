@@ -278,14 +278,14 @@ input[type="color"] {
         width: 55px;
     }
     header h2 input {
-	width: 50%;
+	width: 35%;
     }
     .container-card, .compartirMenu {
         display: block;
         width: fit-content;
     }
     header h1 input {
-	width: 50%;
+	width: 60%;
         padding-left: 3px;
     }
     #textArea {
