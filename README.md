@@ -29,7 +29,7 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 ### Pueden visitar éste sitio web para aprender a configurar un CPE inalámbrico como por ejemplo ![Static Badge](https://img.shields.io/badge/TP-LINK-darkgreen) y ![Static Badge](https://img.shields.io/badge/UBIQUITI-gray)
   
-# [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumlateblue)](https://neotecs.tech)
+# [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumslateblue)](https://neotecs.tech)
 
 
 
