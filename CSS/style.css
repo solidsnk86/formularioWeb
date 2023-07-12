@@ -262,6 +262,9 @@ input[type="color"] {
     header h1 input {
         padding-left: 3px;
     }
+    header h2 input {
+	width: 60%;
+    }
     #textArea {
         max-width: 88px;
     }
