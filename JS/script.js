@@ -233,6 +233,41 @@ function generarPDF() {
 document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
 
 
+// Obtener el elemento select de forma de pago
+  const formaPagoSelect = document.getElementById("forma-pago");
+
+// Escuchar el evento de cambio en el select
+  formaPagoSelect.addEventListener("change", function() {
+    const formaPagoValue = formaPagoSelect.value;
+    const containerForma = document.querySelector(".container-forma");
+
+    // Limpiar el contenido existente en el contenedor
+    containerForma.innerHTML = "";
+
+    // Crear elementos según el valor seleccionado
+    if (formaPagoValue === "opcion1") {
+      const div = document.createElement("div");
+      const heading = document.createElement("h4");
+      const input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.setAttribute("placeholder", "CBU");
+      div.appendChild(heading);
+      div.appendChild(input);
+      containerForma.appendChild(div);
+    } else if (formaPagoValue === "opcion2") {
+      const div = document.createElement("div");
+      const paragraph = document.createElement("p");
+      const input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.setAttribute("placeholder", "CVU o alias");
+      div.appendChild(paragraph);
+      div.appendChild(input);
+      containerForma.appendChild(div);
+    } else if (formaPagoValue === "opcion3") {
+      // Acá podemos agregar código para crear elementos en caso de seleccionar "Eft"
+    }
+  });
+
 
 
 
