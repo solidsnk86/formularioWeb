@@ -263,7 +263,7 @@ input[type="color"] {
         padding-left: 3px;
     }
     header h2 input {
-	width: 60%;
+	width: 50%;
     }
     #textArea {
         max-width: 88px;
@@ -277,6 +277,9 @@ input[type="color"] {
     input {
         width: 55px;
     }
+    header h2 input {
+	width: 50%;
+    }
     .container-card, .compartirMenu {
         display: block;
         width: fit-content;
@@ -288,6 +291,7 @@ input[type="color"] {
     #textArea {
         max-width: 88px;
     }
+}
 
 /* Pago Exitoso */
 #check {
