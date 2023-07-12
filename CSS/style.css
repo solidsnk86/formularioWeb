@@ -371,3 +371,7 @@ input[type="color"] {
 #anuncio a:hover {
     border-bottom: 1px solid blue;
 }
+
+.container-forma input {
+    width: 50%;
+}
