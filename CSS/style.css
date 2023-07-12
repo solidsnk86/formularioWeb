@@ -242,11 +242,6 @@ input[type="color"] {
     width: 25px;
 }
 /* Responsive */
-@media screen and (min-width:1600px) {
-    .logo-nievas{
-        width: 300px;
-    }
-}
 
 @media screen and (max-width:1100px) {
     #fact {
@@ -277,9 +272,6 @@ input[type="color"] {
         display: block;
         width: 100%;
     }
-    header {
-        width: 100%;
-    }
     input {
         width: 55px;
     }
@@ -291,27 +283,14 @@ input[type="color"] {
         width: fit-content;
     }
     header h1 input {
+        width: 40%;
         padding-left: 3px;
     }
     #textArea {
         max-width: 88px;
     }
-    .logo-nievas {
-        top: -9px;
-        right: -9px;
-        width: 150px;
-    }
     #fact {
         width: 150px;
-    }
-}
-
-@media screen and (max-width:844px) {
-    body {
-        display: block;
-    }
-    #textArea {
-        max-width: 88px;
     }
 }
 
