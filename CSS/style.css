@@ -270,29 +270,21 @@ input[type="color"] {
 @media screen and (max-width:740px) {
     body {
         display: block;
-        width: 100%;
     }
     input {
         width: 55px;
-    }
-    table {
-        width: 100%;
     }
     .container-card, .compartirMenu {
         display: block;
         width: fit-content;
     }
     header h1 input {
-        width: 40%;
+	width: 50%;
         padding-left: 3px;
     }
     #textArea {
         max-width: 88px;
     }
-    #fact {
-        width: 150px;
-    }
-}
 
 /* Pago Exitoso */
 #check {
