@@ -119,7 +119,8 @@ var urlContribucion = document.getElementById('colab');
 
 urlContribucion.onclick = function() {
   window.open('https://link.mercadopago.com.ar/neotecs');
-  
+};
+
 // función imprimir
 function imprimirFormulario() {
   var formularioHTML = window.open('/index.html');
