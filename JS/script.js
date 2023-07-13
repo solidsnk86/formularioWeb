@@ -253,20 +253,39 @@ document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
       const input = document.createElement("input");
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CBU");
+      heading.textContent = "Número de cuenta Bancaria:"
       div.appendChild(heading);
       div.appendChild(input);
       containerForma.appendChild(div);
     } else if (formaPagoValue === "opcion2") {
       const div = document.createElement("div");
-      const paragraph = document.createElement("p");
+      const paragraph = document.createElement("h4");
       const input = document.createElement("input");
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CVU o alias de Mercado Pago");
+      paragraph.textContent = "Número de CVU/alias:";
       div.appendChild(paragraph);
       div.appendChild(input);
       containerForma.appendChild(div);
     } else if (formaPagoValue === "opcion3") {
-      // Acá podemos agregar código para crear elementos en caso de seleccionar "Eft"
+        const div3 = document.createElement("div");
+      const etiqueta = document.createElement("label");
+       const etiqueta2 = document.createElement("label");
+      const input = document.createElement("input");
+      const input2 = document.createElement("input")
+      input.setAttribute("type", "radio", "value", "dolar");
+      input2.setAttribute("type", "radio", "value", "pesos");
+      etiqueta.textContent = "Dólar";
+      etiqueta2.textContent = "Pesos"
+      div3.appendChild(etiqueta);
+      div3.appendChild(input);
+      div3.appendChild(etiqueta2);
+      div3.appendChild(input2);
+      containerForma.appendChild(div3);
+      div3.style.display = 'flex';
+      div3.style.margin = '20px';
+      div3.style.width = '110px';
+      etiqueta2.style.marginLeft = '30px';
     }
   });
 
@@ -274,4 +293,4 @@ document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
 
 
 
-
+  
