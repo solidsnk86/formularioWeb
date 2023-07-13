@@ -48,6 +48,9 @@ header p {
 header p input {
     cursor: text;
 }
+#num-form {
+      width: 22%;
+}
 table {
 	width: 100%;
 	border-collapse: collapse;
