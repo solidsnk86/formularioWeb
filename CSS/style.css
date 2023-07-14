@@ -108,10 +108,12 @@ option, select {
 }
 .contacto a:hover {
     text-decoration: underline;
-    color: blue;
 }
 .contacto i {
     font-size: 1.3em;
+}
+.contactos {
+  text-align: right;
 }
 #wap {
     color: rgb(4, 156, 4);
@@ -263,10 +265,10 @@ input[type="color"] {
         padding-left: 3px;
     }
     header h2 input {
-	width: 50%;
+	  width: 50%;
     }
     #textArea {
-        max-width: 88px;
+        width: 118px;
     }
 }
 
@@ -292,12 +294,14 @@ input[type="color"] {
         padding-left: 3px;
     }
     #textArea {
-        max-width: 88px;
+        width: 100px;
+    }
+    .contacto a:hover {
+    text-decoration: none;
     }
     .contactos {
        width: auto;
        display: flex;
-       text-align: right;
     }
     .contactos a {
       font-size: 0.9em;
@@ -366,4 +370,4 @@ input[type="color"] {
 
 .container-forma input {
     width: 50%;
-	}
+	       }
