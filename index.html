@@ -17,12 +17,13 @@
 <body>
 	<form onsubmit="printFormulario()" id="myForm">
     <header id="elemento">
+		
 		<h1 id="elemento"><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="elemento"></h1>
         <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
 		<h2>Cliente: <input id="elemento" type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
         <h2>Dirección: <input id="elemento" type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
 		<h2>CUIT/CUIL: <input id="elemento" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input id="num-form" type="text" style="font-weight: bold; margin-right: 3px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
+		<p><input type="text" style="font-weight: bold; margin-right: 3px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="num-form"></p>
 		<p>Fecha: <input type="date" style="font-weight: bold; width:auto; margin-right: 3px;"></p>
 	</header>
 	<table>
@@ -82,11 +83,11 @@
 </form>
 <div class="contacto" id="elemento">
     <h4>Contáctese por estos medios:</h4>
+    <div class="contactos">
 	<a href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i> Whatsapp</a>
-        
     <a href="tel:+5492665290020"><i class="fa-solid fa-phone"></i> 2665290020</a>
-    <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> calcagni.gabriel86@gmail.com</a>
-    <br>
+    <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> Google mail</a>
+    </div>
     <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <center>
@@ -104,4 +105,4 @@
 	</footer>
       <script src="JS/script.js"></script>
 </body>
-</html>
+				    </html>
