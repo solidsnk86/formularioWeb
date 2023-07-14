@@ -43,5 +43,4 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
   
 ## [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumslateblue)](https://neotecs.tech)
 
-![Visitor](https://visitor-badge.glitch.me/badge?page_id=solidsnk86.formularioWeb)
 
