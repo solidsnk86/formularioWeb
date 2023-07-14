@@ -48,9 +48,6 @@ header p {
 header p input {
     cursor: text;
 }
-#num-form {
-      width: 22%;
-}
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -281,18 +278,33 @@ input[type="color"] {
         width: 55px;
     }
     header h2 input {
-	width: 38%;
+    	width: 38%;
+    }
+    #num-form {
+      width: 22%;
     }
     .container-card, .compartirMenu {
         display: block;
         width: fit-content;
     }
     header h1 input {
-	width: 60%;
+      	width: 60%;
         padding-left: 3px;
     }
     #textArea {
         max-width: 88px;
+    }
+    .contactos {
+       width: auto;
+       display: flex;
+       position: relative;
+       right: -74px;
+    }
+    .contactos a {
+      font-size: 0.9em;
+    }
+    .contactos i, #wap {
+      font-size: 14px;
     }
 }
 
@@ -355,4 +367,4 @@ input[type="color"] {
 
 .container-forma input {
     width: 50%;
-}
+	}
