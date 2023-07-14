@@ -4,8 +4,7 @@ function mostrarAnuncio() {
   <div id="anuncio">
   <h5>¡Por formularios perzonalizados! Contáctame por éste medio:<br>
   <a href="https://api.whatsapp.com/send?phone=5492665290020&text=Hola,%20necesito%20un%20formulario%20perzonalizado%20,%20mi%20nombre%20es...%20" target="_blank">
-   <img src="img/whatsapp.png" alt="" width="14px"> 2665-290020</a>
-  </a>
+   <img src="img/whatsapp.png" alt="" width="15px" style="margin-bottom: -2px;"> 2665-290020</a>
   </h5>
   </div>
   `;
@@ -92,7 +91,7 @@ function compartirFormulario() {
             <h1>¡Muchas Gracias por usar éste formulario!</h1>
             <h3>No olvides dar una colaboración, el desarrollador te lo agradecerá<br>para poder seguir agregando nuevas funciones a éste formulario!</h3>
             <img src="img/metodo-de-pago.png" alt="" width="50px"><br>
-            <button id="colab">Colaborar</button>
+            <button id="colab" onclick="colaboración()">Colaborar</button>
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
             <img src="img/icons8-mercado-pago-48.png" alt="">
         </div>
@@ -110,6 +109,11 @@ function compartirFormulario() {
   `;
   document.body.appendChild(card);
 };
+
+function colaboración() {
+  const botonColab = document.getElementById('colab');
+  window.open('https://link.mercadopago.com.ar/neotecs');
+}
 
 function cerrarCarta() {
   document.body.removeChild(card);
@@ -293,4 +297,4 @@ document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
 
 
 
-  
+    
