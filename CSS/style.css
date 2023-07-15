@@ -114,6 +114,7 @@ option, select {
 }
 .contactos {
   text-align: right;
+  display: flex;
 }
 #wap {
     color: rgb(4, 156, 4);
