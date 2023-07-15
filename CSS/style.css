@@ -294,7 +294,7 @@ input[type="color"] {
         padding-left: 3px;
     }
     #textArea {
-        width: 100px;
+        max-width: 100px;
     }
     .contacto a:hover {
     text-decoration: none;
