@@ -302,6 +302,8 @@ input[type="color"] {
     .contactos {
        width: auto;
        display: flex;
+       text-align: right;
+       align-items: right;
     }
     .contactos a {
       font-size: 0.9em;
