@@ -112,11 +112,6 @@ option, select {
 .contacto i {
     font-size: 1.3em;
 }
-.contactos {
-  text-align: right;
-  display: flex;
-  align-items: right;
-}
 #wap {
     color: rgb(4, 156, 4);
     font-size: 1.6em;
@@ -300,12 +295,6 @@ input[type="color"] {
     }
     .contacto a:hover {
     text-decoration: none;
-    }
-    .contactos {
-       width: auto;
-       display: flex;
-       text-align: right;
-       align-items: right;
     }
     .contactos a {
       font-size: 0.9em;
