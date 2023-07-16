@@ -5,6 +5,7 @@
 input {
     border: none;
     font-family: monospace;
+    background-color: transparent;
 }
 #textArea {
     resize: horizontal;
