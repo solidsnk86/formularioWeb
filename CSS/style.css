@@ -5,7 +5,6 @@
 input {
     border: none;
     font-family: monospace;
-    background-color: transparent;
 }
 #textArea {
     resize: horizontal;
@@ -15,6 +14,8 @@ header {
     color: #000;
     border: 1px solid #000;
     margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 header h1 input {
     padding-left: 3px;
@@ -97,6 +98,8 @@ option, select {
     border-bottom: 1px solid #000;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     text-align: right;
     padding: 20px;
     background-color: rgb(188, 204, 218);
@@ -364,4 +367,4 @@ input[type="color"] {
 
 .container-forma input {
     width: 50%;
-	       }
+	}
