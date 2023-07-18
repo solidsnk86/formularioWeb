@@ -12,6 +12,7 @@ function mostrarAnuncio() {
   anuncio.style.color = '#333';
   anuncio.style.padding = '3px';
   anuncio.style.textAlign = 'center';
+  anuncio.style.marginBottom = '10px';
 
   var contador = document.createElement('span');
   contador.className = 'contador';
