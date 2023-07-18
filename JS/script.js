@@ -94,7 +94,7 @@ function compartirFormulario() {
             <img src="img/metodo-de-pago.png" alt="" width="50px"><br>
             <button id="colab" onclick="colaboración()">Colaborar</button>
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
-            <img src="img/icons8-mercado-pago-48.png" alt="">
+            <img src="img/logo-mercado-pago.png" alt="">
         </div>
     </div>
 </center>
