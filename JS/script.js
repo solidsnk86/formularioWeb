@@ -13,6 +13,9 @@ function mostrarAnuncio() {
   anuncio.style.padding = '3px';
   anuncio.style.textAlign = 'center';
   anuncio.style.marginBottom = '10px';
+  anuncio.style.borderBottomRightRadius = '10px';
+  anuncio.style.borderBottomLeftRadius = '10px';
+  anuncio.style.boxShadow = '1px 2px 4px #555';
 
   var contador = document.createElement('span');
   contador.className = 'contador';
