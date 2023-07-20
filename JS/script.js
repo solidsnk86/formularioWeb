@@ -8,11 +8,15 @@ function mostrarAnuncio() {
   </h5>
   </div>
   `;
+  
   anuncio.style.background = `rgb(193, 197, 215)`;
   anuncio.style.color = '#333';
   anuncio.style.padding = '3px';
   anuncio.style.textAlign = 'center';
-  anuncio.style.marginBottom = '10px';
+  anuncio.style.position = 'fixed';
+  anuncio.style.top = '0';
+  anuncio.style.left = '0';
+  anuncio.style.width = '100%';
   anuncio.style.borderBottomRightRadius = '10px';
   anuncio.style.borderBottomLeftRadius = '10px';
   anuncio.style.boxShadow = '1px 2px 4px #555';
@@ -64,10 +68,10 @@ function calcularTotales() {
   subtotalInput.value = subtotal.toFixed(2);
 
   let impuestosCalculados = (subtotal * impuestos) / 100;
-  impuestosInput.value = impuestosCalculados.toFixed(2);
+  impuestosInput.value = impuestosCalculados.toFixed(1);
 
   let totalFinal = subtotal + impuestosCalculados;
-  totalFinalInput.value = totalFinal.toFixed(2);
+  totalFinalInput.value = totalFinal.toFixed(1);
 }
 
 for (let i = 0; i < cantidadInputs.length; i++) {
@@ -97,7 +101,7 @@ function compartirFormulario() {
             <img src="img/metodo-de-pago.png" alt="" width="50px"><br>
             <button id="colab" onclick="colaboración()">Colaborar</button>
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
-            <img src="img/logo-mercado-pago-removebg-preview.png" alt="logo-mercado" width="150px">
+            <img src="img/icons8-mercado-pago-48.png" alt="">
         </div>
     </div>
 </center>
@@ -259,46 +263,73 @@ document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
       const div = document.createElement("div");
       const heading = document.createElement("h4");
       const input = document.createElement("input");
+      const imgBanco = document.createElement('img');
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CBU");
       heading.textContent = "Número de cuenta Bancaria:"
       div.appendChild(heading);
       div.appendChild(input);
+      div.appendChild(imgBanco);
       containerForma.appendChild(div);
+      imgBanco.src = 'img/banco.png';
+      imgBanco.style.width = '35px';
+      imgBanco.style.marginTop = '6px';
+      div.style.display = 'grid';
     } else if (formaPagoValue === "opcion2") {
       const div = document.createElement("div");
       const paragraph = document.createElement("h4");
       const input = document.createElement("input");
+      const imgMercado = document.createElement("img");
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CVU o alias de Mercado Pago");
       paragraph.textContent = "Número de CVU/alias:";
       div.appendChild(paragraph);
       div.appendChild(input);
       containerForma.appendChild(div);
+      div.appendChild(imgMercado);
+      imgMercado.src = 'img/unnamed-removebg-preview.png';
+      imgMercado.style.width = '40px';
+      div.style.display = 'grid';
     } else if (formaPagoValue === "opcion3") {
         const div3 = document.createElement("div");
       const etiqueta = document.createElement("label");
        const etiqueta2 = document.createElement("label");
       const input = document.createElement("input");
-      const input2 = document.createElement("input")
+      const input2 = document.createElement("input");
+      const pagoEfectivo = document.createElement('img');
       input.setAttribute("type", "radio", "value", "dolar");
       input2.setAttribute("type", "radio", "value", "pesos");
+      pagoEfectivo.src = 'img/pagar.png';
       etiqueta.textContent = "Dólar";
       etiqueta2.textContent = "Pesos"
       div3.appendChild(etiqueta);
       div3.appendChild(input);
       div3.appendChild(etiqueta2);
       div3.appendChild(input2);
+      div3.appendChild(pagoEfectivo);
       containerForma.appendChild(div3);
       div3.style.display = 'flex';
       div3.style.margin = '20px';
       div3.style.width = '110px';
       etiqueta2.style.marginLeft = '30px';
+      pagoEfectivo.style.width = '40px';
+      pagoEfectivo.style.marginLeft = '20px';
     }
-  });
-
-
-
-
-
     
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radioButton => {
+      radioButton.addEventListener('click', () => {
+    const otherRadioButtons = document.querySelectorAll('input[type="radio"]');
+    otherRadioButtons.forEach(otherRadioButton => {
+      otherRadioButton.checked = false;
+    });
+    radioButton.checked = true;
+  });
+});
+});
+
+
+
+
+
+                            
