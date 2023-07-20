@@ -27,7 +27,7 @@ function mostrarAnuncio() {
 
   document.body.insertBefore(anuncio, document.body.firstChild);
 
-  var tiempoRestante = 60; 
+  var tiempoRestante = 30; 
   contador.textContent = tiempoRestante + ' segundos restantes';
 
   var intervalo = setInterval(function() {
