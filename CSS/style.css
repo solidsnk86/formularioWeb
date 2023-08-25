@@ -307,6 +307,11 @@ input[type="color"] {
       font-size: 14px;
     }
 }
+@media print {
+    .enviar {
+        display: none;
+    }
+}
 
 /* Pago Exitoso */
 #check {
@@ -367,4 +372,4 @@ input[type="color"] {
 
 .container-forma input {
     width: 50%;
-	}
+}
