@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
 * {
-    font-family: 'Roboto';
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 input {
     border: none;
@@ -35,7 +35,6 @@ header h3, input {
 header h2 {
     font-size: 1.3em;
     padding-left: 9px;
-    text-shadow: 0 0 4px rgb(83, 83, 83);
 }
 header h2 input {
     font-weight: bold;
@@ -147,11 +146,38 @@ option, select {
     background-color: #ccc;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0;
+    max-width: 420px;
+    margin: auto;
     padding: 2px;
     border-radius: 5px;
+    animation: lightSpeedInLeft;
+    animation-duration: .6s;
 }
+
+@keyframes lightSpeedInLeft {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0) skewX(30deg);
+      transform: translate3d(-100%, 0, 0) skewX(30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      -webkit-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: skewX(5deg);
+      transform: skewX(5deg);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
 .compartirMenu {
     background-color: rgb(188, 204, 218);
     width: 500px;
@@ -295,7 +321,7 @@ input[type="color"] {
         padding-left: 3px;
     }
     #textArea {
-        max-width: 100px;
+        max-width: 65px;
     }
     .contacto a:hover {
     text-decoration: none;
@@ -307,11 +333,13 @@ input[type="color"] {
       font-size: 14px;
     }
 }
+
 @media print {
     .enviar {
         display: none;
     }
 }
+
 
 /* Pago Exitoso */
 #check {
@@ -363,13 +391,58 @@ input[type="color"] {
     width: 300px;
     box-shadow: 0 1px 3px #000;
 }
+#anuncio {
+    animation: jello;
+    animation-duration: 1.6s;
+}
+
+@keyframes jello {
+    from,
+    11.1%,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    22.2% {
+      -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+      transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+  
+    33.3% {
+      -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+      transform: skewX(6.25deg) skewY(6.25deg);
+    }
+  
+    44.4% {
+      -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+      transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+  
+    55.5% {
+      -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+      transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+  
+    66.6% {
+      -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+      transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    }
+  
+    77.7% {
+      -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+      transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+  
+    88.8% {
+      -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+      transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    }
+  }
+
 #anuncio a {
     text-decoration: none;
 }
-#anuncio a:hover {
-    border-bottom: 1px solid blue;
-}
-
 .container-forma input {
     width: 50%;
-}
+	}
