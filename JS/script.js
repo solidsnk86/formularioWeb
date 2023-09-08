@@ -274,7 +274,7 @@ function compartirLinkedIn() {
  */
 document.querySelector('.toggle-button').onclick = function() {
   const rootbackground = document.body;
-  const elementos = document.querySelectorAll('header, th, article')
+  const elementos = document.querySelectorAll('header, th, td, article, .observaciones')
   const DarkIcon = document.getElementById('moon-icon')
   const LightIcon = document.getElementById('sun-icon')
   const inputs = document.querySelectorAll('input')
@@ -386,6 +386,20 @@ atributtePhone.addEventListener('click', function(e) {
   window.open(tel, '_blank');
 })
 
+const chevroButton = document.querySelector('.drop-chevron');
+const dropList = document.querySelector('.article-drop-list');
+chevroButton.style.transition = '.3s all'
+chevroButton.style.cursor = 'pointer'
 
+chevroButton.onclick = () => {
+  
+  if (dropList.style.display === '') {
+    chevroButton.style.transform = 'rotate(-180deg)';
+    dropList.style.display = 'block';
+  } else {
+    dropList.style.display = '';
+    chevroButton.style.transform = 'rotate(0)';
+  }
+}
 
                             
