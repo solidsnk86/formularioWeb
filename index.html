@@ -19,7 +19,7 @@
 
 <body>
 	<nav class="navbar">
-		<img class="avatar-logo" src="img/factura.png" alt="Avatar logo">
+		<img class="avatar-logo" src="../formularioWeb-master/img/factura.png" alt="Avatar logo">
 		<aside class="toggle-button">
 			<i id="moon-icon" title="Modo Oscuro">🌚</i>
 			<i id="sun-icon" title="Modo Claro">🌞</i>
@@ -28,8 +28,9 @@
 
 	<div class="article-header">
 		<h3>Formulario web</h3>
-		<p>Éste formulario se puede usar para: Facturas(A-B-C) <br>[Presupuestos o Recibos]</p>
-		<ul>
+		<p>Éste formulario se puede usar para: Facturas(A-B-C) | Presupuestos | Recibos</p>
+		<i class="bx bi-chevron-down drop-chevron"></i>
+		<ul class="article-drop-list">
 			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
 			<li>Ingrese los items, seleccione la cantidad e indique el precio y se auto-sumarán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
 			<li>En el botón de imprimir, también puede seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
@@ -48,6 +49,7 @@
 		<p><input type="text" style="font-weight: bold; margin-right: 3px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="num-form"></p>
 		<p>Fecha: <input type="date" style="font-weight: bold; width:auto; margin-right: 3px;"></p>
 	</header>
+
 	<table class="tabla">
 		<tr>
 			<th id="elemento">Descripción</th>
@@ -92,6 +94,7 @@
 			<td><input type="text" class="total_final" style="width: 70px;" placeholder="TOTAL"></td>
 		</tr>
 	</table>
+
 <div class="observaciones">
     <h3>Observaciones:</h3>
     <li>Validez de la oferta: <input id="num-form" type="text" name="" id="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
@@ -106,9 +109,11 @@
         <option value="opcion2">"B"</option>
         <option value="opcion3">"C"</option>
       </select></li>
+
 	<div class="container-forma"></div>
+
 </div>
-</form>
+
 <article class="contacto" id="elemento">
     <h4>Contáctese por estos medios:</h4>
     <div class="contactos">
@@ -118,10 +123,11 @@
     </div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </article>
+
 </form>
 
 <div class="enviar">
-    <button onclick="compartirFormulario()">Compartir Formulario <i class="bx bi-reply"></i></button>
+    <button onclick="compartirFormulario()"><i class="bx bi-reply"></i> Compartir Formulario</button>
     <button onclick="imprimirFormulario()" id="imprimir"><i class="bx bx-printer"></i> Imprimir | Descargar</button>
 </div>
 
@@ -130,7 +136,7 @@
 		<p>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;"><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260">SolidSnk86</a></span></p>
 	</footer>
 
-      <script src="JS/script.js"></script>
+    <script src="JS/script.js"></script>
 
 </body>
 </html>
