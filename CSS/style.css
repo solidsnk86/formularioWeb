@@ -12,10 +12,10 @@ body {
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     height: 50px;
     top: 0;
-    margin: 0 15px 40px;
 }
 
 .navbar .avatar-logo {
@@ -31,10 +31,25 @@ body {
 }
 
 .article-header {
-    margin: 17px;
+    margin: 60px 16px 10px 16px;
     padding: 5px;
     border: 3px dotted #ccc;
     border-radius: 10px;
+    text-align: center;
+}
+
+.article-header h3, p {
+    margin: 5px 0 0 5px;
+    text-align: left;
+}
+
+.article-header i {
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
+.article-drop-list {
+    display: none;
 }
 
 #myForm {
@@ -49,11 +64,13 @@ body.dark-mode {
 header.dark-mode {
     background-color: #161B22;
     color: #fafafa;
+    border-color: #666;
 }
 
 th.dark-mode {
     background-color: #161B22;
     color: #fafafa;
+    border-color: #666;
 }
 
 input.dark-mode {
@@ -64,6 +81,7 @@ input.dark-mode {
 article.dark-mode {
     background-color: #161B22;
     color: #fafafa;
+    border-color: #666;
 }
 
 .navbar .toggle-button i {
@@ -145,6 +163,10 @@ th, td {
 	border: 1px solid black;
 }
 
+td.dark-mode {
+    border-color: #666;
+}
+
 th {
 	background-color: #EAEAEA;
 }
@@ -158,6 +180,10 @@ tfoot td {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     padding: 20px;
+}
+
+.observaciones.dark-mode {
+    border-color: #666;
 }
 .observaciones li {
     margin: 5px;
@@ -187,7 +213,7 @@ option, select {
     border-bottom-right-radius: 10px;
     text-align: right;
     padding: 20px;
-    margin: 5px 15px;
+    margin: 5px auto;
     background-color: #EAEAEA;
 }
 .contacto-dark-mode {
@@ -221,7 +247,7 @@ option, select {
     width: 80px;
 }
 
-/* Carta */
+/* Modal Card */
 .card-form-container {
     position: fixed;
     top: 0;
@@ -282,8 +308,10 @@ option, select {
 }
 #colab:hover {
     background: linear-gradient(
-        180deg, lightgreen, yellowgreen);
+    180deg, lightgreen, yellowgreen);
 	color: white;
+    transition: .3s all;
+    box-shadow: 2px 3px 7px #777;
 }
 .enviar span {
     border-bottom: 1px solid #000;
@@ -302,6 +330,7 @@ option, select {
 }
 .redesMenu i:hover {
     transform: scale(1.2);
+    text-shadow: 2px 3px 7px #777;
 }
 .redesMenu #face:hover {
     color: royalblue;
@@ -327,12 +356,12 @@ option, select {
     float: right;
     border: none;
     margin: 2px 2px auto;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 #cerrarCarta:hover {
-    color: tomato;
     transition: .1s all;
+    color: tomato;
 }
 
 footer {
@@ -355,12 +384,15 @@ input[type="color"] {
 /* Responsive */
 
 @media screen and (min-width:1100px) {
-    body {
-        margin: 0 150px;
-    }
     .contacto iframe {
         width: 420px;
         height: 200px;
+    }
+    .article-header {
+        margin: 60px 100px 25px;
+    }
+    #myForm {
+        margin: 0 200px;
     }
     #fact {
         width: max-content;
@@ -412,10 +444,10 @@ input[type="color"] {
     text-decoration: none;
     }
     .contactos a {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
-    .contactos i, #wap {
-      font-size: 14px;
+    .contactos i {
+        font-size: 0.9rem;
     }
 }
 
@@ -431,18 +463,6 @@ input[type="color"] {
     }
     .enviar {
         display: none;
-    }
-    .contacto {
-        display: flex;
-    }
-    .contactos {
-        display: grid;
-        width: auto;
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .contactos a {
-        line-height: 0;
     }
     .contacto iframe {
         width: auto;
@@ -506,7 +526,7 @@ input[type="color"] {
     text-decoration: none;
 }
 .container-forma input {
-    width: 50%;
+    width: 55%;
 }
 
 
