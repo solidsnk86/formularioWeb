@@ -330,14 +330,62 @@ window.addEventListener('load', function () {
 });
  */
 
-const inputWhatsapp = document.getElementById('wap').value;
-const atributteA = document.querySelector('#wap-href');
+
+
+const inputWhatsapp = document.getElementById('wap');
+ const atributteA = document.querySelector('#wap-href');
 
 function createAtributte() {
   inputWhatsapp.addEventListener('change', function() {
-    atributteA.setAttribute.href = `https://api.whatsapp.com/send?phone=${inputWhatsapp}&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio.."`;
+    const phoneNumber = inputWhatsapp.value;
+    atributteA.setAttribute('href', `https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio..`);
+  });
+}
+
+createAtributte();
+
+atributteA.addEventListener('click', function(e) {
+  e.preventDefault();
+  const href = atributteA.getAttribute('href');
+  window.open(href, '_blank');
+});
+
+const inputEmail = document.getElementById('mail-input')
+const atributteMail = document.querySelector('#mail-atributte')
+
+function mailAtributte() {
+  inputEmail.addEventListener('change', function() {
+    const mail = inputEmail.value;
+    atributteMail.setAttribute('href', `mailto:${mail}`)
   })
 }
+
+mailAtributte();
+
+atributteMail.addEventListener('click', function(e) {
+  e.preventDefault();
+  const link = atributteMail.getAttribute('href');
+  window.open(link, '_blank');
+})
+
+const inputPhone = document.getElementById('phone-input')
+const atributtePhone = document.querySelector('#phone-atributte')
+
+function phoneAtributte() {
+  inputPhone.addEventListener('change', function() {
+    const phone = inputPhone.value;
+    atributtePhone.setAttribute('href', `tel:${phone}`)
+  })
+}
+
+phoneAtributte();
+
+atributtePhone.addEventListener('click', function(e) {
+  e.preventDefault();
+  const tel = atributtePhone.getAttribute('href');
+  window.open(tel, '_blank');
+})
+
 
 
                             
