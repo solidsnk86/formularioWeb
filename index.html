@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +12,33 @@
     <title>SolidSnk86 - Formularios©</title>
     <link rel="icon" type="image/x-icon" href="img/factura.png">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	<link href="img/icons/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="img/icons/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="img/icons/remixicon/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-	<form onsubmit="printFormulario()" id="myForm">
+	<nav class="navbar">
+		<img class="avatar-logo" src="../formularioWeb-master/img/factura.png" alt="Avatar logo">
+		<aside class="toggle-button">
+			<i id="moon-icon" title="Modo Oscuro">🌚</i>
+			<i id="sun-icon" title="Modo Claro">🌞</i>
+		</aside>
+	</nav>
+
+	<div class="article-header">
+		<h3>Formulario web</h3>
+		<p>Éste formulario se puede usar para: Facturas(A-B-C) | Presupuestos | Recibos</p>
+		<ul>
+			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
+			<li>Ingrese los items, seleccione la cantidad e indique el precio y se auto-sumarán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
+			<li>En el botón de imprimir, también puede seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
+		</ul>
+	</div>
+
+	<form id="myForm">
+
     <header id="elemento">
-		
 		<h1 id="elemento"><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="elemento"></h1>
         <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
 		<h2>Cliente: <input id="elemento" type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
@@ -27,7 +47,7 @@
 		<p><input type="text" style="font-weight: bold; margin-right: 3px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="num-form"></p>
 		<p>Fecha: <input type="date" style="font-weight: bold; width:auto; margin-right: 3px;"></p>
 	</header>
-	<table>
+	<table class="tabla">
 		<tr>
 			<th id="elemento">Descripción</th>
 			<th id="elemento">Cantidad</th>
@@ -37,24 +57,30 @@
 		<tr>
 			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
-			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
 			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
 			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
 			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td>$<input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
+			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+		</tr>
+		<tr>
+			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
+			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
 			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
-			<td>$<input type="text" class="subtotal" style="width: 70px;" placeholder="SubTotal" title="Ingrese el subtotal"></td>
+			<td><input type="text" class="subtotal" style="width: 70px;" placeholder="SubTotal" title="Ingrese el subtotal"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Impuestos:</td>
@@ -62,7 +88,7 @@
 		</tr>
 		<tr>
 			<td colspan="3">Total:</td>
-			<td>$<input type="text" class="total_final" style="width: 70px;" placeholder="TOTAL"></td>
+			<td><input type="text" class="total_final" style="width: 70px;" placeholder="TOTAL"></td>
 		</tr>
 	</table>
 <div class="observaciones">
@@ -82,27 +108,28 @@
 	<div class="container-forma"></div>
 </div>
 </form>
-<div class="contacto" id="elemento">
+<article class="contacto" id="elemento">
     <h4>Contáctese por estos medios:</h4>
     <div class="contactos">
-  	<a href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio.." target="_blank"><i class="fa-brands fa-whatsapp" id="wap"></i> Whatsapp</a>
-    <a href="tel:+5492665290020"><i class="fa-solid fa-phone"></i> 2665290020</a>
-    <a href="mailto:calcagni.gabriel86@gmail.com"><i class="fa-solid fa-envelope"></i> Google mail</a>
+  	<a target="_blank"><i class="bx bi-whatsapp" id="wap-href" onclick="createAtributte()"></i><input type="text" id="wap" placeholder="Whatsapp"></a>
+    <a ><i class="bx bi-phone"></i><input type="tel" name="" id="telefono" placeholder="Teléfono"></a>
+    <a ><i class="bx bi-envelope"></i><input type="email" name="" id="correo-gmail" placeholder="Correo Electrónico"></a>
     </div>
-    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</article>
 </form>
-<center>
+
 <div class="enviar">
-    <button onclick="compartirFormulario()">Compartir Formulario <i class="fa-solid fa-share"></i></button>
-    <button onclick="imprimirFormulario()" id="imprimir"><i class="fa-solid fa-print"></i> Imprimir | Descargar</button>
-	<br>
-	<span>Elije el color para el formulario: <input type="color" name="" id="elegir-color"></span>
+    <button onclick="compartirFormulario()">Compartir Formulario <i class="bx bi-reply"></i></button>
+    <button onclick="imprimirFormulario()" id="imprimir"><i class="bx bx-printer"></i> Imprimir | Descargar</button>
 </div>
-</center>
-	<footer onsubmit="printFormulario()">
+
+
+	<footer>
 		<p>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;"><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260">SolidSnk86</a></span></p>
 	</footer>
-      <script src="JS/script.js"></script>
+
+      <script src="JS/script.jsx"></script>
+
 </body>
-				      </html>
+</html>
