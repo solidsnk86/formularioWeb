@@ -9,16 +9,16 @@ function mostrarAnuncio() {
   </div>
   `;
   
-  anuncio.style.background = `rgb(193, 197, 215)`;
+  anuncio.style.background = `#eaeaea`;
   anuncio.style.color = '#333';
   anuncio.style.padding = '3px';
   anuncio.style.textAlign = 'center';
   anuncio.style.position = 'fixed';
-  anuncio.style.top = '0';
+  anuncio.style.bottom = '0';
   anuncio.style.left = '0';
-  anuncio.style.width = '100%';
-  anuncio.style.borderBottomRightRadius = '10px';
-  anuncio.style.borderBottomLeftRadius = '10px';
+  anuncio.style.width = '99%';
+  anuncio.style.borderTopRightRadius = '10px';
+  anuncio.style.borderTopLeftRadius = '10px';
   anuncio.style.boxShadow = '1px 2px 4px #555';
 
   var contador = document.createElement('span');
@@ -27,7 +27,7 @@ function mostrarAnuncio() {
 
   document.body.insertBefore(anuncio, document.body.firstChild);
 
-  var tiempoRestante = 30; 
+  var tiempoRestante = 9; 
   contador.textContent = tiempoRestante + ' segundos restantes';
 
   var intervalo = setInterval(function() {
@@ -84,13 +84,13 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 // función menú carta
 function compartirFormulario() {
   card = document.createElement('div');
-  card.classList.add('card');
+  card.classList.add('card-form-container');
   card.innerHTML = `
   <!-- Compartir -->
-  <div class="container-card">
+  <div class="card-form-container">
       
-    <div class="compartirMenu">
-    <button id="cerrarCarta" onclick="cerrarCarta()"><i class="fa-solid fa-xmark"></i></button>
+    <article class="compartirMenu">
+    <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
       <div class="redesMenu">
       <br>
    <center>
@@ -107,12 +107,12 @@ function compartirFormulario() {
 </center>
       <hr>
       <p>Compartir en redes sociales:</p>
-      <button onclick="compartirFacebook()"><i id="face" class="fa-brands fa-facebook-f"></i></span></button>
-      <button onclick="compartirTwitter()"><i id="twitt" class="fa-brands fa-twitter"></i></span></button>
-      <button onclick="compartirWhatsapp()"><i id="what" class="fa-brands fa-whatsapp"></i></span></button>
-      <button onclick="compartirLinkedIn()"><i id="linked" class="fa-brands fa-linkedin"></i></span></button>
+      <button onclick="compartirFacebook()"><i id="face" class="bx bi-facebook"></i></span></button>
+      <button onclick="compartirTwitter()"><i id="twitt" class="bx bi-twitter"></i></span></button>
+      <button onclick="compartirWhatsapp()"><i id="what" class="bx bi-whatsapp"></i></span></button>
+      <button onclick="compartirLinkedIn()"><i id="linked" class="bx bi-linkedin"></i></span></button>
   </div>
-    </div>
+    </article>
   </div>
   `;
   document.body.appendChild(card);
@@ -129,13 +129,6 @@ function cerrarCarta() {
 
 
 // función imprimir
-function imprimirFormulario() {
-  var formularioHTML = window.open('/index.html');
-  formularioHTML.onload = function() {
-    formularioHTML.window.print();
-  } 
-};
-
 const botonImprimir = document.getElementById('imprimir');
 botonImprimir.addEventListener('click', function(event) {
   event.preventDefault();
@@ -154,7 +147,7 @@ function autoResize() {
   this.style.width = this.scrollWidth + "px";
 };
 
-// guardar formulario
+// Guardar los inputs y valores en LocalStorage
 const form = document.querySelector('#myForm');
 const inputField = document.querySelector('#inputField');
 const selectField = document.querySelector('#selectField');
@@ -190,62 +183,9 @@ function compartirTwitter() {
 function compartirLinkedIn() {
   var url = encodeURIComponent(window.location.href);
   var title = encodeURIComponent(document.title);
-  var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`';
+  var shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`;
   window.open(shareUrl, '_blank');
 };
-
-// función para cambiar de color
-
-const elegirColor = document.querySelector('#elegir-color');
-const elementos = document.querySelectorAll('#elemento');
-
-elegirColor.addEventListener('change', function() {
-  const color = elegirColor.value;
-  localStorage.setItem('selectedColor', color);
-  actualizarColor(color);
-});
-
-function actualizarColor(color) {
-  elementos.forEach(function (elementos) {
-    elementos.style.backgroundColor = color;
-  })
-};
-
-window.addEventListener('load', function () {
-  const selectedColor = localStorage.getItem('selectedColor');
-  if (selectedColor) {
-    actualizarColor(selectedColor);
-    elegirColor.value = selectedColor;
-  }
-});
-
-// Envio PDF
-function generarPDF() {
-  // Crear instancia de jsPDF
-  const doc = new jsPDF();
-
-  // Obtener el contenido del formulario
-  const formulario = document.getElementById('myForm');
-  const contenidoFormulario = formulario.innerHTML;
-
-  // Generar el PDF con el contenido del formulario
-  doc.text(contenidoFormulario, 10, 10);
-
-  const pdfData = doc.output();
-
-  // Crear un objeto Blob desde los datos del PDF
-  const pdfBlob = new Blob([pdfData], { type: 'application/pdf' });
-
-  const pdfUrl = URL.createObjectURL(pdfBlob);
-
-  const mensajePdf = encodeURIComponent('Adjunto el formulario como PDF.');
-  const enlaceWhatsApp = `https://wa.me/?text=&text=${mensajePdf}&attachment=${pdfUrl}`;
-
-  window.open(enlaceWhatsApp);
-}
-
-document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
-
 
 // Obtener el elemento select de forma de pago
   const formaPagoSelect = document.getElementById("forma-pago");
@@ -329,7 +269,75 @@ document.getElementById('btnEnviarPDF').addEventListener('click', generarPDF);
 });
 
 
+/**
+ * Dark Mode
+ */
+document.querySelector('.toggle-button').onclick = function() {
+  const rootbackground = document.body;
+  const elementos = document.querySelectorAll('header, th, article')
+  const DarkIcon = document.getElementById('moon-icon')
+  const LightIcon = document.getElementById('sun-icon')
+  const inputs = document.querySelectorAll('input')
+  
 
+  if (rootbackground.classList.contains('dark-mode')) {
+    rootbackground.classList.remove('dark-mode')
+    LightIcon.style.display = 'none'
+    DarkIcon.style.display = 'inline-block'
+    inputs.forEach((input) => {
+      input.classList.remove('dark-mode')
+    })
+    elementos.forEach((elemento) => {
+      elemento.classList.remove('dark-mode')
+    })
+  } else {
+    rootbackground.classList.add('dark-mode')
+    LightIcon.style.display = 'inline-block'
+    DarkIcon.style.display = 'none'
+    inputs.forEach((input) => {
+      input.classList.add('dark-mode')
+    })
+    elementos.forEach((elemento) => {
+      elemento.classList.add('dark-mode')
+    })
+  }
+}
+
+/**
+ * // función para cambiar de color
+
+const elegirColor = document.querySelector('#elegir-color');
+var elementos = document.querySelectorAll('#elemento');
+
+elegirColor.addEventListener('change', function() {
+  const color = elegirColor.value;
+  localStorage.setItem('selectedColor', color);
+  actualizarColor(color);
+});
+
+function actualizarColor(color) {
+  elementos.forEach(function (elementos) {
+    elementos.style.backgroundColor = color;
+  })
+};
+
+window.addEventListener('load', function () {
+  const selectedColor = localStorage.getItem('selectedColor');
+  if (selectedColor) {
+    actualizarColor(selectedColor);
+    elegirColor.value = selectedColor;
+  }
+});
+ */
+
+const inputWhatsapp = document.getElementById('wap').value;
+const atributteA = document.querySelector('#wap-href');
+
+function createAtributte() {
+  inputWhatsapp.addEventListener('change', function() {
+    atributteA.setAttribute.href = `https://api.whatsapp.com/send?phone=${inputWhatsapp}&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio.."`;
+  })
+}
 
 
                             
