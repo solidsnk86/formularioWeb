@@ -228,17 +228,13 @@ option, select {
 .contacto a:hover {
     text-decoration: underline;
 }
-.contacto i {
-    font-size: 1.3em;
-}
-
 .contacto i:hover {
     transform:translateY(-15%);
     transition: 0.1s ease-in-out;
 }
 .contacto iframe {
     margin: 15px auto;
-    width: 320px;
+    width: auto;
     height: auto;
     border-radius: 10px;
 }
@@ -246,6 +242,7 @@ option, select {
 .contactos input {
     width: 80px;
 }
+
 
 /* Modal Card */
 .card-form-container {
@@ -417,7 +414,7 @@ input[type="color"] {
     }
 }
 
-@media screen and (max-width:740px) {
+@media (max-width:740px) and (min-width:400px) {
     body {
         display: block;
     }
@@ -439,6 +436,10 @@ input[type="color"] {
     }
     #textArea {
         max-width: 65px;
+    }
+    .contacto iframe {
+        width: auto;
+        height: auto;
     }
     .contacto a:hover {
     text-decoration: none;
@@ -528,5 +529,3 @@ input[type="color"] {
 .container-forma input {
     width: 55%;
 }
-
-
