@@ -405,4 +405,38 @@ chevroButton.onclick = () => {
   }
 }
 
+/**
+ * Local Storage Button Save
+ */
+
+const inputs = document.querySelectorAll('input');
+const saveButton = document.getElementById('save-button');
+
+function guardarEnLocalStorage() {
+  const valores = {};
+
+  inputs.forEach((input) => {
+    valores[input.id] = input.value;
+  });
+
+  const valoresJSON = JSON.stringify(valores);
+  localStorage.setItem('valoresInput', valoresJSON);
+}
+
+function cargarDesdeLocalStorage() {
+  const valoresJSON = localStorage.getItem('valoresInput');
+  if (valoresJSON) {
+    const valores = JSON.parse(valoresJSON);
+
+    inputs.forEach((input) => {
+      if (valores[input.id]) {
+        input.value = valores[input.id];
+      }
+    });
+  }
+}
+
+cargarDesdeLocalStorage();
+
+saveButton.addEventListener('click', guardarEnLocalStorage)
 
