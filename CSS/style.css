@@ -431,7 +431,7 @@ input[type="color"] {
     }
 }
 
-@media (max-width:740px) and (min-width:400px) {
+@media (max-width:740px) {
     body {
         display: block;
     }
