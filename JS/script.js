@@ -411,6 +411,7 @@ chevroButton.onclick = () => {
 
 const inputs = document.querySelectorAll('input');
 const saveButton = document.getElementById('save-button');
+const borrarButton = document.getElementById('deleteButton')
 
 function guardarEnLocalStorage() {
   const valores = {};
@@ -447,3 +448,48 @@ borrarButton.addEventListener('click', () => {
     input.value = '';
   });
 });
+
+/**-----------------------|
+ # Share content Android  |
+-------------------------*/
+
+// Verificar si el navegador admite el Web Share API
+if (navigator.share) {
+  const shareButtons = document.querySelectorAll('#share-button');
+  
+  shareButtons.forEach(function(shareButton) {
+    shareButton.addEventListener('click', async () => {
+      try {
+        await navigator.share({
+          title: 'Facturador Web',
+          text: '¡Echa un vistazo a este facturador online!',
+          url: 'https://solidsnk86.github.io/mioPortfolioCG/',
+        });
+        console.log('Contenido compartido exitosamente.');
+      } catch (error) {
+        console.error('Error al compartir:', error);
+      }
+    });
+  });
+} else {
+  console.log('El navegador no admite el Web Share API.');
+}
+
+/**
+ * GEOLOCALIZACION (INTENTAR )
+ */
+const iframeGoogle = document.getElementById('google-iframe')
+
+
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var latitud = position.coords.latitude;
+    var longitud = position.coords.longitude;
+    var azimut = position.coords.accuracy;
+    console.log("Latitud: " + latitud + ", Longitud: " + longitud + ", Altitud: " + azimut);
+},function (loadIframe) {
+  const urlMap = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${azimut}!2d${longitud}!3d${latitud}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d`;
+  iframeGoogle.setAttribute('href', urlMap)
+  document.addEventListener('DOMContentLoaded', loadIframe);
+})
+}
