@@ -21,9 +21,10 @@
 
 <body>
 	<nav class="navbar">
-		<img class="avatar-logo" src="img/factura.png" alt="Avatar logo">
+		<img class="avatar-logo" src="../formularioWeb-master/img/factura.png" alt="Avatar logo">
 		<i class="ri-save-3-line" id="save-button" title="Guardar datos de los campos."></i>
-		<span id="borrarButton" style="padding-left: 10px; position: relative; padding-bottom: 10px;">Borrar Datos</span>
+		<i class="ri-delete-bin-6-line" id="deleteButton" title="Borrar datos"></i>
+		<i class="ri-share-line" id="share-button"></i>
 		<aside class="toggle-button">
 			<i id="moon-icon" title="Modo Oscuro">🌚</i>
 			<i id="sun-icon" title="Modo Claro">🌞</i>
@@ -36,9 +37,10 @@
 		<span id="mas-info">Más info <i class="bx bx-plus drop-chevron"></i></span>
 		<ul class="article-drop-list">
 			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
-			<li>Ingrese los items, seleccione la cantidad e indique el precio y se auto-sumarán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
+			<li>Ingrese los items, seleccione la cantidad e indique el precio y se calcularán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
 			<li>En el botón de imprimir, también puede seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
-			<li>En los campos de contacto, puede cargar su número para contacto por Whatsapp y Mail, luego se puede hacer click en los íconos y se crea el link para su contacto.</li>
+			<li>En los campos de contacto, puede cargar su número para contacto por whatsapp, teléfono y mail, luego se puede hacer click en los íconos y se crea el link para su contacto.</li>
+			<li>En la barra de navegación puede guardar los campos 💾 que ha llenado y limpiarlos para otro uso.</li>
 		</ul>
 	</div>
 
@@ -125,7 +127,7 @@
     <a title="Ingrese su Teléfono"><i class="bx bi-phone" id="phone-atributte"></i> <input type="tel" name="" id="phone-input" placeholder="Teléfono"></a>
     <a title="Ingrese su correo electrónico"><i class="bx bi-envelope" id="mail-atributte"></i> <input type="email" name="" id="mail-input" placeholder="Correo Electrónico"></a>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe id="google-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </article>
 
 </form>
