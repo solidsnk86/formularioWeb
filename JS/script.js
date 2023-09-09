@@ -440,3 +440,10 @@ cargarDesdeLocalStorage();
 
 saveButton.addEventListener('click', guardarEnLocalStorage)
 
+borrarButton.addEventListener('click', () => {
+  localStorage.removeItem('valoresInput');
+  
+  inputs.forEach((input) => {
+    input.value = '';
+  });
+});
