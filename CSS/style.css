@@ -25,6 +25,34 @@ body {
     margin: 10px auto auto 10px;
 }
 
+.navbar #save-button {
+    position: relative;
+    top: -4px;
+    left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar #save-button:hover {
+    animation: rotateShadow 1s ease-in-out infinite;
+}
+
+@keyframes rotateShadow {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        text-shadow: 0 0 20px royalblue;
+    }
+    50% {
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+        text-shadow: 0 0 20px royalblue;
+    }
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        text-shadow: 0 0 20px royalblue;
+    }
+}
+
+
 .navbar .toggle-button {
     position: sticky;
     float: right;
