@@ -31,32 +31,42 @@ body {
     left: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: .2s all;
 }
 
 .navbar #save-button:hover {
-    animation: rotateShadow 1s ease-in-out infinite;
+    color: #666;
 }
-
-@keyframes rotateShadow {
-    0% {
-        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        text-shadow: 0 0 20px royalblue;
-    }
-    50% {
-        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
-        text-shadow: 0 0 20px royalblue;
-    }
-    100% {
-        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        text-shadow: 0 0 20px royalblue;
-    }
-}
-
 
 .navbar .toggle-button {
     position: sticky;
     float: right;
     margin: 14px auto auto 10px;
+}
+
+#deleteButton {
+    position: relative;
+    top: -4px;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+#deleteButton:hover {
+    color: #666;
+}
+
+#share-button {
+    font-size: 1.5rem;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#share-button:hover {
+    color: #666;
 }
 
 .article-header {
@@ -184,6 +194,7 @@ input {
 
 input::placeholder {
     color: #222222;
+    font-size: 0.9rem;
 }
 
 input.dark-mode::placeholder {
@@ -318,7 +329,7 @@ option, select {
 
 .contacto iframe {
     margin: 15px auto;
-    width: auto;
+    width: 400px;
     height: auto;
     border-radius: 10px;
 }
@@ -394,11 +405,7 @@ option, select {
     transition: .3s all;
     box-shadow: 2px 3px 7px #777;
 }
-.enviar span {
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    width: fit-content;
-}
+
 .compartirMenu a {
     color: tomato;
     text-decoration: none;
@@ -484,8 +491,8 @@ input[type="color"] {
     .contactos #mail-input {
         width: max-content;
     }
-    .contacto iframe {
-        width: 500px;
+    .compartirMenu {
+        margin: 50px 300px;
     }
 }
 
@@ -504,10 +511,6 @@ input[type="color"] {
     }
     #textArea {
         width: 118px;
-    }
-    .contacto iframe {
-        width: 400px;
-        height: auto;
     }
 }
 
