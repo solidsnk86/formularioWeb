@@ -16,6 +16,7 @@ body {
     width: 100%;
     height: 50px;
     top: 0;
+    z-index: 9;
 }
 
 .navbar .avatar-logo {
@@ -48,9 +49,60 @@ body {
     font-size: 1.2rem;
 }
 
+.drop-chevron {
+   position: relative;
+   top: 3.5px;
+   font-size: 1.5rem;
+}
+
 .article-drop-list {
     display: none;
+    animation: backInDown .6s ease-in-out;
 }
+
+@-webkit-keyframes backInDown {
+    0% {
+      -webkit-transform: translateY(-1200px) scale(0.7);
+      transform: translateY(-1200px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      -webkit-transform: translateY(0px) scale(0.7);
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes backInDown {
+    0% {
+      -webkit-transform: translateY(-1200px) scale(0.7);
+      transform: translateY(-1200px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      -webkit-transform: translateY(0px) scale(0.7);
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .animate__backInDown {
+    -webkit-animation-name: backInDown;
+    animation-name: backInDown;
+  }
+
 
 #myForm {
     margin: 0 15px;
@@ -546,3 +598,4 @@ input[type="color"] {
 .container-forma input {
     width: 55%;
 }
+
