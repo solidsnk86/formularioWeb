@@ -207,6 +207,9 @@ option, select {
     opacity: .7;
     transition: .3s;		
 }
+/**
+* Sección Contacto
+*/
 .contacto {
     border: 1px solid #000;
     border-bottom-left-radius: 10px;
@@ -216,22 +219,23 @@ option, select {
     margin: 5px auto;
     background-color: #EAEAEA;
 }
+
 .contacto-dark-mode {
     background-color: #211A1A;
 }
+
 .contacto a {
     text-decoration: none;
     color: royalblue;
     padding: 5px;
     font-size: 1.1em;
 }
-.contacto a:hover {
-    text-decoration: underline;
-}
+
 .contacto i:hover {
     transform:translateY(-15%);
     transition: 0.1s ease-in-out;
 }
+
 .contacto iframe {
     margin: 15px auto;
     width: auto;
@@ -394,6 +398,15 @@ input[type="color"] {
     #fact {
         width: max-content;
     }
+    .contactos input {
+        width: 100px;
+    }
+    .contactos #mail-input {
+        width: max-content;
+    }
+    .contacto iframe {
+        width: 500px;
+    }
 }
 
 @media screen and (max-width:980px) {
@@ -411,6 +424,10 @@ input[type="color"] {
     }
     #textArea {
         width: 118px;
+    }
+    .contacto iframe {
+        width: 400px;
+        height: auto;
     }
 }
 
