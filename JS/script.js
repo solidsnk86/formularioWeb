@@ -480,7 +480,6 @@ if (navigator.share) {
  */
 const iframeGoogle = document.getElementById('google-iframe')
 
-
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     var latitud = position.coords.latitude;
@@ -488,7 +487,7 @@ if ("geolocation" in navigator) {
     var azimut = position.coords.accuracy;
     console.log("Latitud: " + latitud + ", Longitud: " + longitud + ", Altitud: " + azimut);
 },function (loadIframe) {
-  const urlMap = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${azimut}!2d${longitud}!3d${latitud}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d`;
+  const urlMap = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${azimut}!2d${longitud}!3d${latitud}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d5e0!3m2!1ses-419!2sar!4v1694255285033!5m2!1ses-419!2sar`;
   iframeGoogle.setAttribute('href', urlMap)
   document.addEventListener('DOMContentLoaded', loadIframe);
 })
