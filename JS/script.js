@@ -391,14 +391,17 @@ const dropList = document.querySelector('.article-drop-list');
 chevroButton.style.transition = '.3s all'
 chevroButton.style.cursor = 'pointer'
 
+
 chevroButton.onclick = () => {
   
   if (dropList.style.display === '') {
-    chevroButton.style.transform = 'rotate(-180deg)';
+    chevroButton.style.transform = 'rotate(-45deg)';
     dropList.style.display = 'block';
+    chevroButton.style.color = 'tomato'
   } else {
     dropList.style.display = '';
     chevroButton.style.transform = 'rotate(0)';
+    chevroButton.style.color = ''
   }
 }
 
