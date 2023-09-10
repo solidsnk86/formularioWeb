@@ -32,7 +32,6 @@ body {
     left: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: .2s all;
 }
 
 .navbar #save-button:hover {
@@ -51,7 +50,6 @@ body {
     font-size: 1.5rem;
     margin-left: 20px;
     cursor: pointer;
-    transition: .2s all;
 }
 
 #deleteButton:hover {
