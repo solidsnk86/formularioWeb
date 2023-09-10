@@ -451,11 +451,12 @@ borrarButton.addEventListener('click', () => {
   inputs.forEach((input) => {
     input.value = '';
   });
-});
-
-if (localStorage.removeItem) {
+  
+if (localStorage.removeItem('valoresInput')) {
   alert('Se han eliminado los datos de los campos.')
 }
+});
+
 
 /**-----------------------|
  # Share content Android  |
