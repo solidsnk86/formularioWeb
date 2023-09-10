@@ -422,6 +422,10 @@ function guardarEnLocalStorage() {
 
   const valoresJSON = JSON.stringify(valores);
   localStorage.setItem('valoresInput', valoresJSON);
+
+  if (guardarEnLocalStorage) {
+    alert('Datos guardados con éxito!')
+  }
 }
 
 function cargarDesdeLocalStorage() {
@@ -448,6 +452,10 @@ borrarButton.addEventListener('click', () => {
     input.value = '';
   });
 });
+
+if (localStorage.removeItem) {
+  alert('Se han eliminado los datos de los campos.')
+}
 
 /**-----------------------|
  # Share content Android  |
