@@ -211,6 +211,10 @@ article.dark-mode {
         border-right: 1px solid #666;
 }
 
+.contacto.dark-mode {
+    background-color: #000214;
+}
+
 /**|||||||
 * INPUTS |
 ||||||||||*/
@@ -381,11 +385,6 @@ option, select {
     z-index: -1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
-
-.contacto-dark-mode {
-    background-color: #000214;
-    
 }
 
 .contacto a {
@@ -712,6 +711,7 @@ Responsive   |
     transition: all 0.3s;
 }
 
+
 .shimmer-button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px 8px rgba(62, 61, 117, 0.7);
@@ -789,7 +789,6 @@ Responsive   |
     font-size: 1.5rem;
     font-variant: small-caps;
     font-weight: 900;
-    color: #444;
 }
 
 .contactame span {
