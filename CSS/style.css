@@ -624,9 +624,16 @@ Responsive   |
     .enviar {
         display: none;
     }
+    .contacto {
+        position: relative;
+    }
     .contacto iframe {
+        position: absolute;
         width: auto;
-        height: 120px;
+        height: 110px;
+        margin: 5px 0 5px 10px;
+        top: 0;
+        left: 0;
     }
     .input::placeholder {
         color: #222222;
