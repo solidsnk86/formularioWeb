@@ -1,4 +1,4 @@
-function mostrarAnuncio() {
+/** function mostrarAnuncio() {
   var anuncio = document.createElement('div');
   anuncio.innerHTML = `
   <div id="anuncio">
@@ -42,6 +42,9 @@ function mostrarAnuncio() {
 }
 
 window.addEventListener('load', mostrarAnuncio);
+
+*/
+
 
 // Función sumar productos
 const cantidadInputs = document.querySelectorAll('.cantidad');
@@ -303,34 +306,6 @@ document.querySelector('.toggle-button').onclick = function() {
   }
 }
 
-/**
- * // función para cambiar de color
-
-const elegirColor = document.querySelector('#elegir-color');
-var elementos = document.querySelectorAll('#elemento');
-
-elegirColor.addEventListener('change', function() {
-  const color = elegirColor.value;
-  localStorage.setItem('selectedColor', color);
-  actualizarColor(color);
-});
-
-function actualizarColor(color) {
-  elementos.forEach(function (elementos) {
-    elementos.style.backgroundColor = color;
-  })
-};
-
-window.addEventListener('load', function () {
-  const selectedColor = localStorage.getItem('selectedColor');
-  if (selectedColor) {
-    actualizarColor(selectedColor);
-    elegirColor.value = selectedColor;
-  }
-});
- */
-
-
 
 const inputWhatsapp = document.getElementById('wap');
  const atributteA = document.querySelector('#wap-href');
@@ -391,7 +366,6 @@ const dropList = document.querySelector('.article-drop-list');
 chevroButton.style.transition = '.3s all'
 chevroButton.style.cursor = 'pointer'
 
-
 chevroButton.onclick = () => {
   
   if (dropList.style.display === '') {
@@ -404,7 +378,6 @@ chevroButton.onclick = () => {
     chevroButton.style.color = ''
   }
 }
-
 /**
  * Local Storage Button Save
  */
@@ -414,7 +387,35 @@ const saveButton = document.getElementById('save-button');
 const borrarButton = document.getElementById('deleteButton')
 
 function guardarEnLocalStorage() {
-  const valores = {};
+  const valores = {
+    empresaNombre: [],
+    formulario: [],
+    cliente: [],
+    direccion: [],
+    cuit: [],
+    numeroFact: [],
+    fecha: [],
+    producto1: [],
+    producto2: [],
+    producto3: [],
+    producto4: [],
+    cantidad1: [],
+    cantidad2: [],
+    cantidad3: [],
+    cantidad4: [],
+    precio1: [],
+    precio2: [],
+    precio3: [],
+    precio4: [],
+    total1: [],
+    total2: [],
+    total3: [],
+    total4: [],
+    subtotal: [],
+    impuesto: [],
+    Total: []
+
+  };
 
   inputs.forEach((input) => {
     valores[input.id] = input.value;
@@ -422,9 +423,8 @@ function guardarEnLocalStorage() {
 
   const valoresJSON = JSON.stringify(valores);
   localStorage.setItem('valoresInput', valoresJSON);
-
   if (guardarEnLocalStorage) {
-    alert('Datos guardados con éxito!')
+    alert('Datos guardados exitosamente!')
   }
 }
 
@@ -451,12 +451,10 @@ borrarButton.addEventListener('click', () => {
   inputs.forEach((input) => {
     input.value = '';
   });
-  
-if (localStorage.removeItem('valoresInput')) {
-  alert('Se han eliminado los datos de los campos.')
-}
+  if (localStorage.removeItem) {
+    alert('Se han borrado los datos exitosamente.')
+  }
 });
-
 
 /**-----------------------|
  # Share content Android  |
