@@ -21,34 +21,38 @@
 
 <body>
 	<nav class="navbar">
-		<img class="avatar-logo" src="img/factura.png" alt="Avatar logo">
-		<i class="ri-save-3-line" id="save-button" title="Guardar datos de los campos."></i>
-		<i class="ri-delete-bin-6-line" id="deleteButton" title="Borrar datos"></i>
-		<i class="ri-share-line" id="share-button"></i>
+		<img class="avatar-logo" src="../formularioWeb-master/img/factura.png" alt="Avatar logo">
+		<ul class="tools-container-list">
+			<li><i class="bx bx-save" id="save-button" title="Guardar datos de los campos."></i></li>
+			<li><i class="bx bx-trash" id="deleteButton" title="Borrar datos"></i></li>
+			<li><i class="bx bx-share-alt" id="share-button"></i></li>
+		</ul>
 		<aside class="toggle-button">
 			<i id="moon-icon" title="Modo Oscuro">🌚</i>
 			<i id="sun-icon" title="Modo Claro">🌞</i>
 		</aside>
 	</nav>
 
+
 	<div class="article-header">
+		
 		<h3>Formulario web</h3>
 		<p>Éste formulario se puede usar para: Facturas(A-B-C) | Presupuestos | Recibos</p>
 		<span id="mas-info">Más info <i class="bx bx-plus drop-chevron"></i></span>
 		<ul class="article-drop-list">
-			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo , opciones de contacto y ubicación de la empresa o negocio.</li>
+			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
 			<li>Ingrese los items, seleccione la cantidad e indique el precio y se calcularán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
-			<li>En el botón de imprimir 🖨️, también podés seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
+			<li>En el botón de imprimir 🖨, también podés seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
 			<li>En los campos de contacto, puede cargar su número para contacto por whatsapp, teléfono y mail, luego se puede hacer click en los íconos y se crea el link para su contacto.</li>
-			<li>En la barra de navegación podés guardar los campos 💾 que has completado y limpiarlos para otro uso.</li>
+			<li>En la barra de navegación puede guardar los campos 💾 que ha llenado y limpiarlos para otro uso.</li>
 		</ul>
 	</div>
 
 	<form id="myForm">
 
-    <header id="elemento">
+    <header>
 
-	    	<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+		<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
 			<defs>
 				<pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45'>
 					<path
@@ -61,96 +65,98 @@
 			</defs>
 			<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
 		</svg>
-	    
-		<h1 id="elemento"><input type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa" id="elemento"></h1>
-        <h3> <input type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
-		<h2>Cliente: <input id="elemento" type="text" placeholder="Ingrese el cliente" id="textArea" title="Ingrese el nombre del cliente"></h2>
-        <h2>Dirección: <input id="elemento" type="text" placeholder="Ingrese la calle" id="textArea" title="Ingrese la dirección"></h2>
-		<h2>CUIT/CUIL: <input id="elemento" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input type="text" style="font-weight: bold; margin-right: 3px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="num-form"></p>
-		<p>Fecha: <input type="date" style="font-weight: bold; width:auto; margin-right: 3px;"></p>
+
+		<h1><input id="empresaNombre" type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa"></h1>
+        <h3> <input id="formulario" type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
+		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="cliente" title="Ingrese el nombre del cliente"></h2>
+        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="direccion" title="Ingrese la dirección"></h2>
+		<h2>CUIT/CUIL: <input id="cuit" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
+		<p><input type="text" style="font-weight: bold; margin-right: 5px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="numeroFact"></p>
+		<p>Fecha: <input id="fecha" type="date" style="font-weight: bold; width:auto; margin-right: 5px;"></p>
 	</header>
 
 	<table class="tabla">
 		<tr>
-			<th id="elemento">Descripción</th>
-			<th id="elemento">Cantidad</th>
-			<th id="elemento">Precio Unitario</th>
-			<th id="elemento">Total</th>
+			<th>Descripción</th>
+			<th>Cantidad</th>
+			<th>Precio Unitario</th>
+			<th>Total</th>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad" id="cantidad"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="producto1"></td>
+			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad1"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio1"></td>
+			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total1"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="precio2"></td>
+			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad2"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio2"></td>
+			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total2"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto3"></td>
+			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad3"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio3"></td>
+			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total3"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="textArea"></td>
-			<td><input type="number" class="cantidad" style="width: 30px;" placeholder="..." title="Ingrese cantidad"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario"></td>
-			<td><input type="text" class="total" style="width: 85px;" placeholder=".$." title="Ingrese el total"></td>
+			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto4"></td>
+			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad4"></td>
+			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio4"></td>
+			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total4"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
-			<td><input type="text" class="subtotal" style="width: 70px;" placeholder="SubTotal" title="Ingrese el subtotal"></td>
+			<td><input type="text" class="subtotal" placeholder="SubTotal" title="Ingrese el subtotal" id="subtotal"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Impuestos:</td>
-			<td><input type="text" class="impuestos" style="width: 70px;" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
+			<td><input type="text" class="impuestos" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Total:</td>
-			<td><input type="text" class="total_final" style="width: 70px;" placeholder="TOTAL"></td>
+			<td><input type="text" class="total_final" placeholder="TOTAL"></td>
 		</tr>
 	</table>
 
 <div class="observaciones">
     <h3>Observaciones:</h3>
     <li>Validez de la oferta: <input id="num-form" type="text" name="" id="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
-    <li>Forma de pago: <select name="Forma de pago" id="forma-pago">
+    <li>Forma de pago: 
+		<select name="Forma de pago" id="forma-pago">
         <option value="opcion1">Transferencia</option>
         <option value="opcion2">Mercado Pago</option>
         <option value="opcion3">Efectivo</option>
       </select>
       </li>
-    <li>Facturación: <select name="Facturacion">
+    <li>Facturación: 
+		<select name="Facturacion">
         <option value="opcion1">"A"</option>
         <option value="opcion2">"B"</option>
         <option value="opcion3">"C"</option>
-      </select></li>
+      </select>
+	</li>
 
 	<div class="container-forma"></div>
-
 </div>
 
-<article class="contacto" id="elemento">
+<article class="contacto">
 
 	<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-			<defs>
-				<pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45'>
-					<path
-						d='m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z'
-						strokeWidth='1'
-						stroke='none'
-						fill='rgba(255, 255, 255, .1)'
-					/>
-				</pattern>
-			</defs>
-			<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
-		</svg>
-	
+		<defs>
+			<pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45'>
+				<path
+					d='m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z'
+					strokeWidth='1'
+					stroke='none'
+					fill='rgba(255, 255, 255, .1)'
+				/>
+			</pattern>
+		</defs>
+		<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
+	</svg>
+
     <h4>Contáctese por estos medios:</h4>
     <div class="contactos">
   	<a target="_blank" title="Ingrese su Whatsapp"><i class="bx bi-whatsapp" id="wap-href"></i> <input type="text" id="wap" placeholder="Whatsapp"></a>
@@ -174,6 +180,18 @@
         </div>
     </button>
 </div>
+
+<aside class="bottom-stycky-list">
+	<ul>
+		<li><i id="phone-me" class="bx bi-phone"></i></li>
+		<hr>
+		<li><i id="my-linkedin" class="bx bi-linkedin"></i></li>
+		<hr>
+		<li><i id="my-github" class="bx bi-github"></i></li>
+		<hr>
+		<li><i id="mail-me" class="bx bi-envelope"></i></li>
+	</ul>
+</aside>
 
 	<footer>
 		<span>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;"><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260">SolidSnk86</a></span></span>
