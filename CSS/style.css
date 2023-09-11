@@ -206,6 +206,7 @@ input.dark-mode::placeholder {
 }
 
 header {
+    position: relative;
     background-color: #fafafa;
     color: #000;
     border: 1px solid #000;
@@ -213,6 +214,16 @@ header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #EAEAEA;
+    z-index: 1;
+}
+
+header #patternId {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 header h1 input {
@@ -301,6 +312,7 @@ option, select {
 * Sección Contacto
 */
 .contacto {
+    position: relative;
     border: 1px solid #000;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -308,6 +320,16 @@ option, select {
     padding: 20px;
     margin: 5px auto;
     background-color: #EAEAEA;
+    z-index: 1;
+}
+
+.contacto #patternId {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .contacto-dark-mode {
@@ -627,5 +649,60 @@ input[type="color"] {
 }
 .container-forma input {
     width: 55%;
+}
+
+/**
+* SHIMER BUTTON
+*/
+.shimmer-button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 24px;
+    background: radial-gradient(ellipse 80% 50% at 50% 120%, rgba(62, 61, 117), rgba(18, 18, 38));
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.shimmer-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px 8px rgba(62, 61, 117, 0.7);
+}
+
+.shimmer-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: auto;
+    height: 100%;
+    animation: shimmer 1.5s infinite linear;
+    background: conic-gradient(from 270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
+}
+
+.shimmer-button-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.shimmer-button-content i {
+    margin-right: 5px;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
