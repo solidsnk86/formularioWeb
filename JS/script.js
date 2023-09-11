@@ -499,3 +499,26 @@ if ("geolocation" in navigator) {
   document.addEventListener('DOMContentLoaded', loadIframe);
 })
 }
+
+/**
+ * CONTACT ME
+ */
+const phoneMe = document.getElementById('phone-me');
+phoneMe.onclick = () => {
+  window.open('tel:+5492665290020');
+}
+
+const myLinkedin = document.getElementById('my-linkedin');
+myLinkedin.onclick = () => {
+  window.open('http://www.linkedin.com/in/gabriel-calcagni');
+}
+
+const myGithub = document.getElementById('my-github');
+myGithub.onclick = () => {
+  window.open('https://github.com/solidsnk86');
+}
+
+const mailMe = document.getElementById('mail-me');
+mailMe.onclick = () => {
+  window.open('mailto:calcagni.gabriel86@gmail.com');
+}
