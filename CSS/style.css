@@ -102,6 +102,10 @@ body {
     text-align: center;
 }
 
+.article-header li {
+    text-align: left;
+}
+
 .article-header h3, p {
     margin: 5px 0 0 5px;
     text-align: left;
@@ -628,6 +632,9 @@ Responsive   |
     .input::placeholder {
         color: #222222;
     }
+    .bottom-stycky-list {
+        display: none;
+    }
 }
 
 /**------------|
@@ -773,4 +780,18 @@ Responsive   |
     font-size: 35px;
     margin: 5px 10px auto;
     cursor: pointer;
+}
+
+.contactame {
+    position: relative;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    font-weight: 900;
+    color: #444;
+}
+
+.contactame span {
+    border-bottom: 2px solid #555;
 }
