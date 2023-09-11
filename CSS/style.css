@@ -290,6 +290,14 @@ header p input {
     cursor: text;
 }
 
+header #numeroFact {
+    margin-bottom: 3px;
+}
+
+header #fecha {
+    margin: 0 10px 5px 0;
+}
+
 /**||||||
 * TABLA |
 |||||||||*/
