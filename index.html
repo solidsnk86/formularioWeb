@@ -163,8 +163,16 @@
 </form>
 
 <div class="enviar">
-    <button onclick="compartirFormulario()"><i class="ri-share-forward-line"></i> Compartir Formulario</button>
-    <button onclick="imprimirFormulario()" id="imprimir"><i class="ri-printer-line"></i> Imprimir | Descargar</button>
+	<button class="shimmer-button" onclick="compartirFormulario()">
+        <div class="shimmer-button-content">
+			<i class="ri-share-forward-line"></i> Compartir Formulario
+        </div>
+    </button>
+	<button  id="imprimir" class="shimmer-button" onclick="imprimirFormulario()">
+        <div class="shimmer-button-content">
+			<i class="ri-printer-line"></i> Imprimir | Desacargar
+        </div>
+    </button>
 </div>
 
 	<footer>
