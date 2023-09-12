@@ -30,7 +30,7 @@ body {
 .toggle-button {
     position: sticky;
     float: right;
-    margin: 8px auto auto;
+    margin: 8px auto;
     font-size: 1.3rem;
 }
 
