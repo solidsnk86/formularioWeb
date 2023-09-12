@@ -413,8 +413,10 @@ function guardarEnLocalStorage() {
     total4: [],
     subtotal: [],
     impuesto: [],
-    Total: []
-
+    Total: [],
+    wap: [],
+    'phone-input': [],
+    'mail-input': [],
   };
 
   inputs.forEach((input) => {
