@@ -582,7 +582,7 @@ Responsive   |
         margin: 0 200px;
     }
     .contacto iframe {
-        width: 420px;
+        width: 500px;
         height: 200px;
     }
     .article-header {
@@ -592,7 +592,7 @@ Responsive   |
         width: 100px;
     }
     .contactos #mail-input {
-        width: max-content;
+        width: 260px;
     }
     .compartirMenu {
         margin: 50px 300px;
@@ -642,12 +642,14 @@ Responsive   |
     }
     .contacto {
         position: relative;
+        min-height: 160px;
+        border: 1px solid #000;
     }
     .contacto iframe {
         position: absolute;
         width: auto;
-        height: 110px;
-        margin: 5px 0 5px 10px;
+        height: 180px;
+        margin: 10px 0 5px 10px;
         top: 0;
         left: 0;
     }
@@ -659,6 +661,11 @@ Responsive   |
     }
     .contactame {
         display: none;
+    }
+    footer {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
     }
 }
 
