@@ -22,19 +22,20 @@ body {
 }
 
 .navbar .avatar-logo {
-    width: 28px;
-    height: 28px;
-    margin: 10px auto auto 10px;
+    width: 33px;
+    height: 33px;
+    margin: 5px auto auto 10px;
 }
 
 .toggle-button {
     position: sticky;
     float: right;
-    margin: 14px auto auto 10px;
+    margin: 8px auto auto;
+    font-size: 1.3rem;
 }
 
 .navbar .toggle-button i {
-    margin: 0 15px;
+    margin: 0 10px;
     cursor: pointer;
     font-style: normal;
     font-size: larger;
@@ -42,23 +43,23 @@ body {
 
 #sun-icon {
     display: none;
-    color: goldenrod;
 }
 
 /**|||||||||||||
 # NAVBAR TOOLS |
 ||||||||||||||||*/
 .tools-container-list {
+    position: relative;
     display: inline-flex;
     list-style: none;
-    gap: 10px;
+    margin-left: -25px;
     padding-top: 3px;
+    gap: 10px;
 }
 
 #save-button {
     position: relative;
     top: -4px;
-    left: 10px;
     font-size: 1.5rem;
     cursor: pointer;
     transition: .2s all;
@@ -72,7 +73,6 @@ body {
     position: relative;
     top: -4px;
     font-size: 1.5rem;
-    margin-left: 20px;
     cursor: pointer;
     transition: .2s all;
 }
@@ -86,7 +86,6 @@ body {
     position: relative;
     top: -3px;
     cursor: pointer;
-    margin-left: 5px;
 }
 
 #share-button:hover {
@@ -104,6 +103,7 @@ body {
 
 .article-header li {
     text-align: left;
+    font-style: italic;
 }
 
 .article-header h3, p {
@@ -242,7 +242,7 @@ header {
     background-color: #fafafa;
     color: #000;
     border: 1px solid #000;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #EAEAEA;
@@ -263,7 +263,14 @@ header h1 input {
     padding: 9px 12px;
     font-size: x-large;
     margin-left: 10px;	
+    width: fit-content;
 }
+
+header h1 input::placeholder {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
 header h3, input {
     text-align: center;
     color: #000;
@@ -291,7 +298,12 @@ header p input {
 }
 
 header #fecha {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+}
+
+header #numeroFact {
+    text-align: right;
+    width: 120px;
 }
 
 /**||||||
@@ -377,7 +389,7 @@ option, select {
     border-bottom-right-radius: 10px;
     text-align: right;
     padding: 20px;
-    margin: 5px auto;
+    margin: 3px auto;
     background-color: #EAEAEA;
     z-index: 1;
 }
@@ -805,6 +817,3 @@ Responsive   |
     font-weight: 900;
 }
 
-.contactame span {
-    border-bottom: 2px solid #555;
-}
