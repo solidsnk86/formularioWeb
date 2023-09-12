@@ -242,7 +242,7 @@ header {
     background-color: #fafafa;
     color: #000;
     border: 1px solid #000;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #EAEAEA;
@@ -299,6 +299,7 @@ header p input {
 
 header #fecha {
     margin-bottom: 5px;
+    text-align: right;
 }
 
 header #numeroFact {
@@ -345,6 +346,7 @@ tfoot td {
 # SECCION OBSERVACIONES |
 |||||||||||||||||||||||||*/
 .observaciones {
+    position: relative;
     border-bottom: 1px solid #000;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
@@ -389,7 +391,7 @@ option, select {
     border-bottom-right-radius: 10px;
     text-align: right;
     padding: 20px;
-    margin: 3px auto;
+    margin: 2px auto;
     background-color: #EAEAEA;
     z-index: 1;
 }
@@ -603,6 +605,9 @@ Responsive   |
     #myForm {
         margin: 10px;
     }
+    header #empresaNombre {
+        width: max-content;
+    }
     .tabla {
         width: 100%;
     }
@@ -652,6 +657,9 @@ Responsive   |
         margin: 10px 0 5px 10px;
         top: 0;
         left: 0;
+    }
+    .contactos {
+        width: auto;
     }
     .input::placeholder {
         color: #222222;
