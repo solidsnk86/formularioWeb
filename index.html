@@ -21,11 +21,10 @@
 
 <body>
 	<nav class="navbar">
-		<img class="avatar-logo" src="img/factura.png" alt="Avatar logo">
+		<img class="avatar-logo" src="../formularioWeb-master/img/factura.png" alt="Avatar logo">
 		<ul class="tools-container-list">
-			<li><i class="bx bx-save" id="save-button" title="Guardar datos de los campos."></i></li>
-			<li><i class="bx bx-trash" id="deleteButton" title="Borrar datos"></i></li>
-			<li><i class="bx bx-share-alt" id="share-button"></i></li>
+			<li><i class="bx bx-save" id="save-button" title="Guardar datos del formulario."></i></li>
+			<li><i class="bx bx-trash" id="deleteButton" title="Limpiar formulario."></i></li>
 		</ul>
 		<aside class="toggle-button">
 			<i id="moon-icon" title="Modo Oscuro">🌚</i>
@@ -43,7 +42,7 @@
 			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
 			<li>Ingrese los items, seleccione la cantidad e indique el precio y se calcularán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
 			<li>En el botón de imprimir 🖨, también podés seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
-			<li>En los campos de contacto, puede cargar su número para contacto por whatsapp, teléfono y mail, luego se puede hacer click en los íconos y se crea el link para su contacto.</li>
+			<li>En los campos de contacto, puede cargar su número para contacto por whatsapp, teléfono y mail, se crea un atributo y se genera un link para su contacto haciendo click en los íconos.</li>
 			<li>En la barra de navegación puede guardar los campos 💾 que ha llenado y limpiarlos para otro uso.</li>
 		</ul>
 	</div>
@@ -71,7 +70,7 @@
 		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="cliente" title="Ingrese el nombre del cliente"></h2>
         <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="direccion" title="Ingrese la dirección"></h2>
 		<h2>CUIT/CUIL: <input id="cuit" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input type="text" style="font-weight: bold; margin-right: 5px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario" id="numeroFact"></p>
+		<p><input id="numeroFact" type="text" style="font-weight: bold; margin-right: 5px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
 		<p>Fecha: <input id="fecha" type="date" style="font-weight: bold; width:auto; margin-right: 5px;"></p>
 	</header>
 
@@ -83,28 +82,28 @@
 			<th>Total</th>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="producto1"></td>
-			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad1"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio1"></td>
-			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total1"></td>
+			<td class="descripcion"><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="producto1"></td>
+			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad1"></td>
+			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio1"></td>
+			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total1"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="precio2"></td>
-			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad2"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio2"></td>
-			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total2"></td>
+			<td class="descripcion"><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="producto2"></td>
+			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad2"></td>
+			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio2"></td>
+			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total2"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto3"></td>
-			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad3"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio3"></td>
-			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total3"></td>
+			<td class="descripcion"><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto3"></td>
+			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad3"></td>
+			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio3"></td>
+			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total3"></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto4"></td>
-			<td><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad4"></td>
-			<td><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio4"></td>
-			<td><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total4"></td>
+			<td class="descripcion"><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto4"></td>
+			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad4"></td>
+			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio4"></td>
+			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total4"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
@@ -116,21 +115,22 @@
 		</tr>
 		<tr>
 			<td colspan="3">Total:</td>
-			<td><input type="text" class="total_final" placeholder="TOTAL"></td>
+			<td><input type="text" class="total_final" placeholder="TOTAL"
+				id="Total"></td>
 		</tr>
 	</table>
 
 <div class="observaciones">
     <h3>Observaciones:</h3>
-    <li>Validez de la oferta: <input id="num-form" type="text" name="" id="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
-    <li>Forma de pago: 
+    <li>Validez de la oferta:<br><input id="num-form" type="text" name="" id="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
+    <li>Forma de pago:<br>
 		<select name="Forma de pago" id="forma-pago">
         <option value="opcion1">Transferencia</option>
         <option value="opcion2">Mercado Pago</option>
         <option value="opcion3">Efectivo</option>
       </select>
       </li>
-    <li>Facturación: 
+    <li>Facturación:<br> 
 		<select name="Facturacion">
         <option value="opcion1">"A"</option>
         <option value="opcion2">"B"</option>
@@ -174,7 +174,7 @@
 			<i class="ri-share-forward-line"></i> Compartir Formulario
         </div>
     </button>
-	<button  id="imprimir" class="shimmer-button" onclick="imprimirFormulario()">
+	<button  id="imprimir" class="shimmer-button">
         <div class="shimmer-button-content">
 			<i class="ri-printer-line"></i> Imprimir | Desacargar
         </div>
@@ -190,6 +190,8 @@
 		<li><i id="phone-me" class="bx bi-phone"></i></li>
 		<hr>
 		<li><i id="my-linkedin" class="bx bi-linkedin"></i></li>
+		<hr>
+		<li><i id="share-button" class="bx bx-share-alt"></i></li>
 		<hr>
 		<li><i id="my-github" class="bx bi-github"></i></li>
 		<hr>
