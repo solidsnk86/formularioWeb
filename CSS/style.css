@@ -845,7 +845,7 @@ Responsive   |
     display: inline-block;
     text-align: center;
     padding: 10px;
-    background: radial-gradient(ellipse 80% 50% at 50% 120%, rgba(62, 61, 117), rgba(18, 18, 38));
+    background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(62, 61, 117), rgba(18, 18, 38));
     border-radius: 10px;
 }
 
