@@ -10,6 +10,7 @@ body {
     transition: background-color 0.4s;
 }
 
+
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -27,14 +28,14 @@ body {
 }
 
 .toggle-button {
-    position: sticky;
+    position: relative;
     float: right;
+    right: 10px;
     margin: 8px auto;
     font-size: 1.3rem;
 }
 
 .navbar .toggle-button i {
-    margin: 8px 10px;
     cursor: pointer;
     font-style: normal;
     font-size: larger;
@@ -58,37 +59,24 @@ body {
 
 #save-button {
     position: relative;
-    top: -4px;
-    font-size: 1.5rem;
+    top: -5px;
+    font-size: 1.7rem;
     cursor: pointer;
     transition: .2s all;
-}
-
-#save-button:hover {
-    color: #666;
 }
 
 #deleteButton {
     position: relative;
-    top: -4px;
-    font-size: 1.5rem;
+    top: -5px;
+    font-size: 1.7rem;
     cursor: pointer;
     transition: .2s all;
 }
 
-#deleteButton:hover {
-    color: #666;
-}
-
-#share-button {
-    font-size: 1.5rem;
-    position: relative;
-    top: -3px;
-    cursor: pointer;
-}
-
-#share-button:hover {
-    color: #666;
+.tools-container-list li:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 3px 7px #888;
+    transition: .2s ease-in-out;
 }
 
 .article-header {
@@ -315,12 +303,27 @@ header #numeroFact {
 	border-collapse: collapse;
 }
 
-.tabla .precio {
-    width: 50px;
+.tabla .descripcion {
+    width: 250px;
 }
 
 .tabla .cantidad {
     width: 50px;
+}
+
+.tabla .precio {
+    width: 50px;
+}
+
+.tabla .total {
+    width: 80px;
+}
+
+#producto1,
+#producto2,
+#producto3,
+#producto4 {
+    width: 200px;
 }
 
 th, td {
@@ -356,9 +359,19 @@ tfoot td {
     margin: 5px;
 }
 
+.observaciones #num-form {
+    width: 75px;
+}
+
 option, select {
     font-size: 0.95em;
     cursor: pointer;
+}
+
+.observaciones .container-forma {
+   position: absolute;
+   top: 18px;
+   right: 0;
 }
 
 .enviar {
@@ -551,6 +564,37 @@ option, select {
     transition: .1s all;
     color: tomato;
 }
+
+/* MODAL SAVE & DELETE CARDS */
+.modal-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(160, 160, 160, 0.103);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modal-style {
+    width: 300px;
+    height: auto;
+    color: #fafafa;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(62, 61, 117), rgba(18, 18, 38));
+    border-radius: 10px;
+}
+
+.modal-style button {
+    color: #fafafa;
+}
+
 
 /**|||||||
 * FOOTER |
@@ -791,10 +835,14 @@ Responsive   |
     }
 }
 
+/**
+* BOTTOM LIST CONTACT
+*/
+
 .bottom-stycky-list {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    height: 50px;
+    height: 45px;
     width: 100%;
     position: sticky;
     bottom: 0;
@@ -804,7 +852,7 @@ Responsive   |
 }
 
 .bottom-stycky-list hr {
-    height: 48px;
+    height: 43px;
     margin: 0 auto;
 }
 
@@ -817,9 +865,14 @@ Responsive   |
 }
 
 .bottom-stycky-list ul li i {
-    font-size: 35px;
+    font-size: 30px;
     margin: 5px 10px auto;
     cursor: pointer;
+}
+
+.bottom-stycky-list #share-button {
+    position: relative;
+    top: 3px;
 }
 
 .contactame {
@@ -829,33 +882,4 @@ Responsive   |
     font-size: 1.5rem;
     font-variant: small-caps;
     font-weight: 900;
-}
-
-.modal-card {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(160, 160, 160, 0.103);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.modal-style {
-    width: 300px;
-    height: auto;
-    color: #fafafa;
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(62, 61, 117), rgba(18, 18, 38));
-    border-radius: 10px;
-}
-
-.modal-style button {
-    color: #fafafa;
 }
