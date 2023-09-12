@@ -378,6 +378,33 @@ chevroButton.onclick = () => {
     chevroButton.style.color = ''
   }
 }
+
+/**
+ * MODAL CARD
+ */
+function modalCard() { 
+  const textSave = 'Se ha guardado los datos del formulario correctamente!'
+  modalcard = document.createElement('div');
+  modalcard.classList.add('modal-card');
+  modalcard.innerHTML = `
+  <article class='modal-card'>
+  <div class="modal-style">
+  <h4>${textSave}</h4>
+  <button id="cerrar-modal" class="shimmer-button">Ok</button>
+  </div>
+  </article>
+  `;
+  document.body.appendChild(modalcard);
+
+  document.getElementById('cerrar-modal').addEventListener('click', cerrarModal);
+}
+
+function cerrarModal() {
+  document.body.removeChild(modalcard);
+}
+
+
+
 /**
  * Local Storage Button Save
  */
@@ -415,10 +442,10 @@ function guardarEnLocalStorage() {
     impuesto: [],
     Total: [],
     wap: [],
-    'phone-input': [],
-    'mail-input': [],
+    "phone-input": [],
+    "mail-input": [],
   };
-
+  
   inputs.forEach((input) => {
     valores[input.id] = input.value;
   });
@@ -426,12 +453,15 @@ function guardarEnLocalStorage() {
   const valoresJSON = JSON.stringify(valores);
   localStorage.setItem('valoresInput', valoresJSON);
   if (guardarEnLocalStorage) {
-    alert('Datos guardados exitosamente!')
+    return (
+      modalCard()
+    )
   }
 }
 
 function cargarDesdeLocalStorage() {
   const valoresJSON = localStorage.getItem('valoresInput');
+  
   if (valoresJSON) {
     const valores = JSON.parse(valoresJSON);
 
@@ -454,9 +484,26 @@ borrarButton.addEventListener('click', () => {
     input.value = '';
   });
   if (localStorage.removeItem) {
-    alert('Se han borrado los datos exitosamente.')
+    modalCardDelete();
   }
 });
+
+function modalCardDelete() { 
+  const textDelete = 'Se han eliminado los datos del formulario con éxito!'
+  modalcard = document.createElement('div');
+  modalcard.classList.add('modal-card');
+  modalcard.innerHTML = `
+  <article class='modal-card'>
+  <div class="modal-style">
+  <h4>${textDelete}</h4>
+  <button id="cerrar-modal" class="shimmer-button">Ok</button>
+  </div>
+  </article>
+  `;
+  document.body.appendChild(modalcard);
+
+  document.getElementById('cerrar-modal').addEventListener('click', cerrarModal);
+}
 
 /**-----------------------|
  # Share content Android  |
