@@ -22,23 +22,25 @@ body {
 }
 
 .navbar .avatar-logo {
+    position: relative;
+    top: -1px;
     width: 33px;
     height: 33px;
-    margin: 5px auto auto 10px;
+    margin-left: 10px;
 }
 
 .toggle-button {
     position: relative;
     float: right;
     right: 10px;
-    margin: 8px auto;
+    margin: 10px auto;
     font-size: 1.3rem;
 }
 
 .navbar .toggle-button i {
     cursor: pointer;
     font-style: normal;
-    font-size: larger;
+    font-size: 1.5rem;
 }
 
 #sun-icon {
@@ -177,6 +179,10 @@ th.dark-mode {
     border-color: #666;
 }
 
+td.dark-mode {
+    border-color: #666;
+}
+
 input.dark-mode {
     background-color: transparent;
     color: #fafafa;
@@ -209,16 +215,12 @@ input {
     border: none;
     font-family: monospace;
     background-color: transparent;
+    width: auto;
 }
 
 input::placeholder {
     color: #222222;
     font-size: 0.9rem;
-}
-
-#textArea {
-    resize: horizontal;
-    max-width: 100%;
 }
 
 /**|||||||
@@ -331,8 +333,9 @@ th, td {
 	border: 1px solid black;
 }
 
-td.dark-mode {
-    border-color: #666;
+td input {
+    margin: 0;
+    width: 100%;
 }
 
 th {
@@ -355,7 +358,12 @@ tfoot td {
     padding: 20px;
 }
 
+.observaciones h3 {
+    font-size: 1.2rem;
+}
+
 .observaciones li {
+    font-size: 1rem;
     margin: 5px;
 }
 
@@ -369,9 +377,9 @@ option, select {
 }
 
 .observaciones .container-forma {
-   position: absolute;
-   top: 18px;
-   right: 0;
+   display: inline;
+   font-size: 0.9rem;
+   margin: 0;
 }
 
 .enviar {
@@ -496,13 +504,16 @@ option, select {
     color: rgb(0, 0, 0);
     animation: lightSpeedInLeft;
     animation-duration: .6s;
+    z-index: 9;
 }
+
 #colab {
     border: 1px solid #000;
     padding: 8px;
     border-radius: 3px;
     font-weight: 500;
 }
+
 #colab:hover {
     background: linear-gradient(
     180deg, lightgreen, yellowgreen);
@@ -633,6 +644,19 @@ Responsive   |
     .article-header {
         margin: 60px 100px 25px;
     }
+    .tabla input {
+        width: 100%;
+    }
+    .tabla .descripcion input {
+        width: 250px;
+    }
+    .tabla .total {
+        text-align: center;
+        width: 50px;
+    }
+    .tabla .total input {
+        width: 70px;
+    }
     .contactos input {
         width: 100px;
     }
@@ -696,7 +720,7 @@ Responsive   |
     .contacto iframe {
         position: absolute;
         width: auto;
-        height: 180px;
+        height: 120px;
         margin: 10px 0 5px 10px;
         top: 0;
         left: 0;
@@ -849,6 +873,7 @@ Responsive   |
     left: 0;
     z-index: 3;
     text-align: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .bottom-stycky-list hr {
