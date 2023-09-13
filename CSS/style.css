@@ -410,10 +410,14 @@ option, select {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: right;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 2px auto;
     background-color: #EAEAEA;
     z-index: 1;
+}
+
+.contacto h4 {
+    margin: 10px 10px 20px;
 }
 
 .contacto #patternId {
@@ -491,51 +495,66 @@ option, select {
   }
 
 .compartirMenu {
-    padding: 5px;
-    background-color: #ccc;
+    background: radial-gradient(ellipse 80% 50% at 50% 120%, rgba(62, 61, 117), rgba(18, 18, 38));
     width: 100%;
     height: auto;
-    border: 1px solid #222222;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: box-shadow 0.2s;
-    color: rgb(0, 0, 0);
+    color: #fafafa;
     animation: lightSpeedInLeft;
     animation-duration: .6s;
     z-index: 9;
 }
 
-#colab {
-    border: 1px solid #000;
-    padding: 8px;
-    border-radius: 3px;
-    font-weight: 500;
+.compartirMenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: auto;
+    height: 100%;
+    animation: shimmer 1.5s infinite linear;
+    background: conic-gradient(from 270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
 }
+
+#colab {
+    position: relative;
+    margin: 10px auto;
+    padding: 10px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    background: radial-gradient(ellipse 80% 50% at 50% 120%, rgb(133, 236, 133), rgb(110, 148, 35));
+    cursor: pointer;
+    color: #fafafa;
+    border: none;
+}
+
 
 #colab:hover {
-    background: linear-gradient(
-    180deg, lightgreen, yellowgreen);
-	color: white;
     transition: .3s all;
-    box-shadow: 2px 3px 7px #777;
+    filter: drop-shadow(0 0 10px lightgreen);
 }
 
-.compartirMenu a {
-    color: tomato;
-    text-decoration: none;
+.redesMenu p {
+    margin: 10px 0 0 0;
+    text-align: center;
 }
+
 .redesMenu button {
     border: none;
     padding: 5px;
     background-color: transparent;
     cursor: pointer;
+    color: #fafafa;
 }
 
 .redesMenu i:hover {
     transform: scale(1.2);
     text-shadow: 2px 3px 7px #777;
+    transition: .2s all;
 }
 
 .redesMenu #face:hover {
@@ -567,13 +586,14 @@ option, select {
     cursor: pointer;
     float: right;
     border: none;
-    margin: 2px 2px auto;
+    margin: 3px 3px auto;
     font-size: 1.3rem;
+    color: tomato;
 }
 
 #cerrarCarta:hover {
     transition: .1s all;
-    color: tomato;
+    transform: scale(1.1);
 }
 
 /* MODAL SAVE & DELETE CARDS */
@@ -604,6 +624,55 @@ option, select {
 
 .modal-style button {
     color: #fafafa;
+}
+
+/**
+* BOTTOM LIST CONTACT
+*/
+
+.bottom-stycky-list {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    height: 45px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 100px;
+    z-index: 3;
+    text-align: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bottom-stycky-list hr {
+    height: 43px;
+    margin: 0 auto;
+}
+
+.bottom-stycky-list ul {
+    display: flex;
+    position: relative;
+    left: -22px;
+    margin: 0;
+    list-style: none;
+}
+
+.bottom-stycky-list ul li i {
+    font-size: 30px;
+    margin: 5px 10px auto;
+    cursor: pointer;
+}
+
+.bottom-stycky-list #share-button {
+    position: relative;
+    top: 3px;
+}
+
+.contactame {
+    position: relative;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    font-weight: 900;
 }
 
 
@@ -675,6 +744,9 @@ Responsive   |
     header #empresaNombre {
         width: max-content;
     }
+    header #empresaNombre::placeholder {
+        font-size: 1.1rem;
+    }
     .tabla {
         width: 100%;
     }
@@ -683,6 +755,9 @@ Responsive   |
     }
     .compartirMenu {
         margin: 0 10px;
+    }
+    #mail-input {
+        width: 220px;
     }
     .contacto iframe {
         width: fit-content;
@@ -695,7 +770,18 @@ Responsive   |
         font-size: 0.9rem;
     }
     .bottom-stycky-list {
-        text-align: left;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        height: 45px;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        border-radius: 0;
+    }
+    .bottom-stycky-list ul li i {
+        margin: 5px 10px auto;
     }
 }
 
@@ -714,19 +800,19 @@ Responsive   |
     }
     .contacto {
         position: relative;
-        min-height: 160px;
         border: 1px solid #000;
+        height: fit-content;
     }
     .contacto iframe {
-        position: absolute;
-        width: auto;
+        width: 400px;
         height: 120px;
-        margin: 10px 0 5px 10px;
-        top: 0;
-        left: 0;
+        margin: 5px 0 5px;
     }
     .contactos {
         width: auto;
+    }
+    #mail-input {
+        width: 220px;
     }
     .input::placeholder {
         color: #222222;
@@ -859,52 +945,3 @@ Responsive   |
     }
 }
 
-/**
-* BOTTOM LIST CONTACT
-*/
-
-.bottom-stycky-list {
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    height: 45px;
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    text-align: center;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.bottom-stycky-list hr {
-    height: 43px;
-    margin: 0 auto;
-}
-
-.bottom-stycky-list ul {
-    display: flex;
-    position: relative;
-    left: -22px;
-    margin: 0;
-    list-style: none;
-}
-
-.bottom-stycky-list ul li i {
-    font-size: 30px;
-    margin: 5px 10px auto;
-    cursor: pointer;
-}
-
-.bottom-stycky-list #share-button {
-    position: relative;
-    top: 3px;
-}
-
-.contactame {
-    position: relative;
-    text-align: center;
-    margin: 10px 0 10px 0;
-    font-size: 1.5rem;
-    font-variant: small-caps;
-    font-weight: 900;
-}
