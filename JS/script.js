@@ -383,7 +383,7 @@ chevroButton.onclick = () => {
  * MODAL CARD
  */
 function modalCard() { 
-  const textSave = 'Se ha guardado los datos del formulario correctamente!'
+  const textSave = 'Se han guardado los datos del formulario correctamente!'
   modalcard = document.createElement('div');
   modalcard.classList.add('modal-card');
   modalcard.innerHTML = `
