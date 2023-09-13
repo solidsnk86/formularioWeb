@@ -94,10 +94,7 @@ function compartirFormulario() {
       
     <article class="compartirMenu">
     <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
-      <div class="redesMenu">
       <br>
-   <center>
-    <div class="container">
         <div class="colaboracion">
             <h1>¡Muchas Gracias por usar éste formulario!</h1>
             <h3>No olvides dar una colaboración, el desarrollador te lo agradecerá<br>para poder seguir agregando nuevas funciones a éste formulario!</h3>
@@ -106,15 +103,17 @@ function compartirFormulario() {
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
             <img src="img/unnamed-removebg-preview.png" width="50px" alt="Logo Mercado-Pago">
         </div>
-    </div>
-</center>
+        
       <hr>
+
+      <aside class="redesMenu">
       <p>Compartir en redes sociales:</p>
       <button onclick="compartirFacebook()"><i id="face" class="bx bi-facebook"></i></span></button>
       <button onclick="compartirTwitter()"><i id="twitt" class="bx bi-twitter"></i></span></button>
       <button onclick="compartirWhatsapp()"><i id="what" class="bx bi-whatsapp"></i></span></button>
       <button onclick="compartirLinkedIn()"><i id="linked" class="bx bi-linkedin"></i></span></button>
-  </div>
+      </aside>
+    
     </article>
   </div>
   `;
@@ -137,18 +136,6 @@ botonImprimir.addEventListener('click', function(event) {
   event.preventDefault();
   window.print();
 })
-
-
-// función para expandir área de texto
-var textAreas = document.querySelectorAll('#textArea');
-textAreas.forEach(function(textArea) {
-  textArea.addEventListener("input", autoResize);
-});
-
-function autoResize() {
-  this.style.width = "auto";
-  this.style.width = this.scrollWidth + "px";
-};
 
 // Guardar los inputs y valores en LocalStorage
 const form = document.querySelector('#myForm');
@@ -207,32 +194,49 @@ function compartirLinkedIn() {
       const heading = document.createElement("h4");
       const input = document.createElement("input");
       const imgBanco = document.createElement('img');
+
+      imgBanco.src = 'img/banco.png';
+      imgBanco.style.position = 'absolute'
+      imgBanco.style.width = '25px';
+      imgBanco.style.height = '25px'
+      imgBanco.style.top = '82%'
+      imgBanco.style.left = '10px'
+
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CBU");
+      input.style.marginLeft = '20px'
+
       heading.textContent = "Número de cuenta Bancaria:"
+
       div.appendChild(heading);
       div.appendChild(input);
       div.appendChild(imgBanco);
       containerForma.appendChild(div);
-      imgBanco.src = 'img/banco.png';
-      imgBanco.style.width = '35px';
-      imgBanco.style.marginTop = '6px';
-      div.style.display = 'grid';
+      
     } else if (formaPagoValue === "opcion2") {
       const div = document.createElement("div");
       const paragraph = document.createElement("h4");
       const input = document.createElement("input");
       const imgMercado = document.createElement("img");
+
+      imgMercado.src = 'img/unnamed-removebg-preview.png';
+      imgMercado.style.width = '37px';
+      imgMercado.style.height = '40px'
+      imgMercado.style.position = 'absolute'
+      imgMercado.style.top = '80%'
+      imgMercado.style.left = '6px'
+
       input.setAttribute("type", "text");
       input.setAttribute("placeholder", "Ingrese su CVU o alias de Mercado Pago");
+      input.style.marginLeft = '25px'
+
       paragraph.textContent = "Número de CVU/alias:";
+
       div.appendChild(paragraph);
       div.appendChild(input);
       containerForma.appendChild(div);
       div.appendChild(imgMercado);
-      imgMercado.src = 'img/unnamed-removebg-preview.png';
-      imgMercado.style.width = '40px';
-      div.style.display = 'grid';
+      
     } else if (formaPagoValue === "opcion3") {
         const div3 = document.createElement("div");
       const etiqueta = document.createElement("label");
@@ -240,9 +244,17 @@ function compartirLinkedIn() {
       const input = document.createElement("input");
       const input2 = document.createElement("input");
       const pagoEfectivo = document.createElement('img');
+
+      div3.style.display = 'flex';
+      div3.style.margin = '20px';
+      div3.style.width = '110px';
+      pagoEfectivo.src = 'img/pagar.png';
+      etiqueta2.style.marginLeft = '30px';
+      pagoEfectivo.style.width = '30px';
+      pagoEfectivo.style.marginLeft = '25px';
+
       input.setAttribute("type", "radio", "value", "dolar");
       input2.setAttribute("type", "radio", "value", "pesos");
-      pagoEfectivo.src = 'img/pagar.png';
       etiqueta.textContent = "Dólar";
       etiqueta2.textContent = "Pesos"
       div3.appendChild(etiqueta);
@@ -251,12 +263,6 @@ function compartirLinkedIn() {
       div3.appendChild(input2);
       div3.appendChild(pagoEfectivo);
       containerForma.appendChild(div3);
-      div3.style.display = 'flex';
-      div3.style.margin = '20px';
-      div3.style.width = '110px';
-      etiqueta2.style.marginLeft = '30px';
-      pagoEfectivo.style.width = '40px';
-      pagoEfectivo.style.marginLeft = '20px';
     }
     
     const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -403,11 +409,9 @@ function cerrarModal() {
   document.body.removeChild(modalcard);
 }
 
-
-
-/**
- * Local Storage Button Save
- */
+/**---------------------------|
+ * Local Storage Button Save  |
+ ----------------------------*/
 
 const inputs = document.querySelectorAll('input');
 const saveButton = document.getElementById('save-button');
