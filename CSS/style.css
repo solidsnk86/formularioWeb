@@ -970,7 +970,7 @@ Responsive   |
 .loader {
     position: fixed;
     top: 50%;
-    left: 45%;
+    left: 44%;
     width: 60px;
     z-index: 99;
     aspect-ratio: 2;
