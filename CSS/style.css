@@ -632,10 +632,23 @@ option, select {
     padding: 10px;
     background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(62, 61, 117), rgba(18, 18, 38));
     border-radius: 10px;
+    animation: zoomIn .3s ease-in-out;
 }
 
 .modal-style button {
     color: #fafafa;
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
 }
 
 /**
