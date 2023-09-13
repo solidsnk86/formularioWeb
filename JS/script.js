@@ -44,7 +44,24 @@
 window.addEventListener('load', mostrarAnuncio);
 
 */
+/**@@@@@@@@
+ * LOADER @
+ @@@@@@@@@@*/
+ document.addEventListener('DOMContentLoaded', () => {
+  "use strict";
 
+  const preloader = document.querySelector('.loader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('loader');
+      }, 1000);
+      setTimeout(() => {
+        preloader.remove();
+      }, 2000);
+    })
+  }
+})
 
 // Función sumar productos
 const cantidadInputs = document.querySelectorAll('.cantidad');
