@@ -44,6 +44,7 @@
 window.addEventListener('load', mostrarAnuncio);
 
 */
+
 /**@@@@@@@@
  * LOADER @
  @@@@@@@@@@*/
@@ -51,13 +52,16 @@ window.addEventListener('load', mostrarAnuncio);
   "use strict";
 
   const preloader = document.querySelector('.loader');
+  const containerLoader = document.querySelector('.container-loader');
   if (preloader) {
     window.addEventListener('load', () => {
       setTimeout(() => {
+        containerLoader.classList.add('container-loader')
         preloader.classList.add('loader');
       }, 1000);
       setTimeout(() => {
         preloader.remove();
+        containerLoader.remove();
       }, 2000);
     })
   }
@@ -120,7 +124,7 @@ function compartirFormulario() {
             <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
             <img src="img/unnamed-removebg-preview.png" width="50px" alt="Logo Mercado-Pago">
         </div>
-        
+
       <hr>
 
       <aside class="redesMenu">
@@ -553,7 +557,7 @@ if (navigator.share) {
 }
 
 /**
- * GEOLOCALIZACION (INTENTAR )
+ * GEOLOCALIZACION (INTENTAR)
  */
 const iframeGoogle = document.getElementById('google-iframe')
 
@@ -591,4 +595,10 @@ myGithub.onclick = () => {
 const mailMe = document.getElementById('mail-me');
 mailMe.onclick = () => {
   window.open('mailto:calcagni.gabriel86@gmail.com');
+}
+
+const reloadForm = document.getElementById('reloadButton')
+
+reloadForm.onclick = () => {
+  location.reload()
 }
