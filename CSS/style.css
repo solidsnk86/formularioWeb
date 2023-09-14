@@ -558,6 +558,7 @@ option:checked {
 .colaboracion p {
     font-style: italic;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .colaboracion a {
