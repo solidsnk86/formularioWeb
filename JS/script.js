@@ -589,3 +589,65 @@ createButton.onclick = () => {
   createTable()
 }
 
+/* SET ATRIBUTTES IN CONTACTS INPUTS */
+
+const contactWapInput = document.getElementById('wap');
+const wapAtributte = document.getElementById('wapAtributte');
+const iconWap = document.getElementById('wap-href');
+
+function createAtributteWap() {
+  const phoneNumber = contactWapInput.value;
+  const encodedMessage = encodeURIComponent('Hola, estoy interesado en tu servicio mi nombre es');
+
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+  wapAtributte.href = whatsappLink;
+}
+
+contactWapInput.addEventListener('input', createAtributteWap);
+
+iconWap.addEventListener('click', function () {
+  createAtributteWap();
+  const href = wapAtributte.href;
+  window.open(href, '_blank');
+});
+
+const phoneInput = document.getElementById('phone-input');
+const phoneAtributte = document.getElementById('phoneAtributte');
+const phoneIcon = document.getElementById('phone-href');
+
+function createAtributtePhone() {
+  const phoneCel = phoneInput.value;
+
+  const phoneLink = `tel:+${phoneCel}`;
+
+  phoneAtributte.href = phoneLink;
+}
+
+phoneInput.addEventListener('input', createAtributtePhone);
+
+phoneIcon.onclick = () => {
+  createAtributtePhone();
+  const href = phoneAtributte.href;
+  window.open(href, '_blank')
+}
+
+const mailInput = document.getElementById('mail-input');
+const mailAtributte = document.getElementById('mailAtributte');
+const mailIcon = document.getElementById('mail-href');
+
+function createAtributteMail() {
+  const mail = mailInput.value;
+  const mailLink = `mailto:${mail}`
+
+  mailAtributte.href = mailLink;
+}
+
+mailInput.addEventListener('input', createAtributteMail);
+
+mailIcon.onclick = () => {
+  createAtributteMail();
+  const href = mailAtributte.href;
+  window.open(href, '_blank')
+}
+
