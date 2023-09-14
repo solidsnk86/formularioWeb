@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+
 * {
     font-family: 'Bricolage Grotesque', sans-serif;
 }
@@ -81,6 +82,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
+    transform: rotate(50deg);
 }
 
 .tools-container-list li:hover {
@@ -319,6 +321,7 @@ header #numeroFact {
 .tabla {
     width: 100%;
 	border-collapse: collapse;
+    position: relative;
 }
 
 .tabla .descripcion {
@@ -361,6 +364,20 @@ th {
 
 tfoot td {
 	font-weight: bold;
+}
+
+/* CREATE NEW TABLE */
+#create-table-button {
+    font-size: 1.2rem;
+    background-color: tomato;
+    border-radius: 100%;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.newTable {
+    display: none;
 }
 
 /**||||||||||||||||||||||
@@ -556,25 +573,25 @@ option:checked {
 }
 
 .colaboracion p {
-    font-style: italic;
     text-align: center;
     margin-bottom: 15px;
+    color: #ddd;
 }
 
 .colaboracion a {
     border: 1px solid #f2f2f2;
+    background-color: greenyellow;
     border-radius: 5px;
-    padding: 6px 12px;
+    padding: 4px 10px;
     text-decoration: none;
-    color: #EAEAEA;
+    color: #222222;
+    font-weight: 900;
 }
 
 .colaboracion a:hover {
-    background-color: greenyellow;
-    color: #222222;
-    transition: .2s ease-in-out;
-    font-weight: 900;
-    filter: drop-shadow(0 0 6px greenyellow);
+    filter: drop-shadow(0 0 10px greenyellow);
+    transition: .3s all;
+    color: #000;
 }
 
 .compartirMenu .tw-followCard {
@@ -670,7 +687,7 @@ option:checked {
     cursor: pointer;
     float: right;
     border: none;
-    margin: 3px 3px auto;
+    margin: 5px 5px auto;
     font-size: 1.3rem;
     color: tomato;
 }
@@ -766,9 +783,15 @@ option:checked {
     position: relative;
     text-align: center;
     margin: 10px 0 10px 0;
-    font-size: 1.5rem;
-    font-variant: small-caps;
-    font-weight: 900;
+    font-size: 1.3rem;
+    font-variant:small-caps;
+    font-weight: 600;
+}
+
+#phone-me {
+    position: relative;
+    top: 1px;
+    font-size: 33px;
 }
 
 
