@@ -109,7 +109,7 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 function compartirFormulario() {
  const ulrAvatar = 'img/IMG_20221220_175116_907.jpg'
   const name = 'Calcagni Gabriel'
-  const userName = '@solidsnk86'
+  const userName = 'solidsnk86'
   const wapNumber = '2665290020'
 
   card = document.createElement('div');
