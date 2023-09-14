@@ -122,7 +122,7 @@ function compartirFormulario() {
     <br>
       <div class="colaboracion">
           <h1>Desarrollo de software NeoTecs</h1>
-          <h3>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</h3>
+          <h4>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</h4>
 
           <main class="tw-followCard-header">
             <img src=${ulrAvatar} class="tw-followCard-avatar" />
