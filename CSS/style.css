@@ -246,6 +246,15 @@ header {
     z-index: 1;
 }
 
+.header-title {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 100px;
+    height: 150px;
+    filter: grayscale(70%);
+}
+
 header #patternId {
     position: absolute;
     top: 0;
@@ -255,9 +264,8 @@ header #patternId {
     border-top-right-radius: 10px;
 }
 
-header h1 input {
+header h1 {
     font-family: 'Bricolage Grotesque', sans-serif;
-    padding: 9px 12px;
     font-size: x-large;
     margin-left: 10px;	
     width: fit-content;
@@ -379,9 +387,24 @@ tfoot td {
     width: 75px;
 }
 
-option, select {
-    font-size: 0.95em;
-    cursor: pointer;
+select {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+option {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+  
+option:checked {
+    background-color: rgba(62, 61, 117, 0.7);
+    color: #fff;
 }
 
 .observaciones .container-forma {
@@ -449,10 +472,6 @@ option, select {
     transition: 0.1s ease-in-out;
 }
 
-#mail-input {
-	width:90px
-}
-
 .contacto iframe {
     margin: 15px auto;
     width: 400px;
@@ -468,7 +487,7 @@ option, select {
 /*|||||||||||||
  # Modal Card |
  ||||||||||||||*/
-.card-form-container {
+ .card-form-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -532,22 +551,71 @@ option, select {
     background: conic-gradient(from 270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
 }
 
-#colab {
-    position: relative;
-    margin: 10px auto;
-    padding: 10px 8px;
-    border-radius: 10px;
-    font-weight: 500;
-    background: radial-gradient(ellipse 80% 50% at 50% 120%, rgb(133, 236, 133), rgb(110, 148, 35));
-    cursor: pointer;
-    color: #fafafa;
+.compartirMenu .colaboracion {
     border: none;
 }
 
+.colaboracion h3 {
+    font-style: italic;
+}
 
-#colab:hover {
-    transition: .3s all;
-    filter: drop-shadow(0 0 10px lightgreen);
+.colaboracion a {
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #EAEAEA;
+}
+
+.colaboracion a:hover {
+    background-color: greenyellow;
+    color: #222222;
+    transition: .2s ease-in-out;
+    font-weight: 900;
+}
+
+.compartirMenu .tw-followCard {
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.compartirMenu .tw-followCard-header {
+    display: inline-flex;
+    background-color: transparent;
+    align-items: center;
+    gap: 4px;
+}
+
+.compartirMenu .tw-followCard-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.compartirMenu .tw-followcard-infoUserName {
+    opacity: .6;
+}
+
+.compartirMenu .tw-followCard-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+}
+
+.compartirMenu .tw-followCard-button {
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.compartirMenu .tw-followCard-button:hover {
+    opacity: .8;
 }
 
 .redesMenu p {
@@ -650,7 +718,6 @@ option, select {
       opacity: 1;
     }
 }
-
 /**
 * BOTTOM LIST CONTACT
 */
@@ -738,6 +805,13 @@ Responsive   |
     .article-header {
         margin: 60px 100px 25px;
     }
+    .header-title {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        width: 140px;
+        height: 140px;
+    }
     .tabla input {
         width: 100%;
     }
@@ -782,7 +856,7 @@ Responsive   |
         margin: 0 10px;
     }
     #mail-input {
-        width: 115px;
+        width: 80px;
     }
     .contacto iframe {
         width: fit-content;
@@ -829,7 +903,7 @@ Responsive   |
         height: fit-content;
     }
     .contacto iframe {
-        width: 400px;
+        width: 300px;
         height: 120px;
         margin: 5px 0 5px;
     }
@@ -1005,4 +1079,10 @@ Responsive   |
       60%{background-position:0%  50%, 50% 100%,100%   0%}
       80%{background-position:0%  50%, 50%  50%,100% 100%}
 }
+
+
+
+
+
+
 
