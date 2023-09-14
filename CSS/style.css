@@ -81,6 +81,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
+    transform: rotate(45deg)
 }
 
 .tools-container-list li:hover {
