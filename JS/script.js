@@ -103,8 +103,6 @@ for (let i = 0; i < cantidadInputs.length; i++) {
   precioInputs[i].addEventListener('change', calcularTotales);
 }
 
-
-
 // función menú carta
 function compartirFormulario() {
  const ulrAvatar = 'https://avatars.githubusercontent.com/u/93176365?s=400&u=a363fdcce46fcbb4846fd947e243399620956326&v=4'
@@ -121,7 +119,8 @@ function compartirFormulario() {
   <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
     <br>
       <div class="colaboracion">
-          <h1>Desarrollo de software NeoTecs</h1>
+          <h1>Desarrollo de software</h1>
+
           <p>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</p>
 
           <main class="tw-followCard-header">
@@ -140,7 +139,7 @@ function compartirFormulario() {
 
           <h5>Por consultas o presupuestos escribime acá:</h5>
           <a target="_blank" title="Enviar Whatsapp" href="https://api.whatsapp.com/send?phone=${wapNumber}&text=Hola,%20estoy%20interesado%20en
-          %20tu%20servicio%20mi%20nombre es"><i class="bx bi-whatsapp"></i> Contactame!</a>
+          %20tu%20servicio%20mi%20nombre es"><i class="bx bi-whatsapp"></i> Contacto!</a>
       </div>
       <br>
     <hr>
@@ -572,3 +571,21 @@ const reloadForm = document.getElementById('reloadButton')
 reloadForm.onclick = () => {
   location.reload()
 }
+
+const createButton = document.getElementById('create-table-button')
+const newTable = document.querySelector('.newTable')
+
+function createTable() {
+  if (newTable.style.display === '') {
+    newTable.style.display = 'contents'
+    createButton.style.transform = 'rotate(45deg)'
+  } else {
+    newTable.style.display = ''
+    createButton.style.transform = 'rotate(0)'
+  }
+}
+
+createButton.onclick = () => {
+  createTable()
+}
+
