@@ -26,6 +26,7 @@
 			<li><i class="bx bx-save" id="save-button" title="Guardar datos del formulario."></i></li>
 			<li><i class="bx bx-trash" id="deleteButton" title="Limpiar formulario."></i></li>
 			<li><i class="bx bx-revision" id="reloadButton" title="Actualizar."></i></li>
+			<li><i class="bx bx-plus" id="create-table-button" title="Añadir otra tabla."></i></li>
 		</ul>
 		<aside class="toggle-button">
 			<i id="moon-icon" title="Modo Oscuro">🌚</i>
@@ -101,10 +102,16 @@
 			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total3"></td>
 		</tr>
 		<tr>
-			<td class="descripcion"><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto4"></td>
+			<td class="descripcion"><input type="text" placeholder="Producto 4" title="Ingrese el producto" id="producto4"></td>
 			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad4"></td>
 			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio4"></td>
 			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total4"></td>
+		</tr>
+		<tr class="newTable">
+			<td class="descripcion"><input type="text" placeholder="Producto 5" title="Ingrese el producto" id="producto5"></td>
+			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad5"></td>
+			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio5"></td>
+			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total5"></td>
 		</tr>
 		<tr>
 			<td colspan="3">Subtotal:</td>
@@ -120,6 +127,7 @@
 				id="Total"></td>
 		</tr>
 	</table>
+
 <div class="observaciones">
     <h3>Observaciones:</h3>
     <li>Validez de la oferta: 
@@ -192,7 +200,7 @@
 
 <aside class="bottom-stycky-list">
 	<ul>
-		<li><i id="phone-me" class="bx bi-phone"></i></li>
+		<li><i id="phone-me" class="bx bxs-phone"></i></li>
 		<hr>
 		<li><i id="my-linkedin" class="bx bi-linkedin"></i></li>
 		<hr>
