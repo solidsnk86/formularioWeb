@@ -551,17 +551,17 @@ phoneMe.onclick = () => {
 
 const myLinkedin = document.getElementById('my-linkedin');
 myLinkedin.onclick = () => {
-  window.open('https://www.instagram.com/martin_lucero_0/?igshid=MzRlODBiNWFlZA==');
+  window.open('https://www.linkedin.com/in/gabriel-calcagni');
 }
 
 const myGithub = document.getElementById('my-github');
 myGithub.onclick = () => {
-  window.open('https://facebook.com/');
+  window.open('https://github.com/solidsnk86');
 }
 
 const mailMe = document.getElementById('mail-me');
 mailMe.onclick = () => {
-  window.open('mailto:chucho_conca@hotmail.com');
+  window.open('mailto:calcagni.gabriel86@gmail.com');
 }
 
 const reloadForm = document.getElementById('reloadButton')
