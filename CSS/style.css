@@ -552,7 +552,7 @@ option:checked {
     position: relative;
     transition: box-shadow 0.2s;
     color: #fafafa;
-    animation: lightSpeedInLeft;
+    animation: zoomIn;
     animation-duration: .6s;
     z-index: 9;
 }
