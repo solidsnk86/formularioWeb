@@ -107,7 +107,7 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 
 // función menú carta
 function compartirFormulario() {
- const ulrAvatar = 'img/IMG_20221220_175116_907.jpg'
+ const ulrAvatar = 'https://avatars.githubusercontent.com/u/93176365?s=400&u=a363fdcce46fcbb4846fd947e243399620956326&v=4'
   const name = 'Calcagni Gabriel'
   const userName = 'solidsnk86'
   const wapNumber = '2665290020'
