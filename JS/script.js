@@ -107,7 +107,7 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 
 // función menú carta
 function compartirFormulario() {
- const ulrAvatar = 'https://historia.nationalgeographic.com.es/medio/2019/07/09/nikola-tesla_2f6c2b37_960x1253.jpeg'
+ const ulrAvatar = 'img/IMG_20221220_175116_907.jpg'
 
   card = document.createElement('div');
   card.classList.add('card-form-container');
