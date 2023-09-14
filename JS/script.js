@@ -107,38 +107,58 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 
 // función menú carta
 function compartirFormulario() {
+ const ulrAvatar = 'https://historia.nationalgeographic.com.es/medio/2019/07/09/nikola-tesla_2f6c2b37_960x1253.jpeg'
+
   card = document.createElement('div');
   card.classList.add('card-form-container');
   card.innerHTML = `
-  <!-- Compartir -->
   <div class="card-form-container">
       
-    <article class="compartirMenu">
-    <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
+  <article class="compartirMenu">
+  <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
+    <br>
+      <div class="colaboracion">
+          <h1>Servicio Electrón© de Martin Lucero</h1>
+          <h3>¡Si estás interesado en mis <br>servicios eléctricos, no dudes en contactarme!</h3>
+
+          <main class="tw-followCard-header">
+            <img src=${ulrAvatar} class="tw-followCard-avatar" />
+            <div class="tw-followCard-info">
+                <strong>Martín Lucero</strong>
+                <span 
+                class="tw-followcard-infoUserName">@chuchoconca</span>
+            </div>
+            <aside>
+            <button class="tw-followCard-button" id="seguir-instagram">
+                <span class="tw-followCard-text">Seguir</span>
+            </button>
+          </aside>
+          </main>
+
+          <h5>Por consultas o presupuestos escribime acá:</h5>
+          <a target="_blank" title="Enviar Whatsapp" href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en
+          %20tu%20servicio%20de%20técnico%20electricista%20mi%20nombre es"><i class="bx bi-whatsapp"></i> Contactame!</a>
+      </div>
       <br>
-        <div class="colaboracion">
-            <h1>¡Muchas Gracias por usar éste formulario!</h1>
-            <h3>No olvides dar una colaboración, el desarrollador te lo agradecerá<br>para poder seguir agregando nuevas funciones a éste formulario!</h3>
-            <img src="img/metodo-de-pago.png" alt="" width="50px"><br>
-            <button id="colab" onclick="colaboración()">Colaborar</button>
-            <h6>El monto de la colaboración se puede efectuar<br>mediante MercadoPago</h6>
-            <img src="img/unnamed-removebg-preview.png" width="50px" alt="Logo Mercado-Pago">
-        </div>
+    <hr>
 
-      <hr>
-
-      <aside class="redesMenu">
-      <p>Compartir en redes sociales:</p>
-      <button onclick="compartirFacebook()"><i id="face" class="bx bi-facebook"></i></span></button>
-      <button onclick="compartirTwitter()"><i id="twitt" class="bx bi-twitter"></i></span></button>
-      <button onclick="compartirWhatsapp()"><i id="what" class="bx bi-whatsapp"></i></span></button>
-      <button onclick="compartirLinkedIn()"><i id="linked" class="bx bi-linkedin"></i></span></button>
-      </aside>
-    
-    </article>
-  </div>
+    <aside class="redesMenu">
+    <p>Compartir en redes sociales:</p>
+    <button onclick="compartirFacebook()"><i id="face" class="bx bi-facebook"></i></span></button>
+    <button onclick="compartirTwitter()"><i id="twitt" class="bx bi-twitter"></i></span></button>
+    <button onclick="compartirWhatsapp()"><i id="what" class="bx bi-whatsapp"></i></span></button>
+    <button onclick="compartirLinkedIn()"><i id="linked" class="bx bi-linkedin"></i></span></button>
+    </aside>
+  
+  </article>
+</div>
   `;
   document.body.appendChild(card);
+  const seguirInsta = document.getElementById('seguir-instagram');
+
+  seguirInsta.onclick = () => {
+    window.open('https://www.instagram.com/martin_lucero_0/?igshid=MzRlODBiNWFlZA==')
+  }
 };
 
 function colaboración() {
@@ -149,7 +169,6 @@ function colaboración() {
 function cerrarCarta() {
   document.body.removeChild(card);
 };
-
 
 // función imprimir
 const botonImprimir = document.getElementById('imprimir');
@@ -201,15 +220,12 @@ function compartirLinkedIn() {
 // Obtener el elemento select de forma de pago
   const formaPagoSelect = document.getElementById("forma-pago");
 
-// Escuchar el evento de cambio en el select
   formaPagoSelect.addEventListener("change", function() {
     const formaPagoValue = formaPagoSelect.value;
     const containerForma = document.querySelector(".container-forma");
 
-    // Limpiar el contenido existente en el contenedor
     containerForma.innerHTML = "";
 
-    // Crear elementos según el valor seleccionado
     if (formaPagoValue === "opcion1") {
       const div = document.createElement("div");
       const heading = document.createElement("h4");
@@ -334,60 +350,6 @@ document.querySelector('.toggle-button').onclick = function() {
 }
 
 
-const inputWhatsapp = document.getElementById('wap');
- const atributteA = document.querySelector('#wap-href');
-
-function createAtributte() {
-  inputWhatsapp.addEventListener('change', function() {
-    const phoneNumber = inputWhatsapp.value;
-    atributteA.setAttribute('href', `https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hola,%20estoy%20interesado%20en%20tu%20servicio%20contactáctame%20por%20este%20medio..`);
-  });
-}
-
-createAtributte();
-
-atributteA.addEventListener('click', function(e) {
-  e.preventDefault();
-  const href = atributteA.getAttribute('href');
-  window.open(href, '_blank');
-});
-
-const inputEmail = document.getElementById('mail-input')
-const atributteMail = document.querySelector('#mail-atributte')
-
-function mailAtributte() {
-  inputEmail.addEventListener('change', function() {
-    const mail = inputEmail.value;
-    atributteMail.setAttribute('href', `mailto:${mail}`)
-  })
-}
-
-mailAtributte();
-
-atributteMail.addEventListener('click', function(e) {
-  e.preventDefault();
-  const link = atributteMail.getAttribute('href');
-  window.open(link, '_blank');
-})
-
-const inputPhone = document.getElementById('phone-input')
-const atributtePhone = document.querySelector('#phone-atributte')
-
-function phoneAtributte() {
-  inputPhone.addEventListener('change', function() {
-    const phone = inputPhone.value;
-    atributtePhone.setAttribute('href', `tel:${phone}`)
-  })
-}
-
-phoneAtributte();
-
-atributtePhone.addEventListener('click', function(e) {
-  e.preventDefault();
-  const tel = atributtePhone.getAttribute('href');
-  window.open(tel, '_blank');
-})
-
 const chevroButton = document.querySelector('.drop-chevron');
 const dropList = document.querySelector('.article-drop-list');
 chevroButton.style.transition = '.3s all'
@@ -411,6 +373,7 @@ chevroButton.onclick = () => {
  */
 function modalCard() { 
   const textSave = 'Se han guardado los datos del formulario correctamente!'
+
   modalcard = document.createElement('div');
   modalcard.classList.add('modal-card');
   modalcard.innerHTML = `
@@ -451,18 +414,22 @@ function guardarEnLocalStorage() {
     producto2: [],
     producto3: [],
     producto4: [],
+    producto5: [],
     cantidad1: [],
     cantidad2: [],
     cantidad3: [],
     cantidad4: [],
+    cantidad5: [],
     precio1: [],
     precio2: [],
     precio3: [],
     precio4: [],
+    precio5: [],
     total1: [],
     total2: [],
     total3: [],
     total4: [],
+    total5: [],
     subtotal: [],
     impuesto: [],
     Total: [],
@@ -579,22 +546,22 @@ if ("geolocation" in navigator) {
  */
 const phoneMe = document.getElementById('phone-me');
 phoneMe.onclick = () => {
-  window.open('tel:+5492665290020');
+  window.open('tel:+5492664541567');
 }
 
 const myLinkedin = document.getElementById('my-linkedin');
 myLinkedin.onclick = () => {
-  window.open('http://www.linkedin.com/in/gabriel-calcagni');
+  window.open('https://www.instagram.com/martin_lucero_0/?igshid=MzRlODBiNWFlZA==');
 }
 
 const myGithub = document.getElementById('my-github');
 myGithub.onclick = () => {
-  window.open('https://github.com/solidsnk86');
+  window.open('https://facebook.com/');
 }
 
 const mailMe = document.getElementById('mail-me');
 mailMe.onclick = () => {
-  window.open('mailto:calcagni.gabriel86@gmail.com');
+  window.open('mailto:chucho_conca@hotmail.com');
 }
 
 const reloadForm = document.getElementById('reloadButton')
