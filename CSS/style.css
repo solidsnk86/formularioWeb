@@ -555,8 +555,9 @@ option:checked {
     border: none;
 }
 
-.colaboracion h3 {
+.colaboracion p {
     font-style: italic;
+    text-align: center;
 }
 
 .colaboracion a {
