@@ -108,6 +108,9 @@ for (let i = 0; i < cantidadInputs.length; i++) {
 // función menú carta
 function compartirFormulario() {
  const ulrAvatar = 'img/IMG_20221220_175116_907.jpg'
+  const name = 'Calcagni Gabriel'
+  const userName = '@solidsnk86'
+  const wapNumber = '2665290020'
 
   card = document.createElement('div');
   card.classList.add('card-form-container');
@@ -118,15 +121,15 @@ function compartirFormulario() {
   <i id="cerrarCarta" class="bx bi-x-circle" onclick="cerrarCarta()" ></i>
     <br>
       <div class="colaboracion">
-          <h1>Servicio Electrón© de Martin Lucero</h1>
-          <h3>¡Si estás interesado en mis <br>servicios eléctricos, no dudes en contactarme!</h3>
+          <h1>Desarrollo de software NeoTecs</h1>
+          <h3>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</h3>
 
           <main class="tw-followCard-header">
             <img src=${ulrAvatar} class="tw-followCard-avatar" />
             <div class="tw-followCard-info">
-                <strong>Martín Lucero</strong>
+                <strong>${name}</strong>
                 <span 
-                class="tw-followcard-infoUserName">@chuchoconca</span>
+                class="tw-followcard-infoUserName">@${userName}</span>
             </div>
             <aside>
             <button class="tw-followCard-button" id="seguir-instagram">
@@ -136,8 +139,8 @@ function compartirFormulario() {
           </main>
 
           <h5>Por consultas o presupuestos escribime acá:</h5>
-          <a target="_blank" title="Enviar Whatsapp" href="https://api.whatsapp.com/send?phone=542665290020&text=Hola,%20estoy%20interesado%20en
-          %20tu%20servicio%20de%20técnico%20electricista%20mi%20nombre es"><i class="bx bi-whatsapp"></i> Contactame!</a>
+          <a target="_blank" title="Enviar Whatsapp" href="https://api.whatsapp.com/send?phone=${wapNumber}&text=Hola,%20estoy%20interesado%20en
+          %20tu%20servicio%20mi%20nombre es"><i class="bx bi-whatsapp"></i> Contactame!</a>
       </div>
       <br>
     <hr>
