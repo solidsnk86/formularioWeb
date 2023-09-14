@@ -122,7 +122,7 @@ function compartirFormulario() {
     <br>
       <div class="colaboracion">
           <h1>Desarrollo de software NeoTecs</h1>
-          <h4>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</h4>
+          <p>¡Si estás interesado en mis <br>servicios, no dudes en contactarme!</p>
 
           <main class="tw-followCard-header">
             <img src=${ulrAvatar} class="tw-followCard-avatar" />
@@ -160,7 +160,7 @@ function compartirFormulario() {
   const seguirInsta = document.getElementById('seguir-instagram');
 
   seguirInsta.onclick = () => {
-    window.open('https://www.instagram.com/martin_lucero_0/?igshid=MzRlODBiNWFlZA==')
+    window.open('https://www.linkedin.com/in/gabriel-calcagni')
   }
 };
 
