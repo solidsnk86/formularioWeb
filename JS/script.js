@@ -580,9 +580,9 @@ const newTable = document.querySelector('.newTable');
 createButton.addEventListener('click', () => {
   createTable();
   if (newTable.style.display === 'block') {
-    modalCardDeleteItem();
-  } else {
     modalCardCreateItem();
+  } else {
+    modalCardDeleteItem();
   }
 });
 
@@ -616,13 +616,13 @@ function showModal(message) {
 }
 
 function modalCardCreateItem() {
-  const itemDelete = 'Se ha eliminado el ítem';
-  showModal(itemDelete);
+  const itemCreate = 'Se ha creado una fila para otro ítem, puedes eliminarla desde el mismo botón!';
+  showModal(itemCreate);
 }
 
 function modalCardDeleteItem() {
-  const itemCreate = 'Se ha creado una fila para otro ítem, puedes eliminarla desde el mismo botón!';
-  showModal(itemCreate);
+  const itemDelete = 'Se ha eliminado el ítem';
+  showModal(itemDelete);
 }
 
 /* SET ATRIBUTTE IN CONTACT FIELDS */
