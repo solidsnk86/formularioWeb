@@ -45,9 +45,9 @@ window.addEventListener('load', mostrarAnuncio);
 
 */
 
-/**@@@@@@@@
- * LOADER @
- @@@@@@@@@@*/
+/**
+ * LOADER 
+ */
  document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -404,7 +404,7 @@ const saveButton = document.getElementById('save-button');
 const borrarButton = document.getElementById('deleteButton')
 
 function guardarEnLocalStorage() {
-  const valores = {
+  var valores = {
     empresaNombre: [],
     formulario: [],
     cliente: [],
@@ -572,24 +572,60 @@ reloadForm.onclick = () => {
   location.reload()
 }
 
-const createButton = document.getElementById('create-table-button')
-const newTable = document.querySelector('.newTable')
+/* CREATE ROW AND SHOW MODAL */
+
+const createButton = document.getElementById('create-table-button');
+const newTable = document.querySelector('.newTable');
+
+createButton.addEventListener('click', () => {
+  createTable();
+  if (newTable.style.display === 'block') {
+    modalCardDeleteItem();
+  } else {
+    modalCardCreateItem();
+  }
+});
 
 function createTable() {
-  if (newTable.style.display === '') {
-    newTable.style.display = 'contents'
-    createButton.style.transform = 'rotate(45deg)'
+  if (newTable.style.display === 'none' || newTable.style.display === '') {
+    newTable.style.display = 'block';
+    createButton.style.transform = 'rotate(45deg)';
   } else {
-    newTable.style.display = ''
-    createButton.style.transform = 'rotate(0)'
+    newTable.style.display = 'none';
+    createButton.style.transform = 'rotate(0)';
   }
 }
 
-createButton.onclick = () => {
-  createTable()
+function showModal(message) {
+  const modalcard = document.createElement('div');
+  modalcard.classList.add('modal-card');
+  modalcard.innerHTML = `
+    <article class='modal-card'>
+      <div class="modal-style">
+        <h4>${message}</h4>
+        <button id="cerrar-modal" class="shimmer-button">Ok</button>
+      </div>
+    </article>
+  `;
+  document.body.appendChild(modalcard);
+
+  const closeModalButton = document.getElementById('cerrar-modal');
+  closeModalButton.addEventListener('click', () => {
+    document.body.removeChild(modalcard);
+  });
 }
 
-/* SET ATRIBUTTES IN CONTACTS INPUTS */
+function modalCardCreateItem() {
+  const itemDelete = 'Se ha eliminado el ítem';
+  showModal(itemDelete);
+}
+
+function modalCardDeleteItem() {
+  const itemCreate = 'Se ha creado una fila para otro ítem, puedes eliminarla desde el mismo botón!';
+  showModal(itemCreate);
+}
+
+/* SET ATRIBUTTE IN CONTACT FIELDS */
 
 const contactWapInput = document.getElementById('wap');
 const wapAtributte = document.getElementById('wapAtributte');
@@ -650,4 +686,7 @@ mailIcon.onclick = () => {
   const href = mailAtributte.href;
   window.open(href, '_blank')
 }
+
+
+
 
