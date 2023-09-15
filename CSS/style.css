@@ -85,6 +85,21 @@ body {
     transform: rotate(50deg);
 }
 
+/* CREATE NEW TABLE BUTTON */
+#create-table-button {
+    font-size: 1.2rem;
+    background-color: rgb(131, 155, 226);
+    border-radius: 100%;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.newTable {
+    display: none;
+}
+
+
 .tools-container-list li:hover {
     transform: scale(1.1);
     text-shadow: 2px 3px 7px #888;
@@ -118,7 +133,6 @@ body {
 .drop-chevron {
    position: relative;
    top: 3.5px;
-   font-size: 1.5rem;
 }
 
 .article-drop-list {
@@ -361,23 +375,8 @@ th {
 	background-color: #EAEAEA;
 }
 
-
 tfoot td {
 	font-weight: bold;
-}
-
-/* CREATE NEW TABLE */
-#create-table-button {
-    font-size: 1.2rem;
-    background-color: tomato;
-    border-radius: 100%;
-    color: #f2f2f2;
-    cursor: pointer;
-    transition: .3s all;
-}
-
-.newTable {
-    display: none;
 }
 
 /**||||||||||||||||||||||
@@ -564,8 +563,7 @@ option:checked {
     left: -100%;
     width: auto;
     height: 100%;
-    animation: shimmer 1.5s infinite linear;
-    background: conic-gradient(from 270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
+    background: conic-gradient(from -270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
 }
 
 .compartirMenu .colaboracion {
@@ -613,6 +611,7 @@ option:checked {
 .compartirMenu .tw-followCard-info {
     display: flex;
     flex-direction: column;
+    margin-left: 8px;
 }
 
 .compartirMenu .tw-followcard-infoUserName {
@@ -784,8 +783,8 @@ option:checked {
     text-align: center;
     margin: 10px 0 10px 0;
     font-size: 1.3rem;
-    font-variant:small-caps;
-    font-weight: 600;
+    font-variant: small-caps;
+    font-weight: 500;
 }
 
 #phone-me {
