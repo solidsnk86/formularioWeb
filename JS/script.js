@@ -147,7 +147,7 @@ function compartirFormulario() {
     <aside class="redesMenu">
     <p>Compartir en redes sociales:</p>
     <button onclick="compartirFacebook()"><i id="face" class="bx bi-facebook"></i></span></button>
-    <button onclick="compartirTwitter()"><i id="twitt" class="bx bi-twitter"></i></span></button>
+    <button onclick="compartirTwitter()"><img src="img/X_logo_2023.svg" id="X-logo" alt="Logo Twitter" /></span></button>
     <button onclick="compartirWhatsapp()"><i id="what" class="bx bi-whatsapp"></i></span></button>
     <button onclick="compartirLinkedIn()"><i id="linked" class="bx bi-linkedin"></i></span></button>
     </aside>
@@ -621,7 +621,7 @@ function modalCardCreateItem() {
 }
 
 function modalCardDeleteItem() {
-  const itemDelete = 'Se ha eliminado el ítem';
+  const itemDelete = 'Se ha eliminado el ítem.';
   showModal(itemDelete);
 }
 
