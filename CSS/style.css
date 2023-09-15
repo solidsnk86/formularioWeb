@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap');
 
 * {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -25,9 +25,9 @@ body {
 .navbar .avatar-logo {
     position: relative;
     top: -1px;
-    width: 31px;
-    height: 31px;
-    margin-left: 12px;
+    width: 33px;
+    height: 33px;
+    margin-left: 10px;
 }
 
 .toggle-button {
@@ -56,7 +56,7 @@ body {
     list-style: none;
     margin-left: -25px;
     padding-top: 3px;
-    gap: 20px;
+    gap: 10px;
 }
 
 #save-button {
@@ -98,7 +98,6 @@ body {
     display: none;
 }
 
-
 .tools-container-list li:hover {
     transform: scale(1.1);
     text-shadow: 2px 3px 7px #888;
@@ -132,6 +131,7 @@ body {
 .drop-chevron {
    position: relative;
    top: 3.5px;
+   font-size: 1.5rem;
 }
 
 .article-drop-list {
@@ -267,7 +267,7 @@ header {
     right: 10px;
     width: 100px;
     height: 150px;
-    filter: grayscale(70%);
+    filter: grayscale(60%);
 }
 
 header #patternId {
@@ -334,7 +334,6 @@ header #numeroFact {
 .tabla {
     width: 100%;
 	border-collapse: collapse;
-    position: relative;
 }
 
 .tabla .descripcion {
@@ -343,6 +342,10 @@ header #numeroFact {
 
 .tabla .cantidad {
     width: 50px;
+}
+
+#cantidad-762 {
+    display: none;
 }
 
 .tabla .precio {
@@ -373,6 +376,7 @@ td input {
 th {
 	background-color: #EAEAEA;
 }
+
 
 tfoot td {
 	font-weight: bold;
@@ -550,7 +554,7 @@ option:checked {
     position: relative;
     transition: box-shadow 0.2s;
     color: #fafafa;
-    animation: zoomIn;
+    animation: lightSpeedInLeft;
     animation-duration: .6s;
     z-index: 9;
 }
@@ -562,7 +566,8 @@ option:checked {
     left: -100%;
     width: auto;
     height: 100%;
-    background: conic-gradient(from -270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
+    animation: shimmer 1.5s infinite linear;
+    background: conic-gradient(from 270deg, transparent 0deg, hsla(0, 0%, 100%, 1) 90deg, transparent 180deg);
 }
 
 .compartirMenu .colaboracion {
@@ -570,25 +575,25 @@ option:checked {
 }
 
 .colaboracion p {
+    font-style: italic;
     text-align: center;
     margin-bottom: 15px;
-    color: #ddd;
 }
 
 .colaboracion a {
     border: 1px solid #f2f2f2;
-    background-color: orange;
     border-radius: 5px;
     padding: 4px 10px;
     text-decoration: none;
-    color: #222222;
+    color: #EAEAEA;
     font-weight: 900;
 }
 
 .colaboracion a:hover {
-    filter: drop-shadow(0 0 10px orange);
-    transition: .3s all;
-    color: #fff;
+    background-color: greenyellow;
+    filter: drop-shadow(0 0 10px greenyellow);
+    color: #222222;
+    transition: .9s ease-in-out;
 }
 
 .compartirMenu .tw-followCard {
@@ -613,7 +618,6 @@ option:checked {
 }
 
 .compartirMenu .tw-followcard-infoUserName {
-    text-align: left;
     opacity: .6;
 }
 
@@ -692,7 +696,7 @@ option:checked {
     cursor: pointer;
     float: right;
     border: none;
-    margin: 5px 5px auto;
+    margin: 3px 3px auto;
     font-size: 1.3rem;
     color: tomato;
 }
@@ -788,9 +792,9 @@ option:checked {
     position: relative;
     text-align: center;
     margin: 10px 0 10px 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-variant: small-caps;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 #phone-me {
@@ -798,7 +802,6 @@ option:checked {
     top: 1px;
     font-size: 33px;
 }
-
 
 /**|||||||
 * FOOTER |
@@ -844,12 +847,32 @@ Responsive   |
         width: 140px;
         height: 140px;
     }
-    .tabla input {
-        width: 100%;
+    .tabla .descripcion 
+    #producto1,
+    #producto2,
+    #producto3,
+    #producto4,
+    #producto5,
+    #producto6 {
+        width: 400px;
     }
-    .tabla .descripcion input {
-        width: 250px;
+    .tabla 
+    #cantidad1,
+    #cantidad2,
+    #cantidad3,
+    #cantidad4,
+    #cantidad5,
+    #cantidad6 {
+        width: 80px;
     }
+    .tabla #total1,
+    #total2,
+    #total3,
+    #total4,
+    #total5,
+    #total6 {
+        width: 80px;
+    } 
     .tabla .total {
         text-align: center;
         width: 50px;
@@ -878,12 +901,41 @@ Responsive   |
     header #empresaNombre::placeholder {
         font-size: 1.1rem;
     }
+    #cantidad-1100 {
+        display: none;
+    }
+    #cantidad-762 {
+        display: block;
+    }
     .tabla {
         width: 100%;
     }
-    .tabla input {
-        max-width: 80px;
+    .tabla .descripcion 
+    #producto1,
+    #producto2,
+    #producto3,
+    #producto4,
+    #producto5,
+    #producto6 {
+        width: 80px;
     }
+    .tabla .descripcion 
+    #cantidad1,
+    #cantidad2,
+    #cantidad3,
+    #cantidad4,
+    #cantidad5,
+    #cantidad6 {
+        width: 50px;
+    }
+    .tabla #total1,
+    #total2,
+    #total3,
+    #total4,
+    #total5,
+    #total6 {
+        width: 80px;
+    } 
     .compartirMenu {
         margin: 0 10px;
     }
@@ -926,18 +978,29 @@ Responsive   |
     .article-header {
         display: none;
     }
+    .header-title {
+        width: 153px;
+        height: 153px;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+    }
     .enviar {
         display: none;
+    }
+    .observaciones h3 {
+        font-size: 0.9rem;
     }
     .contacto {
         position: relative;
         border: 1px solid #000;
-        height: fit-content;
+        height: 110px;
     }
     .contacto iframe {
-        width: 300px;
-        height: 120px;
-        margin: 5px 0 5px;
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        height: 110px;
     }
     .contactos {
         width: auto;
@@ -1111,8 +1174,6 @@ Responsive   |
       60%{background-position:0%  50%, 50% 100%,100%   0%}
       80%{background-position:0%  50%, 50%  50%,100% 100%}
 }
-
-
 
 
 
