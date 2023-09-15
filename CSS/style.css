@@ -605,13 +605,12 @@ option:checked {
     display: inline-flex;
     background-color: transparent;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 .compartirMenu .tw-followCard-info {
     display: flex;
     flex-direction: column;
-    margin-left: 6px;
 }
 
 .compartirMenu .tw-followcard-infoUserName {
@@ -626,7 +625,7 @@ option:checked {
 }
 
 .compartirMenu .tw-followCard-button {
-    margin-left: 16px;
+    margin-left: 5px;
     border: 0;
     border-radius: 999px;
     padding: 6px 16px;
