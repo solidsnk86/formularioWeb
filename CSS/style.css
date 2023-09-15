@@ -25,9 +25,9 @@ body {
 .navbar .avatar-logo {
     position: relative;
     top: -1px;
-    width: 33px;
-    height: 33px;
-    margin-left: 10px;
+    width: 31px;
+    height: 31px;
+    margin-left: 12px;
 }
 
 .toggle-button {
@@ -35,7 +35,6 @@ body {
     float: right;
     right: 10px;
     margin: 10px auto;
-    font-size: 1.3rem;
 }
 
 .navbar .toggle-button i {
@@ -578,7 +577,7 @@ option:checked {
 
 .colaboracion a {
     border: 1px solid #f2f2f2;
-    background-color: greenyellow;
+    background-color: orange;
     border-radius: 5px;
     padding: 4px 10px;
     text-decoration: none;
@@ -587,7 +586,7 @@ option:checked {
 }
 
 .colaboracion a:hover {
-    filter: drop-shadow(0 0 10px greenyellow);
+    filter: drop-shadow(0 0 10px orange);
     transition: .3s all;
     color: #000;
 }
@@ -605,7 +604,7 @@ option:checked {
     display: inline-flex;
     background-color: transparent;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .compartirMenu .tw-followCard-info {
