@@ -588,7 +588,7 @@ option:checked {
 .colaboracion a:hover {
     filter: drop-shadow(0 0 10px orange);
     transition: .3s all;
-    color: #000;
+    color: #fff;
 }
 
 .compartirMenu .tw-followCard {
@@ -649,6 +649,13 @@ option:checked {
     color: #fafafa;
 }
 
+.redesMenu #X-logo {
+    position: relative;
+    top: 3px;
+    width: 21px;
+    height: 21px;
+}
+
 .redesMenu i:hover {
     transform: scale(1.2);
     text-shadow: 2px 3px 7px #777;
@@ -659,8 +666,9 @@ option:checked {
     color: royalblue;
 }
 
-.redesMenu #twitt:hover {
-    color: rgb(0, 140, 255);
+.redesMenu #X-logo:hover {
+    transform: scale(1.2);
+    transition: .2s all;
 }
 
 .redesMenu #what:hover {
