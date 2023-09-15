@@ -579,7 +579,7 @@ const newTable = document.querySelector('.newTable');
 
 createButton.addEventListener('click', () => {
   createTable();
-  if (newTable.style.display === 'block') {
+  if (newTable.style.display === 'contents') {
     modalCardCreateItem();
   } else {
     modalCardDeleteItem();
@@ -588,7 +588,7 @@ createButton.addEventListener('click', () => {
 
 function createTable() {
   if (newTable.style.display === 'none' || newTable.style.display === '') {
-    newTable.style.display = 'block';
+    newTable.style.display = 'contents';
     createButton.style.transform = 'rotate(45deg)';
   } else {
     newTable.style.display = 'none';
