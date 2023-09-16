@@ -572,6 +572,10 @@ reloadForm.onclick = () => {
   location.reload()
 }
 
+document.getElementById('mercado-coffee').addEventListener('click', () => {
+  window.open('https://mpago.la/1KYtLYH')
+})
+
 /* CREATE ROW AND SHOW MODAL */
 
 const createButton = document.getElementById('create-table-button');
