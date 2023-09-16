@@ -936,6 +936,9 @@ Responsive   |
     #total6 {
         width: 80px;
     } 
+    .observaciones #num-form {
+        font-size: 0.8rem;
+    }
     .compartirMenu {
         margin: 0 10px;
     }
@@ -1003,7 +1006,9 @@ Responsive   |
         height: 110px;
     }
     .contactos {
-        width: auto;
+        position: absolute;
+        right: 10px;
+        width: 420px;
     }
     #mail-input {
         width: 220px;
@@ -1015,6 +1020,9 @@ Responsive   |
         display: none;
     }
     .contactame {
+        display: none;
+    }
+    .bring-me-coffee {
         display: none;
     }
     footer {
