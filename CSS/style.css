@@ -123,6 +123,10 @@ body {
     text-align: left;
 }
 
+.article-header .como-lo-uso {
+    margin: 10px auto 0;
+}
+
 .article-header i {
     padding-top: 5px;
     font-size: 1.2rem;
