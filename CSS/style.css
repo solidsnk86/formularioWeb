@@ -11,7 +11,6 @@ body {
     transition: background-color 0.4s;
 }
 
-
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -141,6 +140,10 @@ body {
 .article-drop-list {
     display: none;
     animation: backInDown .6s ease-in-out;
+}
+
+.article-drop-list li {
+    font-size: 0.9em;
 }
 
 @-webkit-keyframes backInDown {
