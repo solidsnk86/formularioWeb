@@ -40,13 +40,13 @@
 		<h3>Formulario web para facturación</h3>
 		<p>Éste se puede usar para: Facturas (A-B-C), Presupuestos, Recibos.</p>
 		<h4 class="como-lo-uso">¿Cómo lo uso?</h4>
-		<span id="mas-info">Más info <i class="bx bx-plus drop-chevron"></i></span>
+		<span id="mas-info">Más info</span><i class="bx bx-plus drop-chevron"></i>
 		<ol class="article-drop-list">
 			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
 			<li>Ingrese los detalles de los items, seleccione la cantidad e indique el precio; se calcularán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
 			<li>En la barra de navegación en ícono <i class="bx bx-save"></i> puede guardar los campos que has llenado para su posterior uso. También encontrarás el ícono de un cesto <i class="bx bx-trash"></i> para eliminar los campos y datos guardados.</li>
 			<li>El ícono ➕ en la barra de navegación sirve para crear otra columna para más ítems.</li>
-			<li>En la sección observaciones, se puede indicar el tipo de factura a emitir, el período de días que tiene un presupuesto como también el método de cobro, si es CBU para transferencia bancaria y CVU si por ejemploe es de Mercado Pago.</li>
+			<li>En la sección observaciones, se puede indicar el tipo de factura a emitir, el período de días que tiene un presupuesto como también el método de cobro, si es CBU para transferencia bancaria y CVU si por ejemplo es de Mercado Pago.</li>
 			<li>En la sección de (contactos), puede cargar su número para mensaje por whatsapp, teléfono y mail, cunado ingreses los datos en el campo automáticamente se genera un link para su contacto haciendo click en los íconos, si es de whatsapp, para llamada telefónica y envío de correo.</li>
 			<li>En el botón imprimir <i class="ri-printer-line"></i>, también puede seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
 		</ol>
@@ -75,8 +75,8 @@
 		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="cliente" title="Ingrese el nombre del cliente"></h2>
         <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="direccion" title="Ingrese la dirección"></h2>
 		<h2>CUIT/CUIL: <input id="cuit" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input id="numeroFact" type="text" style="font-weight: bold; margin-right: 5px;" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
-		<p>Fecha: <input id="fecha" type="date" style="font-weight: bold; width:auto; margin-right: 5px;"></p>
+		<p><input id="numeroFact" type="text" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
+		<p>Fecha: <input id="fecha" type="date" ></p>
 
 	</header>
 
@@ -133,16 +133,20 @@
 	</table>
 
 <div class="observaciones">
+	
     <h3>Observaciones:</h3>
+
     <li>Validez de la oferta: 
-		<input id="num-form" type="text" name="" id="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
+		<input id="num-form" type="text" name="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
+
     <li>Forma de pago:
 		<select name="Forma de pago" id="forma-pago">
         <option value="opcion1">Transferencia</option>
         <option value="opcion2">Mercado Pago</option>
         <option value="opcion3">Efectivo</option>
       </select>
-      </li>
+    </li>
+
     <li>Facturación:
 	   <select name="Facturacion">
         <option value="opcion1">"A"</option>
@@ -152,6 +156,7 @@
 	</li>
 
 	<div class="container-forma"></div>
+
 </div>
 
 <article class="contacto">
@@ -170,13 +175,16 @@
 		<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
 	</svg>
 
-    <h4>Contáctese por estos medios:</h4>
+    <h4 id="h4">Contáctese por estos medios:</h4>
+
     <div class="contactos">
   	<a id="wapAtributte" target="_blank" title="Ingrese su Whatsapp"><i class="bx bi-whatsapp" id="wap-href"></i> <input type="text" id="wap" placeholder="Whatsapp"></a>
     <a title="Ingrese su Teléfono" id="phoneAtributte"><i class="bx bi-phone" id="phone-href"></i> <input type="tel" name="" id="phone-input" placeholder="Teléfono"></a>
-    <a id="mailAtributte" title="Ingrese su correo electrónico"><i class="bx bi-envelope" id="mail-href"></i> <input type="email" name="" id="mail-input" placeholder="Correo Electrónico"></a>
+    <a id="mailAtributte" title="Ingrese su correo electrónico"><i class="bx bi-envelope" id="mail-href"></i> <input type="email" name="" id="mail-input" placeholder="E-mail"></a>
     </div>
+
     <iframe id="google-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 </article>
 
 </form>
@@ -216,10 +224,10 @@
 	</ul>
 </aside>
 
-	<div class="bring-me-coffee">
+<div class="bring-me-coffee">
 	<p>Puedes contribuir con el desarrollador!</p>
 	<button id="mercado-coffee"><i class="bx bxs-coffee"></i>Coffee!</button>
-        </div>
+</div>
 
 	<footer>
 		<span>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;"><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260">SolidSnk86</a></span></span>
