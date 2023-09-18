@@ -11,6 +11,7 @@ body {
     transition: background-color 0.4s;
 }
 
+
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -103,9 +104,11 @@ body {
     transition: .2s ease-in-out;
 }
 
+/* ACORDEON HEADER */
+
 .article-header {
     position: relative;
-    margin: 60px 16px 10px 16px;
+    margin: 60px 16px 30px 16px;
     padding: 5px;
     border: 3px groove #ccc;
     border-radius: 10px;
@@ -115,6 +118,7 @@ body {
 .article-header li {
     text-align: left;
     font-style: italic;
+    line-height: 1.4;
 }
 
 .article-header h3, p {
@@ -126,15 +130,14 @@ body {
     margin: 10px auto 0;
 }
 
-.article-header i {
-    padding-top: 5px;
-    font-size: 1.2rem;
+.article-header #mas-info {
+    font-size: 1.1em;
 }
 
 .drop-chevron {
    position: relative;
    top: 3.5px;
-   font-size: 1.5rem;
+   font-size: 1.5em;
 }
 
 .article-drop-list {
@@ -307,7 +310,7 @@ header h3, input {
 
 header h2 {
     font-size: 1.1em;
-    padding-left: 9px;
+    padding-left: 5px;
 }
 
 header h2 input {
@@ -325,11 +328,12 @@ header p input {
 }
 
 header #fecha {
-    margin-bottom: 5px;
+    margin: 3px 5px 5px 0;
     text-align: right;
 }
 
 header #numeroFact {
+    margin: 0 5px auto;
     text-align: right;
     width: 120px;
 }
@@ -473,7 +477,7 @@ option:checked {
     z-index: 1;
 }
 
-.contacto h4 {
+.contacto #h4 {
     margin: 10px 0 20px;
 }
 
@@ -847,6 +851,9 @@ Responsive   |
     .article-header {
         margin: 60px 100px 25px;
     }
+    .article-drop-list li {
+        font-size: 1em;
+    }
     .header-title {
         position: absolute;
         top: 15px;
@@ -902,11 +909,21 @@ Responsive   |
     #myForm {
         margin: 10px;
     }
+    .article-header #mas-info {
+        font-size: 1em;
+    }
+    .drop-chevron {
+       font-size: 1.3em;
+       bottom: 1px;
+    }
     header #empresaNombre {
         width: max-content;
     }
     header #empresaNombre::placeholder {
         font-size: 1.1rem;
+    }
+    header h2 {
+        font-size: 1em;
     }
     #cantidad-1100 {
         display: none;
