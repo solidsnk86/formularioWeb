@@ -163,6 +163,7 @@ function compartirFormulario() {
   }
 };
 
+
 function colaboración() {
   const botonColab = document.getElementById('colab');
   window.open('https://link.mercadopago.com.ar/neotecs');
@@ -171,6 +172,7 @@ function colaboración() {
 function cerrarCarta() {
   document.body.removeChild(card);
 };
+
 
 // función imprimir
 const botonImprimir = document.getElementById('imprimir');
@@ -548,7 +550,7 @@ if ("geolocation" in navigator) {
  */
 const phoneMe = document.getElementById('phone-me');
 phoneMe.onclick = () => {
-  window.open('tel:+5492664541567');
+  window.open('tel:+5492665290020');
 }
 
 const myLinkedin = document.getElementById('my-linkedin');
@@ -571,10 +573,6 @@ const reloadForm = document.getElementById('reloadButton')
 reloadForm.onclick = () => {
   location.reload()
 }
-
-document.getElementById('mercado-coffee').addEventListener('click', () => {
-  window.open('https://mpago.la/1KYtLYH')
-})
 
 /* CREATE ROW AND SHOW MODAL */
 
