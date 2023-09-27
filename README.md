@@ -13,7 +13,7 @@ Este proyecto es un formulario web articulado para facturas o recibos con funcio
 
 ## Este formulario está adaptado a los diseños responsive (Smartphones-Tablets).
 
-<img src="img/Screenshot_20230712-222815.png" alt="Captura de pantalla Smartphone" width="400" height="500" margin="auto" />
+<img src="[img/Screenshot_20230712-222815.png](https://github.com/solidsnk86/mioPortfolioCG/blob/master/assets/img/806shots_so-formularioWeb.png?raw=true)" alt="Captura de pantalla Smartphone" width="400" height="500" justify-content="center" display="flex" margin="auto" />
 
 ![Static Badge](https://img.shields.io/badge/CONTRIBUCIONES-4A9BE2)
 
