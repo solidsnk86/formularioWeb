@@ -1,241 +1,600 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="author" content="Calcagni Gabriel">
-    <meta name="copyright" content="©solidsnk86 - Formularios">
-    <meta property="og:title" content="SolidSnk86 - Formularios©">
-    <meta property="og:description" content="Formulario web para completar y usar como facturación, remitos, presupuestos, etc. Se suma el valor de los productos y se calcula el IVA en el total.">
-    <meta property="og:image" content="img/Screenshot_20230430-213156-731.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="author" content="Calcagni Gabriel" />
+    <meta name="copyright" content="©solidsnk86 - Formularios" />
+    <meta property="og:title" content="SolidSnk86 - Formularios©" />
+    <meta
+      property="og:description"
+      content="Formulario web para completar y usar como factura, remitos, presupuestos, etc. Se suma el valor de los productos y se calcula el IVA en el total."
+    />
+    <meta
+      property="og:image"
+      content="img/Screenshot_20230430-213156-731.png"
+    />
     <meta name="theme-color" content="#1A1F24" />
-	
 
     <title>Facturador Web©</title>
 
-    <link rel="icon" type="image/x-icon" href="img/factura.png">
-    <link rel="stylesheet" href="CSS/style.css">
-	<link href="img/icons/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="img/icons/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="img/icons/remixicon/remixicon.css" rel="stylesheet">
-</head>
+    <link rel="icon" type="image/x-icon" href="img/icons/FormLogo.svg" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link href="img/icons/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="img/icons/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="img/icons/remixicon/remixicon.css" rel="stylesheet" />
+  </head>
 
-<body>
-	<nav class="navbar">
-		<img class="avatar-logo" src="img/factura.png" alt="Avatar logo">
-		<ul class="tools-container-list">
-			<li><i class="bx bx-save" id="save-button" title="Guardar datos del formulario."></i></li>
-			<li><i class="bx bx-trash" id="deleteButton" title="Limpiar formulario."></i></li>
-			<li><i class="bx bx-revision" id="reloadButton" title="Actualizar."></i></li>
-			<li><i class="bx bx-plus" id="create-table-button" title="Añadir otro ítem."></i></li>
-		</ul>
-		<aside class="toggle-button">
-			<i id="moon-icon" title="Modo Oscuro">🌚</i>
-			<i id="sun-icon" title="Modo Claro">🌞</i>
-		</aside>
-	</nav>
+  <body>
+    <nav class="navbar">
+      <svg
+      class="avatar-logo"
+        role="img"
+        viewBox="0 0 24 24"
+        width="33"
+        height="33"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000"
+      >
+        <path
+          d="M19,4.035h1.4c0.331,0,0.6,0.269,0.6,0.6v14.73c0,0.331-0.269,0.6-0.6,0.6H19V4.035z M22,6.026h1.4 c0.331,0,0.6,0.269,0.6,0.6v10.747c0,0.331-0.269,0.6-0.6,0.6H22V6.026z M0.6,2.044h16.8c0.331,0,0.6,0.269,0.6,0.6v18.712 c0,0.331-0.269,0.6-0.6,0.6H0.6c-0.331,0-0.6-0.269-0.6-0.6V2.644C0,2.313,0.269,2.044,0.6,2.044z M4.2,5.23 c-0.11,0-0.2,0.09-0.2,0.2v7.35c0,0.045,0.015,0.089,0.044,0.125c0.069,0.086,0.195,0.101,0.281,0.032l9.228-7.35 c0.048-0.038,0.075-0.096,0.075-0.156c0-0.11-0.09-0.2-0.2-0.2L4.2,5.23z M4,17.185c0,0.04,0.012,0.08,0.035,0.113 c0.062,0.091,0.187,0.114,0.278,0.052l7.576-5.184c0.054-0.037,0.087-0.099,0.087-0.165c0-0.11-0.09-0.2-0.2-0.2H6.89 c-0.045,0-0.088,0.015-0.123,0.042l-2.69,2.102C4.028,13.983,4,14.041,4,14.103L4,17.185z M4.086,18.342 C4.032,18.379,4,18.441,4,18.506v0.087c0,0.106,0.086,0.192,0.192,0.192H7c0.11,0,0.2-0.09,0.2-0.2v-2.022 c0-0.041-0.012-0.081-0.036-0.114c-0.063-0.091-0.188-0.113-0.278-0.05L4.086,18.342z"
+        />
+      </svg>
+      <ul class="tools-container-list">
+        <li>
+          <i
+            class="bx bx-save"
+            id="save-button"
+            title="Guardar datos del formulario."
+          ></i>
+        </li>
+        <li>
+          <i
+            class="bx bx-trash"
+            id="deleteButton"
+            title="Limpiar formulario."
+          ></i>
+        </li>
+        <li>
+          <i class="bx bx-revision" id="reloadButton" title="Actualizar."></i>
+        </li>
+        <li>
+          <i
+            class="bx bx-plus"
+            id="create-table-button"
+            title="Añadir otro ítem."
+          ></i>
+        </li>
+      </ul>
+      <aside class="toggle-button">
+        <i id="moon-icon" title="Modo Oscuro">🌚</i>
+        <i id="sun-icon" title="Modo Claro">🌞</i>
+      </aside>
+    </nav>
 
-
-	<div class="article-header">
-		
-		<h3>Formulario web para facturación</h3>
-		<p>Éste se puede usar para: Facturas (A-B-C), Presupuestos, Recibos.</p>
-		<h4 class="como-lo-uso">¿Cómo lo uso?</h4>
-		<span id="mas-info">Más info</span><i class="bx bx-plus drop-chevron"></i>
-		<ol class="article-drop-list">
-			<li>Este es un facturador online articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.</li>
-			<li>Ingrese los detalles de los items, seleccione la cantidad e indique el precio; se calcularán los productos, puede indicar el porcentaje despues en el campo (IVA).</li>
-			<li>En la barra de navegación en ícono <i class="bx bx-save"></i> puede guardar los campos que has llenado para su posterior uso. También encontrarás el ícono de un cesto <i class="bx bx-trash"></i> para eliminar los campos y datos guardados.</li>
-			<li>El ícono <i class="bx bx-plus" style="font-size: 1.2em; position: relative; top: 3px;"></i> en la barra de navegación sirve para crear otra columna para más ítems.</li>
-			<li>En la sección observaciones, se puede indicar el tipo de factura a emitir, el período de días que tiene un presupuesto como también el método de cobro, si es CBU para transferencia bancaria y CVU si por ejemplo es de Mercado Pago.</li>
-			<li>En la sección de (contactos), puede cargar su número para mensaje por whatsapp, teléfono y mail, cuando ingreses los datos en el campo automáticamente se genera un link para su contacto haciendo click en los íconos, si es de whatsapp, para llamada telefónica y envío de correo.</li>
-			<li>En el botón imprimir <i class="ri-printer-line"></i>, también puede seleccionar para descargar como PDF y poder enviarlo después de que haya guardado el mismo.</li>
-		</ol>
-	</div>
-
-	<form id="myForm">
-
-    <header>
-
-		<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-			<defs>
-				<pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45'>
-					<path
-						d='m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z'
-						strokeWidth='1'
-						stroke='none'
-						fill='rgba(255, 255, 255, .1)'
-					/>
-				</pattern>
-			</defs>
-			<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
-		</svg>
-
-		<h1><input id="empresaNombre" type="text" placeholder="Nombre de la Empresa" title="Ingrese el nombre de la empresa"></h1>
-        <h3> <input id="formulario" type="text" placeholder="Factura/Recibo/Presup." style="color: tomato; font-weight: bold; width:auto; text-transform: uppercase" title="Factura/Recibo/Presupuesto"></h3>
-		<h2>Cliente: <input type="text" placeholder="Ingrese el cliente" id="cliente" title="Ingrese el nombre del cliente"></h2>
-        <h2>Dirección: <input type="text" placeholder="Ingrese la calle" id="direccion" title="Ingrese la dirección"></h2>
-		<h2>CUIT/CUIL: <input id="cuit" type="text" placeholder="XX-XXXXXXXX-X" title="Ingrese número de CUIT/CUIL"></h2>
-		<p><input id="numeroFact" type="text" placeholder="N° Fact/Remito" title="Ingrese Número de Formulario"></p>
-		<p>Fecha: <input id="fecha" type="date" ></p>
-
-	</header>
-
-	<table class="tabla">
-		<tr>
-			<th>Descripción</th>
-			<th><span id="cantidad-1100">Cantidad</span><span id="cantidad-762">Cant.</span></th>
-			<th>Precio Unitario</th>
-			<th>Total</th>
-		</tr>
-		<tr>
-			<td class="descripcion"><input type="text" placeholder="Producto 1" title="Ingrese el producto" id="producto1"></td>
-			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad1"></td>
-			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio1"></td>
-			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total1"></td>
-		</tr>
-		<tr>
-			<td class="descripcion"><input type="text" placeholder="Producto 2" title="Ingrese el producto" id="producto2"></td>
-			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad2"></td>
-			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio2"></td>
-			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total2"></td>
-		</tr>
-		<tr>
-			<td class="descripcion"><input type="text" placeholder="Producto 3" title="Ingrese el producto" id="producto3"></td>
-			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad3"></td>
-			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio3"></td>
-			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total3"></td>
-		</tr>
-		<tr>
-			<td class="descripcion"><input type="text" placeholder="Producto 4" title="Ingrese el producto" id="producto4"></td>
-			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad4"></td>
-			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio4"></td>
-			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total4"></td>
-		</tr>
-		<tr class="newTable">
-			<td class="descripcion"><input type="text" placeholder="Producto 5" title="Ingrese el producto" id="producto5"></td>
-			<td class="cantidad"><input type="number" class="cantidad" placeholder="..." title="Ingrese cantidad" id="cantidad5"></td>
-			<td class="precio"><input type="text" class="precio" placeholder="Precio por unidad.." title="Ingrese el precio unitario" id="precio5"></td>
-			<td class="total"><input type="text" class="total" placeholder=".$." title="Ingrese el total" id="total5"></td>
-		</tr>
-		<tr>
-			<td colspan="3">Subtotal:</td>
-			<td><input type="text" class="subtotal" placeholder="SubTotal" title="Ingrese el subtotal" id="subtotal"></td>
-		</tr>
-		<tr>
-			<td colspan="3">Impuestos:</td>
-			<td><input type="text" class="impuestos" placeholder="IVA %" title="Porcentaje impuestos" id="impuesto"></td>
-		</tr>
-		<tr>
-			<td colspan="3">Total:</td>
-			<td><input type="text" class="total_final" placeholder="TOTAL"
-				id="Total"></td>
-		</tr>
-	</table>
-
-<div class="observaciones">
-	
-    <h3>Observaciones:</h3>
-
-    <li>Validez de la oferta: 
-		<input id="num-form" type="text" name="" placeholder="Período" title="Ingrese los días de validéz de su presupuesto"></li>
-
-    <li>Forma de pago:
-		<select name="Forma de pago" id="forma-pago">
-        <option value="opcion1">Transferencia</option>
-        <option value="opcion2">Mercado Pago</option>
-        <option value="opcion3">Efectivo</option>
-      </select>
-    </li>
-
-    <li>Facturación:
-	   <select name="Facturacion">
-        <option value="opcion1">"A"</option>
-        <option value="opcion2">"B"</option>
-        <option value="opcion3">"C"</option>
-      </select>
-	</li>
-
-	<div class="container-forma"></div>
-
-</div>
-
-<article class="contacto">
-
-	<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-		<defs>
-			<pattern id='a' patternUnits='userSpaceOnUse' width='180' height='45'>
-				<path
-					d='m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z'
-					strokeWidth='1'
-					stroke='none'
-					fill='rgba(255, 255, 255, .1)'
-				/>
-			</pattern>
-		</defs>
-		<rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)' />
-	</svg>
-
-    <h4 id="h4">Contáctese por estos medios:</h4>
-
-    <div class="contactos">
-  	<a id="wapAtributte" target="_blank" title="Ingrese su Whatsapp"><i class="bx bi-whatsapp" id="wap-href"></i> <input type="text" id="wap" placeholder="Whatsapp"></a>
-    <a title="Ingrese su Teléfono" id="phoneAtributte"><i class="bx bi-phone" id="phone-href"></i> <input type="tel" name="" id="phone-input" placeholder="Teléfono"></a>
-    <a id="mailAtributte" title="Ingrese su correo electrónico"><i class="bx bi-envelope" id="mail-href"></i> <input type="email" name="" id="mail-input" placeholder="E-mail"></a>
+    <div class="article-header">
+      <h3>Formulario web para facturación</h3>
+      <p>Éste se puede usar para: Facturas (A-B-C), Presupuestos, Recibos.</p>
+      <h4 class="como-lo-uso">¿Cómo lo uso?</h4>
+      <span id="mas-info">Más info</span><i class="bx bx-plus drop-chevron"></i>
+      <ol class="article-drop-list">
+        <li>
+          Este es un facturador online articulado para facturas o recibos con
+          funcionalidades de cálculo, opciones de contacto y ubicación de la
+          empresa o negocio.
+        </li>
+        <li>
+          Ingrese los detalles de los items, seleccione la cantidad e indique el
+          precio; se calcularán los productos, puede indicar el porcentaje
+          despues en el campo (IVA).
+        </li>
+        <li>
+          En la barra de navegación en ícono <i class="bx bx-save"></i> puede
+          guardar los campos que has llenado para su posterior uso. También
+          encontrarás el ícono de un cesto <i class="bx bx-trash"></i> para
+          eliminar los campos y datos guardados.
+        </li>
+        <li>
+          El ícono
+          <i
+            class="bx bx-plus"
+            style="font-size: 1.2em; position: relative; top: 3px"
+          ></i>
+          en la barra de navegación sirve para crear otra columna para más
+          ítems.
+        </li>
+        <li>
+          En la sección observaciones, se puede indicar el tipo de factura a
+          emitir, el período de días que tiene un presupuesto como también el
+          método de cobro, si es CBU para transferencia bancaria y CVU si por
+          ejemplo es de Mercado Pago.
+        </li>
+        <li>
+          En la sección de (contactos), puede cargar su número para mensaje por
+          whatsapp, teléfono y mail, cuando ingreses los datos en el campo
+          automáticamente se genera un link para su contacto haciendo click en
+          los íconos, si es de whatsapp, para llamada telefónica y envío de
+          correo.
+        </li>
+        <li>
+          En el botón imprimir <i class="ri-printer-line"></i>, también puede
+          seleccionar para descargar como PDF y poder enviarlo después de que
+          haya guardado el mismo.
+        </li>
+      </ol>
     </div>
 
-    <iframe id="google-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <form id="myForm">
+      <header>
+        <svg
+          id="patternId"
+          width="100%"
+          height="100%"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="a"
+              patternUnits="userSpaceOnUse"
+              width="180"
+              height="45"
+            >
+              <path
+                d="m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z"
+                strokeWidth="1"
+                stroke="none"
+                fill="rgba(255, 255, 255, .1)"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="800%"
+            height="800%"
+            transform="translate(0,0)"
+            fill="url(#a)"
+          />
+        </svg>
 
-</article>
+        <h1>
+          <input
+            id="empresaNombre"
+            type="text"
+            placeholder="Nombre de la Empresa"
+            title="Ingrese el nombre de la empresa"
+          />
+        </h1>
+        <h3>
+          <input
+            id="formulario"
+            type="text"
+            placeholder="Factura/Recibo/Presup."
+            style="
+              color: tomato;
+              font-weight: bold;
+              width: auto;
+              text-transform: uppercase;
+            "
+            title="Factura/Recibo/Presupuesto"
+          />
+        </h3>
+        <h2>
+          Cliente:
+          <input
+            type="text"
+            placeholder="Ingrese el cliente"
+            id="cliente"
+            title="Ingrese el nombre del cliente"
+          />
+        </h2>
+        <h2>
+          Dirección:
+          <input
+            type="text"
+            placeholder="Ingrese la calle"
+            id="direccion"
+            title="Ingrese la dirección"
+          />
+        </h2>
+        <h2>
+          CUIT/CUIL:
+          <input
+            id="cuit"
+            type="text"
+            placeholder="XX-XXXXXXXX-X"
+            title="Ingrese número de CUIT/CUIL"
+          />
+        </h2>
+        <p>
+          <input
+            id="numeroFact"
+            type="text"
+            placeholder="N° Fact/Remito"
+            title="Ingrese Número de Formulario"
+          />
+        </p>
+        <p>Fecha: <input id="fecha" type="date" /></p>
+      </header>
 
-</form>
+      <table class="tabla">
+        <tr>
+          <th>Descripción</th>
+          <th>
+            <span id="cantidad-1100">Cantidad</span
+            ><span id="cantidad-762">Cant.</span>
+          </th>
+          <th>Precio Unitario</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td class="descripcion">
+            <input
+              type="text"
+              placeholder="Producto 1"
+              title="Ingrese el producto"
+              id="producto1"
+            />
+          </td>
+          <td class="cantidad">
+            <input
+              type="number"
+              class="cantidad"
+              placeholder="..."
+              title="Ingrese cantidad"
+              id="cantidad1"
+            />
+          </td>
+          <td class="precio">
+            <input
+              type="text"
+              class="precio"
+              placeholder="Precio por unidad.."
+              title="Ingrese el precio unitario"
+              id="precio1"
+            />
+          </td>
+          <td class="total">
+            <input
+              type="text"
+              class="total"
+              placeholder=".$."
+              title="Ingrese el total"
+              id="total1"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="descripcion">
+            <input
+              type="text"
+              placeholder="Producto 2"
+              title="Ingrese el producto"
+              id="producto2"
+            />
+          </td>
+          <td class="cantidad">
+            <input
+              type="number"
+              class="cantidad"
+              placeholder="..."
+              title="Ingrese cantidad"
+              id="cantidad2"
+            />
+          </td>
+          <td class="precio">
+            <input
+              type="text"
+              class="precio"
+              placeholder="Precio por unidad.."
+              title="Ingrese el precio unitario"
+              id="precio2"
+            />
+          </td>
+          <td class="total">
+            <input
+              type="text"
+              class="total"
+              placeholder=".$."
+              title="Ingrese el total"
+              id="total2"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="descripcion">
+            <input
+              type="text"
+              placeholder="Producto 3"
+              title="Ingrese el producto"
+              id="producto3"
+            />
+          </td>
+          <td class="cantidad">
+            <input
+              type="number"
+              class="cantidad"
+              placeholder="..."
+              title="Ingrese cantidad"
+              id="cantidad3"
+            />
+          </td>
+          <td class="precio">
+            <input
+              type="text"
+              class="precio"
+              placeholder="Precio por unidad.."
+              title="Ingrese el precio unitario"
+              id="precio3"
+            />
+          </td>
+          <td class="total">
+            <input
+              type="text"
+              class="total"
+              placeholder=".$."
+              title="Ingrese el total"
+              id="total3"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="descripcion">
+            <input
+              type="text"
+              placeholder="Producto 4"
+              title="Ingrese el producto"
+              id="producto4"
+            />
+          </td>
+          <td class="cantidad">
+            <input
+              type="number"
+              class="cantidad"
+              placeholder="..."
+              title="Ingrese cantidad"
+              id="cantidad4"
+            />
+          </td>
+          <td class="precio">
+            <input
+              type="text"
+              class="precio"
+              placeholder="Precio por unidad.."
+              title="Ingrese el precio unitario"
+              id="precio4"
+            />
+          </td>
+          <td class="total">
+            <input
+              type="text"
+              class="total"
+              placeholder=".$."
+              title="Ingrese el total"
+              id="total4"
+            />
+          </td>
+        </tr>
+        <tr class="newTable">
+          <td class="descripcion">
+            <input
+              type="text"
+              placeholder="Producto 5"
+              title="Ingrese el producto"
+              id="producto5"
+            />
+          </td>
+          <td class="cantidad">
+            <input
+              type="number"
+              class="cantidad"
+              placeholder="..."
+              title="Ingrese cantidad"
+              id="cantidad5"
+            />
+          </td>
+          <td class="precio">
+            <input
+              type="text"
+              class="precio"
+              placeholder="Precio por unidad.."
+              title="Ingrese el precio unitario"
+              id="precio5"
+            />
+          </td>
+          <td class="total">
+            <input
+              type="text"
+              class="total"
+              placeholder=".$."
+              title="Ingrese el total"
+              id="total5"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Subtotal:</td>
+          <td>
+            <input
+              type="text"
+              class="subtotal"
+              placeholder="SubTotal"
+              title="Ingrese el subtotal"
+              id="subtotal"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Impuestos:</td>
+          <td>
+            <input
+              type="text"
+              class="impuestos"
+              placeholder="IVA %"
+              title="Porcentaje impuestos"
+              id="impuesto"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Total:</td>
+          <td>
+            <input
+              type="text"
+              class="total_final"
+              placeholder="TOTAL"
+              id="Total"
+            />
+          </td>
+        </tr>
+      </table>
 
-<div class="enviar">
-	<button class="shimmer-button" onclick="compartirFormulario()">
-        <div class="shimmer-button-content">
-			<i class="ri-share-forward-line"></i> Compartir Formulario
+      <div class="observaciones">
+        <h3>Observaciones:</h3>
+
+        <li>
+          Validez de la oferta:
+          <input
+            id="num-form"
+            type="text"
+            name=""
+            placeholder="Período"
+            title="Ingrese los días de validéz de su presupuesto"
+          />
+        </li>
+
+        <li>
+          Forma de pago:
+          <select name="Forma de pago" id="forma-pago">
+            <option value="opcion1">Transferencia</option>
+            <option value="opcion2">Mercado Pago</option>
+            <option value="opcion3">Efectivo</option>
+          </select>
+        </li>
+
+        <li>
+          Facturación:
+          <select name="Facturacion">
+            <option value="opcion1">"A"</option>
+            <option value="opcion2">"B"</option>
+            <option value="opcion3">"C"</option>
+          </select>
+        </li>
+
+        <div class="container-forma"></div>
+      </div>
+
+      <article class="contacto">
+        <svg
+          id="patternId"
+          width="100%"
+          height="100%"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="a"
+              patternUnits="userSpaceOnUse"
+              width="180"
+              height="45"
+            >
+              <path
+                d="m0 5.625 14.06 7.03 16.876-8.438L22.502 0H11.25l8.436 4.219-5.623 2.81L0 0ZM33.75 0l2.81 1.406L39.374 0Zm16.871 0h.002L19.686 15.469l16.877 8.44 30.939-15.47 5.625 2.811-30.94 15.47 16.875 8.438 14.063-7.031 5.623 2.812L50.621 45h11.25l28.131-14.063L73.126 22.5l-14.065 7.033-5.623-2.812L84.374 11.25 67.498 2.81 36.561 18.282l-5.625-2.814L61.87 0H50.62Zm22.505 0L90 8.437l14.06-7.03 5.626 2.812-30.938 15.469 16.874 8.438 30.939-15.472 5.625 2.815L73.126 45h11.25l59.061-29.532L126.56 7.03 95.622 22.499l-5.621-2.814 30.934-15.467L112.498 0H95.621l-5.623 2.813L84.376 0Zm50.624 0h-.002l44.998 22.5-5.623 2.813-14.063-7.032-16.876 8.44 30.941 15.468-2.813 1.407L157.499 45h11.249l5.628-2.813-30.938-15.468 5.624-2.813 14.064 7.033L180 22.501 134.998 0Zm33.749 45L126.56 29.532l-16.877 8.439L123.749 45h11.249l-14.062-7.03 5.625-2.812L146.248 45ZM146.248 0l11.25 5.625L168.748 0Zm16.875 8.44L180 16.877V11.25l-5.625-2.815L180 5.625V0ZM0 11.25v5.627l42.186 21.092-5.625 2.814-30.938-15.47L0 28.122v5.629l5.623-2.813L33.75 45h5.624l14.062-7.031zm0 22.502v5.625L11.251 45h11.251zm180-5.631v.002l-11.252 5.627L180 39.377Zm-75.939 12.662L95.621 45h16.877z"
+                strokeWidth="1"
+                stroke="none"
+                fill="rgba(255, 255, 255, .1)"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="800%"
+            height="800%"
+            transform="translate(0,0)"
+            fill="url(#a)"
+          />
+        </svg>
+
+        <h4 id="h4">Contáctese por estos medios:</h4>
+
+        <div class="contactos">
+          <a id="wapAtributte" target="_blank" title="Ingrese su Whatsapp"
+            ><i class="bx bi-whatsapp" id="wap-href"></i>
+            <input type="text" id="wap" placeholder="Whatsapp"
+          /></a>
+          <a title="Ingrese su Teléfono" id="phoneAtributte"
+            ><i class="bx bi-phone" id="phone-href"></i>
+            <input type="tel" name="" id="phone-input" placeholder="Teléfono"
+          /></a>
+          <a id="mailAtributte" title="Ingrese su correo electrónico"
+            ><i class="bx bi-envelope" id="mail-href"></i>
+            <input type="email" name="" id="mail-input" placeholder="E-mail"
+          /></a>
         </div>
-    </button>
-	<button  id="imprimir" class="shimmer-button">
+
+        <iframe
+          id="google-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7154659747107!2d-65.23763348428606!3d-32.56043825977295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3056cee406bf3%3A0x80cbd8c58e2ca91d!2sNeoTecs!5e0!3m2!1ses-419!2sar!4v1678170193696!5m2!1ses-419!2sar"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </article>
+    </form>
+
+    <div class="enviar">
+      <button class="shimmer-button" onclick="compartirFormulario()">
         <div class="shimmer-button-content">
-			<i class="ri-printer-line"></i> Imprimir | Desacargar
+          <i class="ri-share-forward-line"></i> Compartir Formulario
         </div>
-    </button>
-</div>
+      </button>
+      <button id="imprimir" class="shimmer-button">
+        <div class="shimmer-button-content">
+          <i class="ri-printer-line"></i> Imprimir | Desacargar
+        </div>
+      </button>
+    </div>
 
-<div class="container-loader">
-<div class="loader"></div>
-</div>
+    <div class="container-loader">
+      <div class="loader"></div>
+    </div>
 
-<div class="contactame">
-<span>Me puedes encontrar por aquí:</span>
-</div>
+    <div class="contactame">
+      <span>Me puedes encontrar por aquí:</span>
+    </div>
 
-<aside class="bottom-stycky-list">
-	<ul>
-		<li><i id="phone-me" class="bx bxs-phone"></i></li>
-		<hr>
-		<li><i id="my-linkedin" class="bx bi-linkedin"></i></li>
-		<hr>
-		<li><i id="share-button" class="bx bx-share-alt"></i></li>
-		<hr>
-		<li><i id="my-github" class="bx bi-github"></i></li>
-		<hr>
-		<li><i id="mail-me" class="bx bi-envelope"></i></li>
-	</ul>
-</aside>
+    <aside class="bottom-stycky-list">
+      <ul>
+        <li><i id="phone-me" class="bx bxs-phone"></i></li>
+        <hr />
+        <li><i id="my-linkedin" class="bx bi-linkedin"></i></li>
+        <hr />
+        <li><i id="share-button" class="bx bx-share-alt"></i></li>
+        <hr />
+        <li><i id="my-github" class="bx bi-github"></i></li>
+        <hr />
+        <li><i id="mail-me" class="bx bi-envelope"></i></li>
+      </ul>
+    </aside>
 
-<div class="bring-me-coffee">
-	<p>¡Si quieres contribuir con el desarrollador! ツ</p>
-	<button id="mercado-coffee"><i class="bx bxs-coffee"></i>Coffee!</button>
-</div>
+    <div class="bring-me-coffee">
+      <p>¡Si quieres contribuir con el desarrollador! ツ</p>
+      <button id="mercado-coffee"><i class="bx bxs-coffee"></i>Coffee!</button>
+    </div>
 
-	<footer>
-		<span>&copy;formularioWeb 2023 - Desarrollo por <span style="color: royalblue;"><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260">SolidSnk86</a></span></span>
-	</footer>
+    <footer>
+      <span
+        >&copy;formularioWeb 2023 - Desarrollo por
+        <span style="color: royalblue"
+          ><a href="https://www.linkedin.com/in/gabriel-calcagni-659907260"
+            >SolidSnk86</a
+          ></span
+        ></span
+      >
+    </footer>
 
     <script src="JS/script.js"></script>
-
-</body>
+  </body>
 </html>
