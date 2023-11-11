@@ -199,6 +199,10 @@ body.dark-mode {
     color: #fafafa;
 }
 
+.avatar-logo.dark-mode {
+    fill: #fff;
+}
+
 header.dark-mode {
     background-color: #000214;
     color: #fafafa;
@@ -1243,6 +1247,3 @@ Responsive   |
     transform: scale(1.02);
     filter: drop-shadow(1px 3px 7px #555);
 }
-
-
-
