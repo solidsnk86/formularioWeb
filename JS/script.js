@@ -199,7 +199,6 @@ window.onload = function() {
   }
 };
 
-
 // Función compartir en redes sociales
 function compartirFacebook() {
   window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
@@ -328,10 +327,12 @@ document.querySelector('.toggle-button').onclick = function() {
   const DarkIcon = document.getElementById('moon-icon')
   const LightIcon = document.getElementById('sun-icon')
   const inputs = document.querySelectorAll('input')
+  const formLogo = document.querySelector('.avatar-logo')
   
 
   if (rootbackground.classList.contains('dark-mode')) {
     rootbackground.classList.remove('dark-mode')
+    formLogo.classList.remove('dark-mode')
     LightIcon.style.display = 'none'
     DarkIcon.style.display = 'inline-block'
     inputs.forEach((input) => {
@@ -342,6 +343,7 @@ document.querySelector('.toggle-button').onclick = function() {
     })
   } else {
     rootbackground.classList.add('dark-mode')
+    formLogo.classList.add('dark-mode')
     LightIcon.style.display = 'inline-block'
     DarkIcon.style.display = 'none'
     inputs.forEach((input) => {
@@ -689,6 +691,17 @@ mailIcon.onclick = () => {
   window.open(href, '_blank')
 }
 
+function ulb_generate_random_string( length ) {
 
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
 
+  for ( var i = 0; i < length; i++ ) {
+     
+     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+
+  return result;
+}
 
