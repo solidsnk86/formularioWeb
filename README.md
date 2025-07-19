@@ -1,11 +1,11 @@
 # Facturero Web para completar
-<br/>
-![Static Badge](https://img.shields.io/badge/Formulario-WEB-green)
-<br/>
+
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
 **🔧 Herramientas utilizadas:**
-<br/>
+
+<br />
+
 | Lenguaje | Descripción            |
 |----------|------------------------|
 | ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)     | Lenguaje de marcado    |
