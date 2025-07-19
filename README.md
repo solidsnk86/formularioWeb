@@ -1,9 +1,11 @@
+# Facturero Web para completar
+<br/>
 ![Static Badge](https://img.shields.io/badge/Formulario-WEB-green)
-
+<br/>
 Este proyecto es un formulario web articulado para facturas o recibos con funcionalidades de cálculo, opciones de contacto y ubicación de la empresa o negocio.
 
 **🔧 Herramientas utilizadas:**
-
+<br/>
 | Lenguaje | Descripción            |
 |----------|------------------------|
 | ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)     | Lenguaje de marcado    |
@@ -25,8 +27,13 @@ Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull par
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-calcagni-659907260) [![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/calcagni_gabriel26/?ishid=ZDdkNTZiNTM%3D) 
 
-### Pueden visitar éste sitio web para aprender a configurar un CPE inalámbrico como por ejemplo [![Static Badge](https://img.shields.io/badge/TPLINK-green)](https://neotecs.tech/aprende.html?) y ![Static Badge](https://img.shields.io/badge/UBIQUITI-blue)
-  
-## [![Static Badge](https://img.shields.io/badge/Neo-Tecs-mediumslateblue)](https://neotecs.netlify.app)
+### Pueden visitar éste sitio web para aprender a configurar de manera automática un CPE inalámbrico de TP-LINK
+<br/>
+[https://neo-wifi.vercel.app/](https://neo-wifi.vercel.app)
+
+---
+<div align="center">
+  solidsnk86 - 2023
+</div>
 
 
